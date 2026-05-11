@@ -1,0 +1,28 @@
+zerar_chuva_hoje:
+  alias: Zerar chuva hoje
+  icon: mdi:weather-rainy
+  mode: single
+  sequence:
+    - service: counter.reset
+      target:
+        entity_id: counter.chuva_balanca_pulsos
+
+adicionar_pulso_chuva:
+  alias: Adicionar pulso chuva
+  icon: mdi:plus-circle
+  mode: single
+  sequence:
+    - service: counter.increment
+      target:
+        entity_id: counter.chuva_balanca_pulsos
+
+remover_pulso_chuva:
+  alias: Remover pulso chuva
+  icon: mdi:minus-circle
+  mode: single
+  sequence:
+    - condition: template
+      value_template: "{{ states('counter.chuva_balanca_pulsos') | int(0) > 0 }}"
+    - service: counter.decrement
+      target:
+        entity_id: counter.chuva_balanca_pulsos
