@@ -20,7 +20,6 @@ tocar_playlist_likes_ivan:
         media_content_id: LM
         media_content_type: playlist
 
-
 tocar_playlist_mix3_ivan:
   alias: Tocar playlist Mix3 Ivan
   icon: mdi:music
@@ -42,7 +41,6 @@ tocar_playlist_mix3_ivan:
       data:
         media_content_id: RDTMAK5uy_k5UUl0lmrrfrjMpsT0CoMpdcBz1ruAO1k
         media_content_type: playlist
-
 
 tocar_playlist_supermix_ivan:
   alias: Tocar playlist SUPERMIX Ivan
@@ -66,7 +64,6 @@ tocar_playlist_supermix_ivan:
         media_content_id: RDTMAK5uy_kset8DisdE7LSD4TNjEVvrKRTmG7a56sY
         media_content_type: playlist
 
-
 tocar_playlist_mix7_ivan:
   alias: Tocar playlist MIX7 Ivan
   icon: mdi:music
@@ -89,7 +86,6 @@ tocar_playlist_mix7_ivan:
         media_content_id: RDTMAK5uy_lfhhWWw9v71CPrR7MRMHgZzbH6Vku9iJc
         media_content_type: playlist
 
-
 tocar_playlist_festa_ivan:
   alias: Tocar playlist FESTA Ivan
   icon: mdi:music
@@ -111,7 +107,6 @@ tocar_playlist_festa_ivan:
       data:
         media_content_id: RDCLAK5uy_n3HGLGTjb_X-mnyCA66JNINojrt41W5K0
         media_content_type: playlist
-
 
 tocar_playlist_festa_rock_ivan:
   alias: Tocar playlist FESTA ROCK Ivan

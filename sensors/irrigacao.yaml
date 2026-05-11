@@ -5,41 +5,6 @@
   type: count
   start: '{{ today_at("00:00") }}'
   end: "{{ now() }}"
-  
-- name: "Chuva Hoje Local"
-  unique_id: "template_s_chuva_hoje_local"
-  unit_of_measurement: "mm"
-  state: >-
-    {% set count = states('sensor.chuva_balanca_contador') | int(0) %}
-    {% set mm_per_pulse = 0.25 %}
-    {% set mm = count * mm_per_pulse %}
-    {{ mm | round(2, 'floor') }}
-
-- name: "Ajuste Irrigacao"
-  unique_id: "template_s_ajuste_irrigacao"
-  state: "{{ state_attr('binary_sensor.irrigation_unlimited_c1_z1', 'adjustment') }}"
-
-- name: "Energia Utilizada Hoje"
-  unique_id: "template_s_energia_utilizada_hoje"
-  unit_of_measurement: "kWh"
-  state: >-
-    {{ (
-        (states('sensor.consumo_concessionaria_hoje') | float(0))
-        + (states('sensor.medidor_producao_solar_energy_today') | float(0))
-        - (states('sensor.injecao_solar_hoje') | float(0))
-      ) | round(3) }}
-
-- name: "Irrigation Unlimited Rain Weighted Total"
-  unique_id: "template_s_irrigation_unlimited_rain_weighted_total"
-  unit_of_measurement: "mm"
-  icon: "mdi:umbrella"
-  state: >-
-    {% set rain_total = (state_attr('sensor.irrigation_unlimited_rain_0', 'max_value') | float(0)) %}
-    {% set rain_total = rain_total + ((state_attr('sensor.irrigation_unlimited_rain_1', 'max_value') | float(0)) * 0.5) %}
-    {% set rain_total = rain_total + ((state_attr('sensor.irrigation_unlimited_rain_2', 'max_value') | float(0)) * 0.15) %}
-    {% set rain_total = rain_total + ((state_attr('sensor.irrigation_unlimited_rain_3', 'max_value') | float(0)) * 0.05) %}
-    {% set rain_total = rain_total + ((state_attr('sensor.irrigation_unlimited_rain_4', 'max_value') | float(0)) * 0.02) %}
-    {{ rain_total | round(1) }}
 
 # Irrigation Unlimited
 - platform: average
@@ -129,76 +94,61 @@
   precision: 1
   start: "{{ now().replace(hour=0).replace(minute=30).replace(second=0) - timedelta(days=4) }}"
   end: "{{ now() }}"
-# Five day weighted rain total sensor.
-# Adjust the weight values (0.7, 0.3, 0.15, 0.05) to suit your needs (0.0 = ignore that day).
-# - platform: template
-#   sensors:
-#     irrigation_unlimited_rain_weighted_total:
-#       friendly_name: "Irrigation Unlimited Rain Weighted Total"
-#       unit_of_measurement: "mm"
-#       icon_template: "mdi:umbrella"
-#       value_template: >
-#         {% set rain_total = state_attr('sensor.irrigation_unlimited_rain_0','max_value') | float(0) %}
-#         {% set rain_total = rain_total + state_attr('sensor.irrigation_unlimited_rain_1','max_value') | float(0) * 0.5 %}
-#         {% set rain_total = rain_total + state_attr('sensor.irrigation_unlimited_rain_2','max_value') | float(0) * 0.15 %}
-#         {% set rain_total = rain_total + state_attr('sensor.irrigation_unlimited_rain_3','max_value') | float(0) * 0.05 %}
-#         {% set rain_total = rain_total + state_attr('sensor.irrigation_unlimited_rain_4','max_value') | float(0) * 0.02 %}
-#         {{ rain_total | round(1) }}
 
 #### Sensores Estação Meteorológica - LOCAL ###
 ## Hoje ##
 - platform: average
-  name: "temperatura_garagem_media_hoje"
+  name: temperatura_garagem_media_hoje
   entities:
     - sensor.termometro_servico_temperature
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}"
   end: "{{ now() }}"
 
 - platform: average
-  name: "umidade_garagem_media_hoje"
+  name: umidade_garagem_media_hoje
   entities:
     - sensor.termometro_servico_humidity
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}"
   end: "{{ now() }}"
 
 - platform: average
-  name: "pressao_garagem_media_hoje"
+  name: pressao_garagem_media_hoje
   entities:
     - sensor.termometro_servico_pressure
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}"
   end: "{{ now() }}"
 
 - platform: average
-  name: "chuva_media_hoje"
+  name: chuva_media_hoje
   entities:
     - sensor.chuva_hoje_local
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}"
   end: "{{ now() }}"
 
-  ## 1 Dia atrás ##
+## 1 Dia atrás ##
 - platform: average
-  name: "temperatura_garagem_media_1_dia"
+  name: temperatura_garagem_media_1_dia
   entities:
     - sensor.termometro_servico_temperature
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=1) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=1) }}"
 
 - platform: average
-  name: "umidade_garagem_media_1_dia"
+  name: umidade_garagem_media_1_dia
   entities:
     - sensor.termometro_servico_humidity
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=1) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=1) }}"
 
 - platform: average
-  name: "pressao_garagem_media_1_dia"
+  name: pressao_garagem_media_1_dia
   entities:
     - sensor.termometro_servico_pressure
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=1) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=1) }}"
 
 - platform: average
-  name: "chuva_media_1_dia"
+  name: chuva_media_1_dia
   entities:
     - sensor.chuva_hoje_local
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=1) }}"
@@ -206,57 +156,57 @@
 
 ## 2 Dias atrás ##
 - platform: average
-  name: "temperatura_garagem_media_2_dia"
+  name: temperatura_garagem_media_2_dia
   entities:
     - sensor.termometro_servico_temperature
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=2) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=2) }}"
 
 - platform: average
-  name: "umidade_garagem_media_2_dia"
+  name: umidade_garagem_media_2_dia
   entities:
     - sensor.termometro_servico_humidity
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=2) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=2) }}"
 
 - platform: average
-  name: "pressao_garagem_media_2_dia"
+  name: pressao_garagem_media_2_dia
   entities:
     - sensor.termometro_servico_pressure
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=2) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=2) }}"
 
 - platform: average
-  name: "chuva_media_2_dia"
+  name: chuva_media_2_dia
   entities:
     - sensor.chuva_hoje_local
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=2) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=2) }}"
 
-  ## 3 Dias atrás ##
+## 3 Dias atrás ##
 - platform: average
-  name: "temperatura_garagem_media_3_dia"
+  name: temperatura_garagem_media_3_dia
   entities:
     - sensor.termometro_servico_temperature
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=3) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=3) }}"
 
 - platform: average
-  name: "umidade_garagem_media_3_dia"
+  name: umidade_garagem_media_3_dia
   entities:
     - sensor.termometro_servico_humidity
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=3) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=3) }}"
 
 - platform: average
-  name: "pressao_garagem_media_3_dia"
+  name: pressao_garagem_media_3_dia
   entities:
     - sensor.termometro_servico_pressure
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=3) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=3) }}"
 
 - platform: average
-  name: "chuva_media_3_dia"
+  name: chuva_media_3_dia
   entities:
     - sensor.chuva_hoje_local
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=3) }}"
@@ -264,58 +214,58 @@
 
 ## 4 Dias atrás ##
 - platform: average
-  name: "temperatura_garagem_media_4_dia"
+  name: temperatura_garagem_media_4_dia
   entities:
     - sensor.termometro_servico_temperature
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=4) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=4) }}"
 
 - platform: average
-  name: "umidade_garagem_media_4_dia"
+  name: umidade_garagem_media_4_dia
   entities:
     - sensor.termometro_servico_humidity
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=4) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=4) }}"
 
 - platform: average
-  name: "pressao_garagem_media_4_dia"
+  name: pressao_garagem_media_4_dia
   entities:
     - sensor.termometro_servico_pressure
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=4) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=4) }}"
 
 - platform: average
-  name: "chuva_media_4_dia"
+  name: chuva_media_4_dia
   entities:
     - sensor.chuva_hoje_local
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=4) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=4) }}"
 
-  ## 5 Dias atrás ##
+## 5 Dias atrás ##
 - platform: average
-  name: "temperatura_garagem_media_5_dia"
+  name: temperatura_garagem_media_5_dia
   entities:
     - sensor.termometro_servico_temperature
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=5) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=5) }}"
 
 - platform: average
-  name: "umidade_garagem_media_5_dia"
+  name: umidade_garagem_media_5_dia
   entities:
     - sensor.termometro_servico_humidity
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=5) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=5) }}"
 
 - platform: average
-  name: "pressao_garagem_media_5_dia"
+  name: pressao_garagem_media_5_dia
   entities:
     - sensor.termometro_servico_pressure
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=5) }}"
   end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=5) }}"
 
 - platform: average
-  name: "chuva_media_5_dia"
+  name: chuva_media_5_dia
   entities:
     - sensor.chuva_hoje_local
   start: "{{ now().replace(hour=0).replace(minute=0).replace(second=0) - timedelta(days=5) }}"
-  end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=5) }}"    
+  end: "{{ now().replace(hour=23).replace(minute=59).replace(second=0) - timedelta(days=5) }}"
