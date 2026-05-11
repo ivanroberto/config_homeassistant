@@ -3,10 +3,9 @@
       unique_id: template_s_chuva_hoje_local
       unit_of_measurement: mm
       state: >-
-        {% set count = states('sensor.chuva_balanca_contador') | int(0) %}
+        {% set count = states('counter.chuva_balanca_pulsos') | int(0) %}
         {% set mm_per_pulse = 0.25 %}
-        {% set mm = count * mm_per_pulse %}
-        {{ mm | round(2, 'floor') }}
+        {{ (count * mm_per_pulse) | round(2) }}
 
     - name: Ajuste Irrigacao
       unique_id: template_s_ajuste_irrigacao

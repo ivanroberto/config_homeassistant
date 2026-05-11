@@ -1,0 +1,32 @@
+counter:
+  chuva_balanca_pulsos:
+    name: Chuva Balança Pulsos
+    initial: 0
+    step: 1
+
+automation:
+  - id: contar_pulso_pluviometro
+    alias: Contar pulso do pluviômetro
+    description: Incrementa o contador apenas quando o reed switch do pluviômetro muda de off para on.
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.pluviometro_water_leak
+        from: "off"
+        to: "on"
+    action:
+      - service: counter.increment
+        target:
+          entity_id: counter.chuva_balanca_pulsos
+    mode: single
+
+  - id: reset_chuva_balanca_pulsos
+    alias: Reset chuva balança pulsos
+    description: Zera o contador diário de pulsos do pluviômetro à meia-noite.
+    trigger:
+      - platform: time
+        at: "00:00:00"
+    action:
+      - service: counter.reset
+        target:
+          entity_id: counter.chuva_balanca_pulsos
+    mode: single

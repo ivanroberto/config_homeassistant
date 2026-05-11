@@ -1,11 +1,3 @@
-- platform: history_stats
-  name: Chuva Balanca Contador
-  entity_id: binary_sensor.pluviometro_water_leak
-  state: "off"
-  type: count
-  start: '{{ today_at("00:00") }}'
-  end: "{{ now() }}"
-
 # Irrigation Unlimited
 - platform: average
   name: irrigation_unlimited_rain_0
