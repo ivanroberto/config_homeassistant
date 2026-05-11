@@ -1,0 +1,23 @@
+# Home Assistant / runtime
+.secrets.yaml
+secrets.yaml
+.HA_VERSION
+.ha_run.lock
+home-assistant.log*
+home-assistant_v2.db*
+*.db
+*.db-*
+zigbee.db
+
+# Integration exports / credentials
+.sonoff.json
+zigbee2mqtt/configuration.yaml
+
+# Inventory / temporary files
+inventario_home_assistant.txt
+configuration(1).yaml
+
+# Add-on and generated data
+deps/
+__pycache__/
+*.pyc
