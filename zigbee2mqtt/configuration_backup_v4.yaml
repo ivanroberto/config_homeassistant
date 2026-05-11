@@ -1,0 +1,182 @@
+homeassistant:
+  enabled: true
+  experimental_event_entities: true
+mqtt:
+  server: mqtt://a0d7b954-emqx:1883
+  user: ivan
+  password: ivanrsc125
+  keepalive: 60
+  reject_unauthorized: true
+  version: 4
+serial:
+  port: tcp://192.168.0.17:6638
+  adapter: zstack
+  baudrate: 115200
+frontend:
+  enabled: true
+  port: 8099
+advanced:
+  channel: 25
+  log_syslog:
+    app_name: Zigbee2MQTT
+    eol: /n
+    host: localhost
+    localhost: localhost
+    path: /dev/log
+    pid: process.pid
+    port: 123
+    protocol: tcp4
+    type: '5424'
+  last_seen: ISO_8601
+  transmit_power: 19
+device_options: {}
+devices:
+  '0x00158d000544a891':
+    friendly_name: Cubo Sala TV
+    legacy: false
+  '0x00158d0005995f6f':
+    friendly_name: Janela Lavabo
+  '0x00124b0022d336f3':
+    friendly_name: Porta Pergolado
+  '0x00124b0022ebe0ce':
+    friendly_name: Janela Cozinha
+  '0x804b50fffe04731f':
+    friendly_name: Sirene
+  '0x804b50fffe08f080':
+    friendly_name: Luz Escada Superior
+  '0x00124b0024c2cc52':
+    friendly_name: Router Suite
+  '0x804b50fffeb0d5e0':
+    friendly_name: Luz Varanda
+  '0x00124b0024c2cc7f':
+    friendly_name: Router Corredor Andar 2
+  '0x804b50fffea6b587':
+    friendly_name: Luz Corredor Andar 2 Fundos
+  '0x54ef4410000d71ac':
+    friendly_name: Lux Corredor Andar 2
+  '0x804b50fffe0a6a7b':
+    friendly_name: Luz Serviço
+  '0x804b50fffe0a6caa':
+    friendly_name: Luz Garagem
+  '0x00124b0022d32422':
+    friendly_name: Portão Social
+  '0x60a423fffe39e6b2':
+    friendly_name: PIR Gás
+  '0x804b50fffeb725bd':
+    friendly_name: Luz Entrada Casa
+  '0x00158d0004747e1c':
+    friendly_name: Vazamento Pia Cozinha Esquerda
+  '0x00124b002396fc49':
+    friendly_name: Botão Externo
+  '0x00124b0022cd84f7':
+    friendly_name: Botão Bancada Cozinha
+  '0x00158d00045a349a':
+    friendly_name: Vazamento Caixa Água
+  '0x00158d00062fdb26':
+    friendly_name: Vazamento Telhado
+  '0x00124b0022fde1c3':
+    friendly_name: Botão Luísa
+  '0x00124b00257cb078':
+    friendly_name: Router Telhado
+  '0x04cf8cdf3c7d16ef':
+    friendly_name: Lux Externo
+  '0x04cf8cdf3c7d0e1e':
+    friendly_name: Lux Sala TV
+  '0x00124b0022d32600':
+    friendly_name: Pluviômetro
+  '0x70ac08fffeddbb2d':
+    friendly_name: mmwave cozinha
+  '0x70ac08fffeddb19e':
+    friendly_name: mmWave Serviço
+  '0x00124b00251fb081':
+    friendly_name: Termômetro Suíte 2
+  '0x00124b0022ea7c47':
+    friendly_name: Lava Louças Porta
+  '0x00124b0022ec101f':
+    friendly_name: Janela Escada
+  '0x00124b0022ea78f5':
+    friendly_name: Porta Entrada Casa
+  '0x00124b0022670d25':
+    friendly_name: Porta Garagem
+  '0x00158d0006793036':
+    friendly_name: Termômetro Servico
+  '0x00124b001f918c53':
+    friendly_name: Termômetro Suíte
+  '0xa4c13861a9e82058':
+    friendly_name: Vazamento Pia Cozinha
+  '0xa4c138e2a7ddb9c2':
+    friendly_name: Vazamento Banheiro Suíte
+  '0xa4c1387abb0f6625':
+    friendly_name: Vazamento Lava Louças
+  '0xa4c138d882c3ec02':
+    friendly_name: Vazamento Lavabo
+  '0xa4c13846c06fddcc':
+    friendly_name: Vazamento Suíte 2
+  '0xa4c138bb2ff74346':
+    friendly_name: mmwave Banheiro Externo
+  '0xa4c138dea39ed6a2':
+    friendly_name: mmwave lavabo
+  '0x00124b0022686438':
+    friendly_name: Termômetro Telhado
+  '0x00124b001f918a5a':
+    friendly_name: Termômetro Cozinha
+  '0x00124b00234e6dc1':
+    friendly_name: 'Termômetro Geladeira '
+  '0xa4c13805deab5437':
+    friendly_name: mmwave escritorio
+  '0x00158d00075f8798':
+    friendly_name: PIR Escada Superior
+  '0x0ceff6fffe69be7a':
+    friendly_name: Termômetro Luisa
+    temperature_precision: 2
+  '0xa4c1389348a63af7':
+    friendly_name: Porta Cozinha
+  '0xa4c138178a2f6f18':
+    friendly_name: Janela Luisa
+  '0x00158d00075f8e73':
+    friendly_name: Pir Escada Inferior
+  '0xa4c13829cd801fe3':
+    friendly_name: Janela Oficina
+  '0xa4c13804d93771c7':
+    friendly_name: Porta Oficina
+  '0x00124b001f91d5e0':
+    friendly_name: Termômetro Pergolado
+  '0x00124b0022cd3ef0':
+    friendly_name: Termômetro Escritório
+  '0x00124b001f918d5f':
+    friendly_name: Termômetro Oficina
+  '0xa4c13837b7420d7c':
+    friendly_name: Termômetro Sotão
+  '0xa4c1383bc1cbc823':
+    friendly_name: Sensor Chuva
+  '0xa4c138dfcc7e6821':
+    friendly_name: Presença Garagem
+  '0xa4c13828d4df879b':
+    friendly_name: Detector Fumaça Telecom
+  '0xa4c13833cd515ad7':
+    friendly_name: Presença Corredor Externo
+  '0xa4c138e3a3f74f45':
+    friendly_name: Presença Corredor Andar 2 Fundos
+  '0xa4c1389fa62db89f':
+    friendly_name: Presença Garagem Frente
+  '0xa4c13846fb77df48':
+    friendly_name: Presença Sala TV
+  '0xa4c1383a7dd96bc7':
+    friendly_name: Termômetro Sala TV
+  '0xa4c13853657266b6':
+    friendly_name: Presença Corredor Andar 2
+  '0xa4c1389ae8a02da7':
+    friendly_name: Lux Fundos
+  '0xa4c138e53dfe77d8':
+    friendly_name: Presença Pergolado
+  '0xa4c138811a4ab180':
+    friendly_name: Registro Água Geral
+  '0xa4c1387b07e391b4':
+    friendly_name: Sensor Chuva Fundos
+  '0xa4c1387e0d2971a0':
+    friendly_name: '0xa4c1387e0d2971a0'
+  '0xa4c13807053d6531':
+    friendly_name: Presença 1
+  '0xa4c138af395d10e5':
+    friendly_name: Presença Pergolado Fundos
+version: 4

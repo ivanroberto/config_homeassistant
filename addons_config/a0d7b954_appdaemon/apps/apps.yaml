@@ -1,0 +1,849 @@
+nspanel-1:
+  module: nspanel-lovelace-ui
+  class: NsPanelLovelaceUIManager
+  config:
+    defaultBackgroundColor: black
+    model: "us-p"
+    panelRecvTopic: "tele/nspanel_cozinha/RESULT"
+    panelSendTopic: "cmnd/nspanel_cozinha/CustomSend"
+    #sleepTracking: device_tracker.ivan_celular
+    screenBrightness: 80
+    sleepTimeout: 30
+    sleepBrightness:
+      - time: "07:00:00"
+        value: 10
+      - time: "08:00:00"
+        value: 40
+      - time: "10:00:00"
+        value: 35
+      - time: "sunset - 1:00:00"
+        value: 10
+      - time: "23:00:00"
+        value: 0
+    sleepOverride:
+      entity: binary_sensor.todas_particoes_ativadas
+      brightness: 0
+    locale: "pt_PT"
+    dateFormatBabel: "E, d 'de' LLLL"
+    #dateAdditionalTemplate: "- {{ state_attr('media_player.som_suite','media_title') if is_state('media_player.som_suite','playing') }} " #" - {{ states('sun.sun') }}"
+    timeAdditionalTemplate: "{{ state_attr('media_player.som_suite','media_title') if is_state('media_player.som_suite','playing') }}"
+    #timeAdditionalTemplate: "TESTE"
+    screensaver:
+      type: screensaver2
+      #doubleTapToUnlock: True
+      entity: weather.casa
+      weatherUnit: celsius
+      #alternativeLayout: True
+      theme:
+        autoWeather: true
+      entities:
+        - entity: weather.casa
+        - entity: sensor.termometro_servico_temperature
+          color: [255, 50, 255]
+        - entity: sensor.chuva_hoje_local
+          icon: mdi:weather-rainy
+          color: [0, 255, 255]
+        - entity: sensor.nivel_caixa_agua_2
+          name: Cx. Água
+          icon: mdi:water-alert
+          color: [0, 50, 255]
+        - entity: sensor.termometro_cozinha_temperature
+          name: Temp
+          icon: mdi:thermometer
+        - entity: sensor.termometro_cozinha_humidity
+          name: Umid
+          icon: mdi:cloud-percent
+        - entity: delete
+        - entity: weather.casa
+          type: 0
+        - entity: weather.casa
+          type: 1
+        - entity: weather.casa
+          type: 2
+        - entity: binary_sensor.particao_portoes_ativada
+          name: Portões
+          icon:
+            "on": mdi:shield-car
+            "off": mdi:shield-off
+          color:
+            "on": [255, 0, 0]
+            "off": [0, 255, 0]
+        - entity: binary_sensor.particao_externa_ativada
+          name: Externa
+          icon:
+            "on": mdi:shield-home
+            "off": mdi:shield-off
+          color:
+            "on": [255, 0, 0]
+            "off": [0, 255, 0]
+        - entity: input_boolean.sensor_offline
+          icon:
+            "on": mdi:wifi-off
+            "off": mdi:zigbee
+        - entity: input_boolean.sensor_bateria_fraca
+          icon:
+            "on": mdi:battery-charging-wireless-alert
+            "off": mdi:battery-check
+        - entity: input_boolean.abrir_lava_loucas
+          icon:
+            "on": mdi:dishwasher-alert
+            "off": mdi:dishwasher
+          color:
+            "on": [255, 0, 0]
+    cards:
+      - type: cardGrid
+        entities:
+          - entity: navigate.cardGrid_alarme
+            name: Alarme
+            # status: binary_sensor.alarme_ativado
+            icon: mdi:shield-home-outline
+          - entity: navigate.cardGrid_irrigacao
+            name: Irrigação
+            icon: mdi:sprinkler-variant
+          - entity: navigate.cardGrid_eletrica
+            name: Elétrica
+            icon: mdi:flash
+          - entity: navigate.cardGrid_sensores
+            name: Sensores
+            icon: mdi:thermometer
+          - entity: switch.tv_sala
+            icon: mdi:television
+          - entity: navigate.cardGrid_musica
+            name: Música
+            icon: mdi:music
+        title: Principal
+
+      - type: cardGrid
+        entities:
+          - entity: navigate.cardGrid_iluminacao_interna
+            name: Ilum. Interna
+            icon: mdi:ceiling-light
+          - entity: navigate.cardGrid_iluminacao_jardim
+            name: Ilum. Jardim
+            icon: mdi:flower
+          - entity: navigate.cardGrid_iluminacao_externa
+            name: Ilum. Externa
+            icon: mdi:coach-lamp
+          - entity: navigate.cardGrid_iluminacao_andar_2
+            name: Ilum. Andar 2
+            icon: mdi:home-floor-2
+          - entity: switch.luz_mesa_jantar
+            icon: mdi:ceiling-light
+          - entity: switch.luz_sala_fundos_1
+            icon: mdi:ceiling-light
+        title: Iluminação
+      - type: cardMedia
+        entity: media_player.cozinha
+      - type: cardPower
+        title: Energia
+        entities:
+          - entity: sensor.energia_utilizada_hoje
+            icon: mdi:home
+          - entity: delete
+          - entity: sensor.consumo_concessionaria_hoje
+            icon: mdi:transmission-tower-export
+            color: [255, 0, 0]
+            # speed: 20
+            speed: >-
+              {% set entity_power = states('sensor.consumo_concessionaria_hoje') |float | round(3)%}
+              {% set total_power = states('sensor.energia_utilizada_hoje') | float | round(3) %}
+              {% set entity_usage = (entity_power / total_power) * 100 | float | round(3) %}
+              {{ (entity_usage | round()) * -1 }}
+          - entity: delete
+            # icon: mdi:car
+            # speed: -20
+          - entity: delete
+          - entity: delete
+          - entity: sensor.medidor_producao_solar_energy_today
+            icon: mdi:solar-panel
+            color: [180, 180, 10]
+            # speed: 30
+            speed: >-
+              {% set entity_power = states('sensor.medidor_producao_solar_energy_today') |float | round(3)%}
+              {% set total_power = states('sensor.energia_utilizada_hoje') | float | round(3) %}
+              {% set entity_usage = (entity_power / total_power) * 100 | float | round(3) %}
+              {{ (entity_usage | round())}}
+          - entity: sensor.injecao_solar_hoje
+            icon: mdi:transmission-tower-import
+            color: [0, 255, 0]
+            # speed: -40
+            speed: >-
+              {% set entity_power = states('sensor.injecao_solar_hoje') |float | round(3)%}
+              {% set total_power = states('sensor.energia_utilizada_hoje') | float | round(3) %}
+              {% set entity_usage = (entity_power / total_power) * 100 | float | round(3) %}
+              {{ (entity_usage | round()) * -1 }}
+    hiddenCards:
+      - type: cardGrid
+        entities:
+          - entity: switch.luz_entrada_casa
+            icon: mdi:ceiling-light
+            name: Entrada Casa
+          - entity: switch.luz_sala_tv
+            icon: mdi:ceiling-light
+            name: Sala TV
+          - entity: switch.luz_sala_jantar
+            icon: mdi:ceiling-light
+            name: Sala Jantar
+          - entity: switch.luz_mesa_jantar
+            icon: mdi:ceiling-light
+            name: Mesa Jantar
+          - entity: switch.luz_sala_fundos_1
+            icon: mdi:ceiling-light
+            name: Sala Fundos
+          - entity: switch.luz_cozinha
+            icon: mdi:ceiling-light
+            name: Cozinha
+        title: Iluminação Interna
+        key: iluminacao_interna
+      - type: cardGrid
+        entities:
+          - entity: switch.luz_varanda
+            icon: mdi:ceiling-light
+            name: Varanda
+          - entity: switch.luz_suite
+            icon: mdi:ceiling-light
+            name: Suíte
+          - entity: switch.luz_escada_superior
+            icon: mdi:ceiling-light
+            name: Esc. Superior
+          - entity: switch.luz_corredor_andar_2
+            icon: mdi:ceiling-light
+            name: Corredor A 2
+          - entity: switch.luz_escada
+            icon: mdi:ceiling-light
+            name: Escada
+        title: Iluminação Andar 2
+        key: iluminacao_andar_2
+      - type: cardGrid
+        entities:
+          - entity: switch.luz_pergolado
+            icon: mdi:string-lights
+            name: Pergolado
+          - entity: switch.luz_jardim
+            icon: mdi:light-flood-up
+            name: Jardim
+          - entity: switch.luz_gramado
+            icon: mdi:light-flood-down
+            name: Gramado
+        title: Iluminação Jardim
+        key: iluminacao_jardim
+      - type: cardGrid
+        entities:
+          - entity: light.luz_rua
+            icon: mdi:light-flood-down
+            name: Rua
+          - entity: switch.luz_entrada_externa
+            icon: mdi:coach-lamp
+            name: Entrada Ext
+          - entity: switch.luz_corredor_externo
+            icon: mdi:coach-lamp
+            name: Corredor Ext
+          - entity: switch.luz_garagem
+            icon: mdi:ceiling-light
+            name: Garagem
+          - entity: switch.luz_servico
+            icon: mdi:ceiling-light
+            name: Serviço
+        title: Iluminação Externa
+        key: iluminacao_externa
+      - type: cardGrid
+        title: Alarme
+        entities:
+          - entity: input_boolean.controla_alarme_portoes
+            name: Portões
+            icon:
+              "on": mdi:rotate-3d-variant
+              "off": mdi:shield-car
+          - entity: binary_sensor.particao_portoes_ativada
+            icon:
+              "on": mdi:shield-car
+              "off": mdi:shield-car
+          - entity: input_boolean.controla_alarme_externo
+            name: Externa
+            icon:
+              "on": mdi:rotate-3d-variant
+              "off": mdi:shield-account
+          - entity: binary_sensor.particao_externa_ativada
+            icon:
+              "on": mdi:shield-account
+              "off": mdi:shield-account
+          # - entity: input_boolean.controla_alarme_geral
+          #   name: Geral
+          #   icon:
+          #     "on": mdi:rotate-3d-variant
+          #     "off": mdi:shield-home
+          # - entity: binary_sensor.todas_particoes_ativadas
+          #   icon:
+          #     "on": mdi:shield-home
+          #     "off": mdi:shield-home
+        key: alarme
+      - type: cardGrid
+        title: Irrigação Controle
+        entities:
+          - entity: navigate.cardGrid_irrigacao_controle
+            icon: mdi:pipe-disconnected
+          - entity: navigate.cardGrid_irrigacao_manual
+            icon: mdi:sprinkler-variant
+          - entity: sensor.chuva_hoje_local
+            name: Chuva (mm)
+          - entity: sensor.ajuste_irrigacao
+            name: Ajuste (%)
+        key: irrigacao
+      - type: cardGrid
+        title: Controle
+        entities:
+          - entity: input_boolean.irrigacao_zona_frente
+            name: Frente
+            icon:
+              "on": mdi:pipe
+              "off": mdi:pipe-disconnected
+            color:
+              "on": [0, 255, 0]
+              "off": [255, 0, 0]
+          - entity: input_boolean.irrigacao_zona_horta
+            name: Horta
+            icon:
+              "on": mdi:pipe
+              "off": mdi:pipe-disconnected
+            color:
+              "on": [0, 255, 0]
+              "off": [255, 0, 0]
+          - entity: input_boolean.irrigacao_zona_corredor
+            name: Corredor
+            icon:
+              "on": mdi:pipe
+              "off": mdi:pipe-disconnected
+            color:
+              "on": [0, 255, 0]
+              "off": [255, 0, 0]
+          - entity: input_boolean.irrigacao_zona_gramado
+            name: Gramado
+            icon:
+              "on": mdi:pipe
+              "off": mdi:pipe-disconnected
+            color:
+              "on": [0, 255, 0]
+              "off": [255, 0, 0]
+          - entity: input_boolean.irrigacao_zona_fundos
+            name: Fundos
+            icon:
+              "on": mdi:pipe
+              "off": mdi:pipe-disconnected
+            color:
+              "on": [0, 255, 0]
+              "off": [255, 0, 0]
+        key: irrigacao_controle
+      - type: cardGrid
+        title: Manual
+        entities:
+          - entity: switch.irrigacao_frente
+            name: Frente
+            icon:
+              "on": mdi:sprinkler-variant
+              "off": mdi:sprinkler-variant
+          - entity: switch.irrigacao_horta
+            name: Horta
+            icon:
+              "on": mdi:sprinkler-variant
+              "off": mdi:sprinkler-variant
+          - entity: switch.irrigacao_corredor
+            name: Corredor
+            icon:
+              "on": mdi:sprinkler-variant
+              "off": mdi:sprinkler-variant
+          - entity: switch.irrigacao_grama
+            name: Gramado
+            icon:
+              "on": mdi:sprinkler-variant
+              "off": mdi:sprinkler-variant
+          - entity: switch.irrigacao_fundos
+            name: Fundos
+            icon:
+              "on": mdi:sprinkler-variant
+              "off": mdi:sprinkler-variant
+        key: irrigacao_manual
+      - type: cardGrid
+        title: Elétrica
+        entities:
+          - entity: sensor.energia_utilizada_hoje
+            name: Consumo (kWh)
+            color: [0, 0, 255]
+          - entity: sensor.medidor_producao_solar_energy_today
+            name: Prod Solar (kWh)
+            color: [255, 255, 0]
+          - entity: sensor.injecao_solar_hoje
+            name: Vendido (kWh)
+            color: [0, 255, 0]
+          - entity: sensor.consumo_concessionaria_hoje
+            name: Comprado (kWh)
+            color: [255, 0, 0]
+          - entity: sensor.potencia_ativa_total
+            name: Potência (W)
+            color: [225, 50, 30]
+          - entity: sensor.medidor_producao_solar_energy_power
+            name: Solar (W)
+            color: [180, 180, 10]
+        key: eletrica
+      - type: cardGrid
+        title: Sensores
+        entities:
+          - entity: sensor.termometro_geladeira_temperature
+            name: Geladeira (°C)
+          - entity: sensor.termometro_servico_temperature
+            name: Serviço (°C)
+          - entity: sensor.termometro_cozinha_temperature
+            name: Cozinha (°C)
+          - entity: sensor.termometro_sala_tv_temperature
+            name: Sala TV (°C)
+          - entity: sensor.termometro_suite_temperature
+            name: Suíte (°C)
+          - entity: sensor.termometro_pergolado_temperature
+            name: Pergolado (°C)
+        key: sensores
+      - type: cardGrid
+        title: Música
+        entities:
+          - entity: script.tocar_playlist_supermix_ivan
+            name: SuperMIX
+            icon: mdi:rocket-launch
+          - entity: script.tocar_playlist_mix3_ivan
+            name: POP
+            icon: mdi:music-box-outline
+          - entity: script.tocar_playlist_mix7_ivan
+            name: Nacional
+            icon: mdi:currency-brl
+          - entity: script.tocar_playlist_likes_ivan
+            name: Likes
+            icon: mdi:thumb-up
+          - entity: script.tocar_playlist_festa_ivan
+            name: Festa POP
+            icon: mdi:party-popper
+          - entity: script.tocar_playlist_festa_rock_ivan
+            name: Festa Rock
+            icon: mdi:balloon
+        key: musica
+
+nspanel-2:
+  module: nspanel-lovelace-ui
+  class: NsPanelLovelaceUIManager
+  config:
+    defaultBackgroundColor: black
+    model: "us-p"
+    panelRecvTopic: "tele/nspanel_escritorio/RESULT"
+    panelSendTopic: "cmnd/nspanel_escritorio/CustomSend"
+    #sleepTracking: device_tracker.ivan_celular
+    screenBrightness: 80
+    sleepTimeout: 30
+    sleepBrightness:
+      - time: "07:00:00"
+        value: 10
+      - time: "08:00:00"
+        value: 40
+      - time: "10:00:00"
+        value: 35
+      - time: "sunset - 1:00:00"
+        value: 10
+      - time: "23:00:00"
+        value: 0
+    sleepOverride:
+      entity: binary_sensor.todas_particoes_ativadas
+      brightness: 0
+    locale: "pt_PT"
+    dateFormatBabel: "E, d 'de' LLLL"
+    #dateAdditionalTemplate: "- {{ state_attr('media_player.som_suite','media_title') if is_state('media_player.som_suite','playing') }} " #" - {{ states('sun.sun') }}"
+    timeAdditionalTemplate: "{{ state_attr('media_player.som_suite','media_title') if is_state('media_player.som_suite','playing') }}"
+    #timeAdditionalTemplate: "TESTE"
+    screensaver:
+      type: screensaver2
+      #doubleTapToUnlock: True
+      entity: weather.casa
+      weatherUnit: celsius
+      #alternativeLayout: True
+      theme:
+        autoWeather: true
+      entities:
+        - entity: weather.casa
+        - entity: sensor.termometro_servico_temperature
+          color: [255, 50, 255]
+        - entity: sensor.chuva_hoje_local
+          icon: mdi:weather-rainy
+          color: [0, 255, 255]
+        - entity: ssensor.nivel_caixa_agua_2
+          name: Cx. Água
+          icon: mdi:water-alert
+          color: [0, 50, 255]
+        - entity: sensor.termometro_escritorio_temperature
+          name: Temp
+          icon: mdi:thermometer
+        - entity: sensor.termometro_escritorio_humidity
+          name: Umid
+          icon: mdi:cloud-percent
+        - entity: delete
+        - entity: weather.casa
+          type: 0
+        - entity: weather.casa
+          type: 1
+        - entity: weather.casa
+          type: 2
+        - entity: binary_sensor.particao_portoes_ativada
+          name: Portões
+          icon:
+            "on": mdi:shield-car
+            "off": mdi:shield-off
+          color:
+            "on": [255, 0, 0]
+            "off": [0, 255, 0]
+        - entity: binary_sensor.particao_externa_ativada
+          name: Externa
+          icon:
+            "on": mdi:shield-home
+            "off": mdi:shield-off
+          color:
+            "on": [255, 0, 0]
+            "off": [0, 255, 0]
+        - entity: input_boolean.sensor_offline
+          icon:
+            "on": mdi:wifi-off
+            "off": mdi:zigbee
+        - entity: input_boolean.sensor_bateria_fraca
+          icon:
+            "on": mdi:battery-charging-wireless-alert
+            "off": mdi:battery-check
+        - entity: input_boolean.abrir_lava_loucas
+          icon:
+            "on": mdi:dishwasher-alert
+            "off": mdi:dishwasher
+          color:
+            "on": [255, 0, 0]
+    cards:
+      - type: cardGrid
+        entities:
+          - entity: navigate.cardGrid_alarme
+            name: Alarme
+            # status: binary_sensor.alarme_ativado
+            icon: mdi:shield-home-outline
+          - entity: navigate.cardGrid_irrigacao
+            name: Irrigação
+            icon: mdi:sprinkler-variant
+          - entity: navigate.cardGrid_eletrica
+            name: Elétrica
+            icon: mdi:flash
+          - entity: navigate.cardGrid_sensores
+            name: Sensores
+            icon: mdi:thermometer
+          - entity: switch.tv_sala
+            icon: mdi:television
+          - entity: navigate.cardGrid_musica
+            name: Música
+            icon: mdi:music
+        title: Principal
+      - type: cardGrid
+        entities:
+          - entity: navigate.cardGrid_iluminacao_interna
+            name: Ilum. Interna
+            icon: mdi:ceiling-light
+          - entity: navigate.cardGrid_iluminacao_jardim
+            name: Ilum. Jardim
+            icon: mdi:flower
+          - entity: navigate.cardGrid_iluminacao_externa
+            name: Ilum. Externa
+            icon: mdi:coach-lamp
+          - entity: navigate.cardGrid_iluminacao_andar_2
+            name: Ilum. Andar 2
+            icon: mdi:home-floor-2
+          - entity: switch.luz_mesa_jantar
+            icon: mdi:ceiling-light
+          - entity: switch.luz_sala_fundos_1
+            icon: mdi:ceiling-light
+        title: Iluminação
+      - type: cardMedia
+        entity: media_player.cozinha
+      - type: cardPower
+        title: Energia
+        entities:
+          - entity: sensor.energia_utilizada_hoje
+            icon: mdi:home
+          - entity: delete
+          - entity: sensor.consumo_concessionaria_hoje
+            icon: mdi:transmission-tower-export
+            color: [255, 0, 0]
+            # speed: 20
+            speed: >-
+              {% set entity_power = states('sensor.consumo_concessionaria_hoje') |float | round(3)%}
+              {% set total_power = states('sensor.energia_utilizada_hoje') | float | round(3) %}
+              {% set entity_usage = (entity_power / total_power) * 100 | float | round(3) %}
+              {{ (entity_usage | round()) * -1 }}
+          - entity: delete
+            # icon: mdi:car
+            # speed: -20
+          - entity: delete
+          - entity: delete
+          - entity: sensor.medidor_producao_solar_energy_today
+            icon: mdi:solar-panel
+            color: [180, 180, 10]
+            # speed: 30
+            speed: >-
+              {% set entity_power = states('sensor.medidor_producao_solar_energy_today') |float | round(3)%}
+              {% set total_power = states('sensor.energia_utilizada_hoje') | float | round(3) %}
+              {% set entity_usage = (entity_power / total_power) * 100 | float | round(3) %}
+              {{ (entity_usage | round())}}
+          - entity: sensor.injecao_solar_hoje
+            icon: mdi:transmission-tower-import
+            color: [0, 255, 0]
+            # speed: -40
+            speed: >-
+              {% set entity_power = states('sensor.injecao_solar_hoje') |float | round(3)%}
+              {% set total_power = states('sensor.energia_utilizada_hoje') | float | round(3) %}
+              {% set entity_usage = (entity_power / total_power) * 100 | float | round(3) %}
+              {{ (entity_usage | round()) * -1 }}
+    hiddenCards:
+      - type: cardGrid
+        entities:
+          - entity: switch.luz_entrada_casa
+            icon: mdi:ceiling-light
+            name: Entrada Casa
+          - entity: switch.luz_sala_tv
+            icon: mdi:ceiling-light
+            name: Sala TV
+          - entity: switch.luz_sala_jantar
+            icon: mdi:ceiling-light
+            name: Sala Jantar
+          - entity: switch.luz_mesa_jantar
+            icon: mdi:ceiling-light
+            name: Mesa Jantar
+          - entity: switch.luz_sala_fundos_1
+            icon: mdi:ceiling-light
+            name: Sala Fundos
+          - entity: switch.luz_cozinha
+            icon: mdi:ceiling-light
+            name: Cozinha
+        title: Iluminação Interna
+        key: iluminacao_interna
+      - type: cardGrid
+        entities:
+          - entity: switch.luz_varanda
+            icon: mdi:ceiling-light
+            name: Varanda
+          - entity: switch.luz_suite
+            icon: mdi:ceiling-light
+            name: Suíte
+          - entity: switch.luz_escada_superior
+            icon: mdi:ceiling-light
+            name: Esc. Superior
+          - entity: switch.luz_corredor_andar_2
+            icon: mdi:ceiling-light
+            name: Corredor A 2
+          - entity: switch.luz_escada
+            icon: mdi:ceiling-light
+            name: Escada
+        title: Iluminação Andar 2
+        key: iluminacao_andar_2
+      - type: cardGrid
+        entities:
+          - entity: switch.luz_pergolado
+            icon: mdi:string-lights
+            name: Pergolado
+          - entity: switch.luz_jardim
+            icon: mdi:light-flood-up
+            name: Jardim
+          - entity: switch.luz_gramado
+            icon: mdi:light-flood-down
+            name: Gramado
+        title: Iluminação Jardim
+        key: iluminacao_jardim
+      - type: cardGrid
+        entities:
+          - entity: light.luz_rua
+            icon: mdi:light-flood-down
+            name: Rua
+          - entity: switch.luz_entrada_externa
+            icon: mdi:coach-lamp
+            name: Entrada Ext
+          - entity: switch.luz_corredor_externo
+            icon: mdi:coach-lamp
+            name: Corredor Ext
+          - entity: switch.luz_garagem
+            icon: mdi:ceiling-light
+            name: Garagem
+          - entity: switch.luz_servico
+            icon: mdi:ceiling-light
+            name: Serviço
+        title: Iluminação Externa
+        key: iluminacao_externa
+      - type: cardGrid
+        title: Alarme
+        entities:
+          - entity: input_boolean.controla_alarme_portoes
+            name: Portões
+            icon:
+              "on": mdi:rotate-3d-variant
+              "off": mdi:shield-car
+          - entity: binary_sensor.particao_portoes_ativada
+            icon:
+              "on": mdi:shield-car
+              "off": mdi:shield-car
+          - entity: input_boolean.controla_alarme_externo
+            name: Externa
+            icon:
+              "on": mdi:rotate-3d-variant
+              "off": mdi:shield-account
+          - entity: binary_sensor.particao_externa_ativada
+            icon:
+              "on": mdi:shield-account
+              "off": mdi:shield-account
+          # - entity: input_boolean.controla_alarme_geral
+          #   name: Geral
+          #   icon:
+          #     "on": mdi:rotate-3d-variant
+          #     "off": mdi:shield-home
+          # - entity: binary_sensor.todas_particoes_ativadas
+          #   icon:
+          #     "on": mdi:shield-home
+          #     "off": mdi:shield-home
+        key: alarme
+      - type: cardGrid
+        title: Irrigação Controle
+        entities:
+          - entity: navigate.cardGrid_irrigacao_controle
+            icon: mdi:pipe-disconnected
+          - entity: navigate.cardGrid_irrigacao_manual
+            icon: mdi:sprinkler-variant
+          - entity: sensor.chuva_hoje_local
+            name: Chuva (mm)
+          - entity: sensor.ajuste_irrigacao
+            name: Ajuste (%)
+        key: irrigacao
+      - type: cardGrid
+        title: Controle
+        entities:
+          - entity: input_boolean.irrigacao_zona_frente
+            name: Frente
+            icon:
+              "on": mdi:pipe
+              "off": mdi:pipe-disconnected
+            color:
+              "on": [0, 255, 0]
+              "off": [255, 0, 0]
+          - entity: input_boolean.irrigacao_zona_horta
+            name: Horta
+            icon:
+              "on": mdi:pipe
+              "off": mdi:pipe-disconnected
+            color:
+              "on": [0, 255, 0]
+              "off": [255, 0, 0]
+          - entity: input_boolean.irrigacao_zona_corredor
+            name: Corredor
+            icon:
+              "on": mdi:pipe
+              "off": mdi:pipe-disconnected
+            color:
+              "on": [0, 255, 0]
+              "off": [255, 0, 0]
+          - entity: input_boolean.irrigacao_zona_gramado
+            name: Gramado
+            icon:
+              "on": mdi:pipe
+              "off": mdi:pipe-disconnected
+            color:
+              "on": [0, 255, 0]
+              "off": [255, 0, 0]
+          - entity: input_boolean.irrigacao_zona_fundos
+            name: Fundos
+            icon:
+              "on": mdi:pipe
+              "off": mdi:pipe-disconnected
+            color:
+              "on": [0, 255, 0]
+              "off": [255, 0, 0]
+        key: irrigacao_controle
+      - type: cardGrid
+        title: Manual
+        entities:
+          - entity: switch.irrigacao_frente
+            name: Frente
+            icon:
+              "on": mdi:sprinkler-variant
+              "off": mdi:sprinkler-variant
+          - entity: switch.irrigacao_horta
+            name: Horta
+            icon:
+              "on": mdi:sprinkler-variant
+              "off": mdi:sprinkler-variant
+          - entity: switch.irrigacao_corredor
+            name: Corredor
+            icon:
+              "on": mdi:sprinkler-variant
+              "off": mdi:sprinkler-variant
+          - entity: switch.irrigacao_grama
+            name: Gramado
+            icon:
+              "on": mdi:sprinkler-variant
+              "off": mdi:sprinkler-variant
+          - entity: switch.irrigacao_fundos
+            name: Fundos
+            icon:
+              "on": mdi:sprinkler-variant
+              "off": mdi:sprinkler-variant
+        key: irrigacao_manual
+
+      - type: cardGrid
+        title: Elétrica
+        entities:
+          - entity: sensor.energia_utilizada_hoje
+            name: Consumo (kWh)
+            color: [0, 0, 255]
+          - entity: sensor.medidor_producao_solar_energy_today
+            name: Prod Solar (kWh)
+            color: [255, 255, 0]
+          - entity: sensor.injecao_solar_hoje
+            name: Vendido (kWh)
+            color: [0, 255, 0]
+          - entity: sensor.consumo_concessionaria_hoje
+            name: Comprado (kWh)
+            color: [255, 0, 0]
+          - entity: sensor.potencia_ativa_total
+            name: Potência (W)
+            color: [225, 50, 30]
+          - entity: sensor.medidor_producao_solar_energy_power
+            name: Solar (W)
+            color: [180, 180, 10]
+        key: eletrica
+      - type: cardGrid
+        title: Sensores
+        entities:
+          - entity: sensor.termometro_geladeira_temperature
+            name: Geladeira (°C)
+          - entity: sensor.termometro_servico_temperature
+            name: Serviço (°C)
+          - entity: sensor.termometro_cozinha_temperature
+            name: Cozinha (°C)
+          - entity: sensor.termometro_sala_tv_temperature
+            name: Sala TV (°C)
+          - entity: sensor.termometro_suite_temperature
+            name: Suíte (°C)
+          - entity: sensor.termometro_pergolado_temperature
+            name: Pergolado (°C)
+        key: sensores
+      - type: cardGrid
+        title: Música
+        entities:
+          - entity: script.tocar_playlist_supermix_ivan
+            name: SuperMIX
+            icon: mdi:rocket-launch
+          - entity: script.tocar_playlist_mix3_ivan
+            name: POP
+            icon: mdi:music-box-outline
+          - entity: script.tocar_playlist_mix7_ivan
+            name: Nacional
+            icon: mdi:currency-brl
+          - entity: script.tocar_playlist_likes_ivan
+            name: Likes
+            icon: mdi:thumb-up
+          - entity: script.tocar_playlist_festa_ivan
+            name: Festa POP
+            icon: mdi:party-popper
+          - entity: script.tocar_playlist_festa_rock_ivan
+            name: Festa Rock
+            icon: mdi:balloon
+        key: musica

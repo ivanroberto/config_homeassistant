@@ -1,0 +1,1002 @@
+binary_sensor.videosource_1_motion_alarm:
+  hidden: true
+  disabled: true
+binary_sensor.mymotiondetectorrule_cell_motion_detection:
+  hidden: true
+  disabled: true
+binary_sensor.mytamperdetectorrule_tamper_detection:
+  hidden: true
+  disabled: true
+binary_sensor.videosourcetoken_image_too_dark:
+  hidden: true
+  disabled: true
+binary_sensor.storage_failure:
+  hidden: true
+  disabled: true
+binary_sensor.videosource_1_motion_alarm_3:
+  hidden: true
+  disabled: true
+binary_sensor.mymotiondetectorrule_cell_motion_detection_3:
+  hidden: true
+  disabled: true
+binary_sensor.mytamperdetectorrule_tamper_detection_3:
+  hidden: true
+  disabled: true
+binary_sensor.videosourcetoken_image_too_dark_3:
+  hidden: true
+  disabled: true
+binary_sensor.storage_failure_3:
+  hidden: true
+  disabled: true
+button.portoes_reboot:
+  hidden: true
+  disabled: true
+button.garagem_reboot:
+  hidden: true
+  disabled: true
+sensor.last_reboot:
+  hidden: true
+  disabled: true
+sensor.last_reboot_3:
+  hidden: true
+  disabled: true
+sensor.processor_usage_3:
+  hidden: true
+  disabled: true
+sensor.processor_usage:
+  hidden: true
+  disabled: true
+camera.portoes_mainstream:
+  hidden: true
+  disabled: false
+  sort_order: 1
+camera.garagem_mainstream:
+  hidden: true
+  disabled: false
+  sort_order: 2
+binary_sensor.sala_motion_alarm:
+  sort_order: 1
+  disabled: true
+binary_sensor.sala_cell_motion_detection:
+  sort_order: 2
+  disabled: true
+binary_sensor.sala_tamper_detection:
+  sort_order: 3
+  disabled: true
+binary_sensor.sala_image_too_dark:
+  sort_order: 4
+  disabled: true
+binary_sensor.sala_storage_failure:
+  sort_order: 11
+  disabled: true
+button.sala_reboot:
+  sort_order: 5
+  disabled: true
+camera.sala_mainstream:
+  sort_order: 6
+  disabled: true
+media_player.sala_de_tv_2:
+  sort_order: 7
+  disabled: false
+  hidden: true
+media_player.som_sala_jantar:
+  sort_order: 8
+  disabled: false
+  hidden: true
+media_player.lg_sk6_e8_97:
+  sort_order: 9
+  disabled: false
+  hidden: true
+media_player.viera_et5_series:
+  sort_order: 10
+  disabled: true
+sensor.hacs:
+  sort_order: 12
+  disabled: true
+sensor.sala_last_reboot:
+  sort_order: 13
+  disabled: true
+sensor.sala_processor_usage:
+  sort_order: 14
+  disabled: true
+sensor.pow_tv_sala_last_restart_time:
+  sort_order: 15
+  disabled: true
+sensor.pow_tv_sala_wifi_connect_count:
+  sort_order: 16
+  disabled: true
+sensor.pow_tv_sala_mqtt_connect_count:
+  sort_order: 17
+  disabled: true
+sensor.pow_tv_sala_restart_reason:
+  sort_order: 18
+  disabled: true
+sensor.pow_tv_sala_ssid:
+  sort_order: 19
+  disabled: true
+sensor.pow_tv_sala_energy_totalstarttime:
+  sort_order: 20
+  disabled: true
+sensor.pow_tv_sala_energy_total:
+  sort_order: 21
+  disabled: true
+sensor.pow_tv_sala_energy_yesterday:
+  sort_order: 22
+  disabled: true
+sensor.pow_tv_sala_energy_today:
+  sort_order: 23
+  disabled: true
+sensor.pow_tv_sala_energy_power_0:
+  sort_order: 24
+  disabled: true
+sensor.pow_tv_sala_energy_power_1:
+  sort_order: 25
+  disabled: true
+sensor.pow_tv_sala_energy_apparentpower_0:
+  sort_order: 26
+  disabled: true
+sensor.pow_tv_sala_energy_apparentpower_1:
+  sort_order: 27
+  disabled: true
+sensor.pow_tv_sala_energy_reactivepower_0:
+  sort_order: 28
+  disabled: true
+sensor.pow_tv_sala_energy_reactivepower_1:
+  sort_order: 29
+  disabled: true
+sensor.pow_tv_sala_energy_factor_0:
+  sort_order: 30
+  disabled: true
+sensor.pow_tv_sala_energy_factor_1:
+  sort_order: 31
+  disabled: true
+sensor.pow_tv_sala_energy_voltage:
+  sort_order: 32
+  disabled: true
+sensor.pow_tv_sala_energy_current_0:
+  sort_order: 33
+  disabled: true
+sensor.pow_tv_sala_energy_current_1:
+  sort_order: 34
+  disabled: true
+sensor.pow_tv_sala_energy_bl09xx_temperature:
+  sort_order: 35
+  disabled: true
+sensor.pow_tv_sala_esp32_temperature:
+  sort_order: 36
+  disabled: true
+sensor.pow_luzes_sala_tv_last_restart_time:
+  sort_order: 37
+  disabled: true
+sensor.pow_luzes_sala_tv_wifi_connect_count:
+  sort_order: 38
+  disabled: true
+sensor.pow_luzes_sala_tv_mqtt_connect_count:
+  sort_order: 39
+  disabled: true
+sensor.pow_luzes_sala_tv_restart_reason:
+  sort_order: 40
+  disabled: true
+sensor.pow_luzes_sala_tv_ssid:
+  sort_order: 41
+  disabled: true
+sensor.pow_luzes_sala_tv_energy_totalstarttime:
+  sort_order: 42
+  disabled: true
+sensor.pow_luzes_sala_tv_energy_total:
+  sort_order: 43
+  disabled: true
+sensor.pow_luzes_sala_tv_energy_yesterday:
+  sort_order: 44
+  disabled: true
+sensor.pow_luzes_sala_tv_energy_today:
+  sort_order: 45
+  disabled: true
+sensor.pow_luzes_sala_tv_energy_power_0:
+  sort_order: 46
+  disabled: true
+sensor.pow_luzes_sala_tv_energy_power_1:
+  sort_order: 47
+  disabled: true
+sensor.pow_luzes_sala_tv_energy_apparentpower_0:
+  sort_order: 48
+  disabled: true
+sensor.pow_luzes_sala_tv_energy_apparentpower_1:
+  sort_order: 49
+  disabled: true
+sensor.pow_luzes_sala_tv_energy_reactivepower_0:
+  sort_order: 50
+  disabled: true
+sensor.pow_luzes_sala_tv_energy_reactivepower_1:
+  sort_order: 51
+  disabled: true
+sensor.pow_luzes_sala_tv_energy_factor_0:
+  sort_order: 52
+  disabled: true
+sensor.pow_luzes_sala_tv_energy_factor_1:
+  sort_order: 53
+  disabled: true
+sensor.pow_luzes_sala_tv_energy_voltage:
+  sort_order: 54
+  disabled: true
+sensor.pow_luzes_sala_tv_energy_current_0:
+  sort_order: 55
+  disabled: true
+sensor.pow_luzes_sala_tv_energy_current_1:
+  sort_order: 56
+  disabled: true
+sensor.pow_luzes_sala_tv_energy_bl09xx_temperature:
+  sort_order: 57
+  disabled: true
+sensor.pow_luzes_sala_tv_esp32_temperature:
+  sort_order: 58
+  disabled: true
+switch.tv_sala:
+  sort_order: 59
+  disabled: false
+  hidden: true
+switch.fita_led_tv:
+  sort_order: 60
+  disabled: false
+  hidden: true
+switch.luz_sala_tv:
+  sort_order: 61
+  disabled: false
+  hidden: true
+switch.luz_ante_sala:
+  sort_order: 62
+  disabled: false
+  hidden: true
+binary_sensor.pir_garagem_frente_battery_low:
+  hidden: true
+binary_sensor.pir_garagem_frente_tamper:
+  hidden: true
+binary_sensor.pir_garagem_battery_low:
+  hidden: true
+binary_sensor.pir_garagem_tamper:
+  hidden: true
+binary_sensor.pir_garagem_occupancy:
+  sort_order: 3
+sensor.pir_garagem_frente_battery:
+  sort_order: 5
+  hidden: true
+sensor.pir_garagem_battery:
+  sort_order: 6
+  hidden: true
+binary_sensor.pir_garagem_frente_occupancy:
+  sort_order: 4
+sensor.cubo_sala_tv_action_angle:
+  hidden: true
+sensor.cubo_sala_tv_device_temperature:
+  hidden: true
+sensor.cubo_sala_tv_action_to_side:
+  hidden: true
+sensor.cubo_sala_tv_action_side:
+  hidden: true
+sensor.cubo_sala_tv_action_from_side:
+  hidden: true
+sensor.cubo_sala_tv_power_outage_count:
+  hidden: true
+sensor.cubo_sala_tv_side:
+  hidden: true
+sensor.cubo_sala_tv_action:
+  hidden: true
+light.luz_rua:
+  disabled: true
+camera.rua_sobe_mainstream:
+  disabled: true
+binary_sensor.videosource_1_motion_alarm_6:
+  disabled: true
+binary_sensor.videosource_1_global_scene_change:
+  disabled: true
+binary_sensor.mymotiondetectorrule_cell_motion_detection_6:
+  disabled: true
+binary_sensor.mytamperdetectorrule_tamper_detection_5:
+  disabled: true
+binary_sensor.videosourcetoken_image_too_dark_5:
+  disabled: true
+binary_sensor.myfielddetector1_field_detection_2:
+  disabled: true
+binary_sensor.storage_failure_5:
+  disabled: true
+sensor.last_reboot_5:
+  disabled: true
+sensor.processor_usage_5:
+  disabled: true
+camera.rua_desce_mainstream:
+  disabled: true
+binary_sensor.videosource_1_motion_alarm_8:
+  disabled: true
+binary_sensor.videosource_1_global_scene_change_2:
+  disabled: true
+binary_sensor.mymotiondetectorrule_cell_motion_detection_8:
+  disabled: true
+binary_sensor.mytamperdetectorrule_tamper_detection_7:
+  disabled: true
+binary_sensor.videosourcetoken_image_too_dark_7:
+  disabled: true
+binary_sensor.myfielddetector1_field_detection_3:
+  disabled: true
+binary_sensor.storage_failure_7:
+  disabled: true
+sensor.last_reboot_7:
+  disabled: true
+sensor.processor_usage_7:
+  disabled: true
+button.rua_sobe_reboot:
+  disabled: true
+button.rua_desce_reboot:
+  disabled: true
+media_player.tela_cozinha:
+  disabled: true
+sensor.pow_lava_loucas_current:
+  disabled: true
+sensor.pow_lava_loucas_power:
+  disabled: true
+sensor.pow_lava_loucas_voltage:
+  disabled: true
+light.luz_bancada:
+  disabled: true
+light.luz_bancada_2:
+  disabled: true
+sensor.pow_luzes_cozinha_last_restart_time:
+  disabled: true
+sensor.pow_luzes_cozinha_wifi_connect_count:
+  disabled: true
+sensor.pow_luzes_cozinha_mqtt_connect_count:
+  disabled: true
+sensor.pow_luzes_cozinha_restart_reason:
+  disabled: true
+sensor.pow_luzes_cozinha_ssid:
+  disabled: true
+switch.luz_cozinha:
+  disabled: true
+switch.luz_bancada_fogao:
+  disabled: true
+sensor.pow_luzes_cozinha_energy_totalstarttime:
+  disabled: true
+sensor.pow_luzes_cozinha_energy_total:
+  disabled: true
+sensor.pow_luzes_cozinha_energy_yesterday:
+  disabled: true
+sensor.pow_luzes_cozinha_energy_today:
+  disabled: true
+sensor.pow_luzes_cozinha_energy_power_0:
+  disabled: true
+sensor.pow_luzes_cozinha_energy_power_1:
+  disabled: true
+sensor.pow_luzes_cozinha_energy_apparentpower_0:
+  disabled: true
+sensor.pow_luzes_cozinha_energy_apparentpower_1:
+  disabled: true
+sensor.pow_luzes_cozinha_energy_reactivepower_0:
+  disabled: true
+sensor.pow_luzes_cozinha_energy_reactivepower_1:
+  disabled: true
+sensor.pow_luzes_cozinha_energy_factor_0:
+  disabled: true
+sensor.pow_luzes_cozinha_energy_factor_1:
+  disabled: true
+sensor.pow_luzes_cozinha_energy_voltage:
+  disabled: true
+sensor.pow_luzes_cozinha_energy_current_0:
+  disabled: true
+sensor.pow_luzes_cozinha_energy_current_1:
+  disabled: true
+sensor.pow_luzes_cozinha_energy_bl09xx_temperature:
+  disabled: true
+sensor.pow_luzes_cozinha_esp32_temperature:
+  disabled: true
+sensor.nspanel_cozinha_last_restart_time:
+  disabled: true
+sensor.nspanel_cozinha_wifi_connect_count:
+  disabled: true
+sensor.nspanel_cozinha_mqtt_connect_count:
+  disabled: true
+sensor.nspanel_cozinha_restart_reason:
+  disabled: true
+sensor.nspanel_cozinha_ssid:
+  disabled: true
+switch.tasmota:
+  disabled: true
+switch.tasmota_c4dd57e9d658_switch_relay_1:
+  disabled: true
+sensor.nspanel_cozinha_analog_temperature1:
+  disabled: true
+sensor.nspanel_cozinha_esp32_temperature:
+  disabled: true
+binary_sensor.fire_tablet_kiosk_mode:
+  disabled: true
+binary_sensor.fire_tablet_plugged_in:
+  disabled: true
+binary_sensor.fire_tablet_device_admin:
+  disabled: true
+button.fire_tablet_restart_browser:
+  disabled: true
+button.fire_tablet_reboot_device:
+  disabled: true
+button.fire_tablet_bring_to_foreground:
+  disabled: true
+button.fire_tablet_send_to_background:
+  disabled: true
+button.fire_tablet_load_start_url:
+  disabled: true
+light.fire_tablet_screen:
+  disabled: true
+media_player.fire_tablet_media_player:
+  disabled: true
+number.fire_tablet_screensaver_timer:
+  disabled: true
+number.fire_tablet_screensaver_brightness:
+  disabled: true
+number.fire_tablet_screen_off_timer:
+  disabled: true
+sensor.fire_tablet_battery_level:
+  disabled: true
+sensor.fire_tablet_screen_orientation:
+  disabled: true
+sensor.fire_tablet_foreground_app:
+  disabled: true
+sensor.fire_tablet_last_app_start:
+  disabled: true
+sensor.fire_tablet_current_page:
+  disabled: true
+sensor.fire_tablet_wifi_signal_level:
+  disabled: true
+sensor.fire_tablet_internal_storage_free_space:
+  disabled: true
+sensor.fire_tablet_internal_storage_total_space:
+  disabled: true
+sensor.fire_tablet_ram_free_memory:
+  disabled: true
+sensor.fire_tablet_ram_total_memory:
+  disabled: true
+switch.fire_tablet_screensaver:
+  disabled: true
+switch.fire_tablet_maintenance_mode:
+  disabled: true
+switch.fire_tablet_kiosk_lock:
+  disabled: true
+switch.fire_tablet_motion_detection:
+  disabled: true
+media_player.som_suite:
+  disabled: true
+sensor.sonoff_1000f366b8_rssi:
+  disabled: true
+switch.luz_suite:
+  disabled: true
+switch.pow_ar_suite:
+  disabled: true
+sensor.pow_ar_suite_energy_totalstarttime:
+  disabled: true
+sensor.pow_ar_suite_energy_total:
+  disabled: true
+sensor.pow_ar_suite_energy_yesterday:
+  disabled: true
+sensor.pow_ar_suite_energy_today:
+  disabled: true
+sensor.pow_ar_suite_energy_power:
+  disabled: true
+sensor.pow_ar_suite_energy_apparentpower:
+  disabled: true
+sensor.pow_ar_suite_energy_reactivepower:
+  disabled: true
+sensor.pow_ar_suite_energy_factor:
+  disabled: true
+sensor.pow_ar_suite_energy_voltage:
+  disabled: true
+sensor.pow_ar_suite_energy_current:
+  disabled: true
+switch.luz_jardim:
+  disabled: true
+input_boolean.iluminacao_jardim:
+  disabled: true
+binary_sensor.videosource_1_motion_alarm_7:
+  disabled: true
+binary_sensor.mymotiondetectorrule_cell_motion_detection_7:
+  disabled: true
+binary_sensor.mytamperdetectorrule_tamper_detection_6:
+  disabled: true
+binary_sensor.videosourcetoken_image_too_dark_6:
+  disabled: true
+binary_sensor.storage_failure_6:
+  disabled: true
+sensor.last_reboot_6:
+  disabled: true
+sensor.processor_usage_6:
+  disabled: true
+camera.fundos_mainstream:
+  disabled: true
+button.fundos_reboot_2:
+  disabled: true
+binary_sensor.videosource_1_motion_alarm_2:
+  disabled: true
+binary_sensor.mymotiondetectorrule_cell_motion_detection_2:
+  disabled: true
+binary_sensor.mytamperdetectorrule_tamper_detection_2:
+  disabled: true
+binary_sensor.videosourcetoken_image_too_dark_2:
+  disabled: true
+binary_sensor.storage_failure_2:
+  disabled: true
+sensor.last_reboot_2:
+  disabled: true
+sensor.processor_usage_2:
+  disabled: true
+camera.pergolado_mainstream:
+  disabled: true
+button.fundos_reboot:
+  disabled: true
+sensor.pow_luzes_fundos_last_restart_time:
+  disabled: true
+sensor.pow_luzes_fundos_wifi_connect_count:
+  disabled: true
+sensor.pow_luzes_fundos_mqtt_connect_count:
+  disabled: true
+sensor.pow_luzes_fundos_restart_reason:
+  disabled: true
+sensor.pow_luzes_fundos_ssid:
+  disabled: true
+switch.luz_pergolado:
+  disabled: true
+switch.luz_gramado:
+  disabled: true
+sensor.pow_luzes_fundos_energy_totalstarttime:
+  disabled: true
+sensor.pow_luzes_fundos_energy_total:
+  disabled: true
+sensor.pow_luzes_fundos_energy_yesterday:
+  disabled: true
+sensor.pow_luzes_fundos_energy_today:
+  disabled: true
+sensor.pow_luzes_fundos_energy_power_0:
+  disabled: true
+sensor.pow_luzes_fundos_energy_power_1:
+  disabled: true
+sensor.pow_luzes_fundos_energy_apparentpower_0:
+  disabled: true
+sensor.pow_luzes_fundos_energy_apparentpower_1:
+  disabled: true
+sensor.pow_luzes_fundos_energy_reactivepower_0:
+  disabled: true
+sensor.pow_luzes_fundos_energy_reactivepower_1:
+  disabled: true
+sensor.pow_luzes_fundos_energy_factor_0:
+  disabled: true
+sensor.pow_luzes_fundos_energy_factor_1:
+  disabled: true
+sensor.pow_luzes_fundos_energy_voltage:
+  disabled: true
+sensor.pow_luzes_fundos_energy_current_0:
+  disabled: true
+sensor.pow_luzes_fundos_energy_current_1:
+  disabled: true
+sensor.pow_luzes_fundos_energy_bl09xx_temperature:
+  disabled: true
+sensor.pow_luzes_fundos_esp32_temperature:
+  disabled: true
+camera.servico_profile000:
+  disabled: true
+button.servico_reboot:
+  disabled: true
+sensor.sonoff_1000f2fd98_rssi:
+  disabled: true
+sensor.pow_luzes_sala_jantar_last_restart_time:
+  disabled: true
+sensor.pow_luzes_sala_jantar_wifi_connect_count:
+  disabled: true
+sensor.pow_luzes_sala_jantar_mqtt_connect_count:
+  disabled: true
+sensor.pow_luzes_sala_jantar_restart_reason:
+  disabled: true
+sensor.pow_luzes_sala_jantar_ssid:
+  disabled: true
+switch.luz_sala_jantar:
+  disabled: true
+switch.luz_mesa_jantar:
+  disabled: true
+sensor.pow_luzes_sala_jantar_energy_totalstarttime:
+  disabled: true
+sensor.pow_luzes_sala_jantar_energy_total:
+  disabled: true
+sensor.pow_luzes_sala_jantar_energy_yesterday:
+  disabled: true
+sensor.pow_luzes_sala_jantar_energy_today:
+  disabled: true
+sensor.pow_luzes_sala_jantar_energy_power_0:
+  disabled: true
+sensor.pow_luzes_sala_jantar_energy_power_1:
+  disabled: true
+sensor.pow_luzes_sala_jantar_energy_apparentpower_0:
+  disabled: true
+sensor.pow_luzes_sala_jantar_energy_apparentpower_1:
+  disabled: true
+sensor.pow_luzes_sala_jantar_energy_reactivepower_0:
+  disabled: true
+sensor.pow_luzes_sala_jantar_energy_reactivepower_1:
+  disabled: true
+sensor.pow_luzes_sala_jantar_energy_factor_0:
+  disabled: true
+sensor.pow_luzes_sala_jantar_energy_factor_1:
+  disabled: true
+sensor.pow_luzes_sala_jantar_energy_voltage:
+  disabled: true
+sensor.pow_luzes_sala_jantar_energy_current_0:
+  disabled: true
+sensor.pow_luzes_sala_jantar_energy_current_1:
+  disabled: true
+sensor.pow_luzes_sala_jantar_energy_bl09xx_temperature:
+  disabled: true
+sensor.pow_luzes_sala_jantar_esp32_temperature:
+  disabled: true
+sensor.pow_luzes_sala_fundos_last_restart_time:
+  disabled: true
+sensor.pow_luzes_sala_fundos_wifi_connect_count:
+  disabled: true
+sensor.pow_luzes_sala_fundos_mqtt_connect_count:
+  disabled: true
+sensor.pow_luzes_sala_fundos_restart_reason:
+  disabled: true
+sensor.pow_luzes_sala_fundos_ssid:
+  disabled: true
+switch.luz_sala_fundos_1:
+  disabled: true
+switch.luz_sala_fundos_2:
+  disabled: true
+sensor.pow_luzes_sala_fundos_energy_totalstarttime:
+  disabled: true
+sensor.pow_luzes_sala_fundos_energy_total:
+  disabled: true
+sensor.pow_luzes_sala_fundos_energy_yesterday:
+  disabled: true
+sensor.pow_luzes_sala_fundos_energy_today:
+  disabled: true
+sensor.pow_luzes_sala_fundos_energy_power_0:
+  disabled: true
+sensor.pow_luzes_sala_fundos_energy_power_1:
+  disabled: true
+sensor.pow_luzes_sala_fundos_energy_apparentpower_0:
+  disabled: true
+sensor.pow_luzes_sala_fundos_energy_apparentpower_1:
+  disabled: true
+sensor.pow_luzes_sala_fundos_energy_reactivepower_0:
+  disabled: true
+sensor.pow_luzes_sala_fundos_energy_reactivepower_1:
+  disabled: true
+sensor.pow_luzes_sala_fundos_energy_factor_0:
+  disabled: true
+sensor.pow_luzes_sala_fundos_energy_factor_1:
+  disabled: true
+sensor.pow_luzes_sala_fundos_energy_voltage:
+  disabled: true
+sensor.pow_luzes_sala_fundos_energy_current_0:
+  disabled: true
+sensor.pow_luzes_sala_fundos_energy_current_1:
+  disabled: true
+sensor.pow_luzes_sala_fundos_energy_bl09xx_temperature:
+  disabled: true
+sensor.pow_luzes_sala_fundos_esp32_temperature:
+  disabled: true
+switch.luz_corredor_andar_2:
+  disabled: true
+sensor.rele1_last_restart_time:
+  disabled: true
+sensor.rele1_wifi_connect_count:
+  disabled: true
+sensor.rele1_mqtt_connect_count:
+  disabled: true
+sensor.rele1_restart_reason:
+  disabled: true
+sensor.rele1_ssid:
+  disabled: true
+switch.rele2:
+  disabled: true
+switch.tasmota_c4dd57eb1414_switch_relay_1:
+  disabled: true
+sensor.rele1_analog_temperature1:
+  disabled: true
+sensor.rele1_esp32_temperature:
+  disabled: true
+sensor.nivel_caixa_agua:
+  disabled: true
+binary_sensor.nivel_caixa_status:
+  disabled: true
+button.telhado_reboot:
+  disabled: true
+camera.telhado_profile_000:
+  disabled: true
+switch.luz_corredor_externo:
+  disabled: true
+camera.corredor_mainstream:
+  disabled: true
+binary_sensor.videosource_1_motion_alarm_4:
+  disabled: true
+binary_sensor.mymotiondetectorrule_cell_motion_detection_4:
+  disabled: true
+binary_sensor.mytamperdetectorrule_tamper_detection_4:
+  disabled: true
+binary_sensor.videosourcetoken_image_too_dark_4:
+  disabled: true
+binary_sensor.storage_failure_4:
+  disabled: true
+sensor.last_reboot_4:
+  disabled: true
+sensor.processor_usage_4:
+  disabled: true
+button.corredor_reboot:
+  disabled: true
+button.varanda_reboot:
+  disabled: true
+camera.varanda_mainstream:
+  disabled: true
+binary_sensor.mymotiondetectorrule_cell_motion_detection_5:
+  disabled: true
+binary_sensor.videosource_1_motion_alarm_5:
+  disabled: true
+binary_sensor.myfielddetector1_field_detection:
+  disabled: true
+binary_sensor.pir_cozinha_battery_low:
+  hidden: true
+binary_sensor.pir_cozinha_tamper:
+  hidden: true
+binary_sensor.janela_cozinha_battery_low:
+  hidden: true
+binary_sensor.porta_cozinha_battery_low:
+  hidden: true
+sensor.lux_cozinha_battery:
+  hidden: true
+sensor.termometro_cozinha_humidity:
+  hidden: true
+sensor.termometro_cozinha_temperature:
+  hidden: true
+sensor.termometro_cozinha_battery:
+  hidden: true
+sensor.pir_cozinha_battery:
+  hidden: true
+sensor.janela_cozinha_battery:
+  hidden: true
+sensor.porta_cozinha_battery:
+  hidden: true
+sensor.botao_bancada_cozinha_battery:
+  hidden: true
+sensor.botao_bancada_cozinha_action:
+  hidden: true
+sensor.lux_cozinha_power_outage_count:
+  hidden: true
+binary_sensor.lava_loucas_porta_battery_low:
+  hidden: true
+sensor.pow_lava_loucas_rssi:
+  hidden: true
+sensor.pow_lava_loucas_energy_totalstarttime:
+  hidden: true
+sensor.pow_lava_loucas_energy_total:
+  hidden: true
+sensor.pow_lava_loucas_energy_yesterday:
+  hidden: true
+sensor.pow_lava_loucas_energy_today:
+  hidden: true
+sensor.pow_lava_loucas_energy_power:
+  hidden: true
+sensor.pow_lava_loucas_energy_apparentpower:
+  hidden: true
+sensor.pow_lava_loucas_energy_reactivepower:
+  hidden: true
+sensor.pow_lava_loucas_energy_factor:
+  hidden: true
+sensor.pow_lava_loucas_energy_voltage:
+  hidden: true
+sensor.pow_lava_loucas_energy_current:
+  hidden: true
+sensor.lava_loucas_porta_battery:
+  hidden: true
+sensor.termometro_geladeira_battery:
+  hidden: true
+sensor.termometro_geladeira_temperature:
+  hidden: true
+sensor.termometro_geladeira_humidity:
+  hidden: true
+switch.pow_lava_loucas:
+  hidden: true
+hhn:
+  sort_order: 1
+o0g:
+  sort_order: 2
+hv7:
+  sort_order: 3
+f5n:
+  sort_order: 4
+hs1:
+  sort_order: 5
+f88:
+  sort_order: 6
+hkp:
+  sort_order: 7
+kib:
+  sort_order: 8
+gqr:
+  sort_order: 9
+fhh:
+  sort_order: 10
+f51:
+  sort_order: 11
+hva:
+  sort_order: 12
+hp3:
+  sort_order: 13
+ftm:
+  sort_order: 14
+f9h:
+  sort_order: 15
+hr9:
+  sort_order: 16
+fjv:
+  sort_order: 17
+fbh:
+  sort_order: 18
+f8h:
+  sort_order: 19
+fov:
+  sort_order: 20
+f5l:
+  sort_order: 21
+i6q:
+  sort_order: 22
+o0m:
+  sort_order: 2
+binary_sensor.pir_suite_battery_low:
+  hidden: true
+binary_sensor.pir_suite_tamper:
+  hidden: true
+sensor.pir_suite_battery:
+  hidden: true
+binary_sensor.pir_suite_occupancy:
+  hidden: true
+sensor.termometro_suite_battery:
+  hidden: true
+sensor.termometro_suite_temperature:
+  hidden: true
+sensor.termometro_suite_humidity:
+  hidden: true
+sensor.termometro_sala_tv_battery:
+  hidden: true
+sensor.cubo_sala_tv_battery:
+  hidden: true
+sensor.pluviometro_battery:
+  hidden: true
+binary_sensor.pluviometro_battery_low:
+  hidden: true
+sensor.termometro_escritorio_battery:
+  hidden: true
+sensor.porta_garagem_battery:
+  hidden: true
+binary_sensor.porta_garagem_battery_low:
+  hidden: true
+binary_sensor.porta_pergolado_battery_low:
+  hidden: true
+sensor.termometro_pergolado_battery:
+  hidden: true
+sensor.porta_pergolado_battery:
+  hidden: true
+sensor.lux_externo_battery:
+  hidden: true
+sensor.lux_externo_power_outage_count:
+  hidden: true
+sensor.janela_oficina_battery:
+  hidden: true
+sensor.porta_oficina_battery:
+  hidden: true
+sensor.termometro_oficina_battery:
+  hidden: true
+binary_sensor.janela_oficina_battery_low:
+  hidden: true
+binary_sensor.porta_oficina_battery_low:
+  hidden: true
+binary_sensor.chovendo_agora_battery_low:
+  hidden: true
+sensor.chovendo_agora_device_temperature:
+  hidden: true
+sensor.chovendo_agora_power_outage_count:
+  hidden: true
+sensor.chovendo_agora_battery:
+  hidden: true
+sensor.janela_escada_battery:
+  hidden: true
+sensor.pir_escada_battery:
+  hidden: true
+binary_sensor.pir_escada_tamper:
+  hidden: true
+binary_sensor.pir_escada_battery_low:
+  hidden: true
+binary_sensor.janela_escada_battery_low:
+  hidden: true
+switch.luz_escada:
+  sort_order: 1
+binary_sensor.janela_escada_contact:
+  sort_order: 3
+binary_sensor.pir_escada_occupancy:
+  sort_order: 4
+switch.luz_escada_superior:
+  sort_order: 2
+sensor.pir_servico_battery:
+  hidden: true
+switch.luz_servico:
+  sort_order: 1
+  hidden: true
+binary_sensor.pir_servico_occupancy:
+  sort_order: 2
+binary_sensor.pir_servico_battery_low:
+  sort_order: 3
+  hidden: true
+binary_sensor.pir_servico_tamper:
+  sort_order: 4
+  hidden: true
+sensor.termometro_servico_battery:
+  sort_order: 5
+  hidden: true
+sensor.termometro_servico_temperature:
+  sort_order: 6
+sensor.termometro_servico_humidity:
+  sort_order: 7
+sensor.termometro_servico_pressure:
+  sort_order: 8
+sensor.pir_corredor_andar_2_battery:
+  hidden: true
+sensor.pir_corredor_andar_2_power_outage_count:
+  hidden: true
+switch.luz_corredor_andar_2_fundos:
+  sort_order: 1
+  hidden: true
+binary_sensor.pir_corredor_andar_2_occupancy:
+  sort_order: 2
+binary_sensor.pir_corredor_andar_2_fundos_occupancy:
+  sort_order: 3
+sensor.pir_corredor_andar_2_device_temperature:
+  sort_order: 4
+sensor.pir_corredor_andar_2_illuminance_lux:
+  sort_order: 5
+sensor.pir_corredor_andar_2_fundos_battery:
+  sort_order: 6
+  hidden: true
+sensor.pir_corredor_andar_2_fundos_device_temperature:
+  sort_order: 7
+sensor.pir_corredor_andar_2_fundos_illuminance_lux:
+  sort_order: 8
+sensor.pir_corredor_andar_2_fundos_power_outage_count:
+  sort_order: 9
+  hidden: true
+sensor.sonoff_10010495b0_rssi:
+  hidden: true
+sensor.sonoff_1000f2f3e1_rssi:
+  hidden: true
+sensor.pir_corredor_externo_battery:
+  hidden: true
+sensor.pir_corredor_externo_power_outage_count:
+  hidden: true
+binary_sensor.porta_entrada_casa_battery_low:
+  hidden: true
+binary_sensor.pir_entrada_casa_battery_low:
+  hidden: true
+binary_sensor.pir_entrada_casa_tamper:
+  hidden: true
+sensor.porta_entrada_casa_battery:
+  hidden: true
+sensor.pir_entrada_casa_battery:
+  hidden: true
+switch.luz_entrada_casa:
+  sort_order: 1
+binary_sensor.porta_entrada_casa_contact:
+  sort_order: 2
+binary_sensor.pir_entrada_casa_occupancy:
+  sort_order: 3
+binary_sensor.janela_quarto_fundos_battery_low:
+  hidden: true
+sensor.janela_quarto_fundos_battery:
+  hidden: true
+binary_sensor.janela_lavabo_battery_low:
+  hidden: true
+binary_sensor.janela_lavabo_tamper:
+  hidden: true
+sensor.janela_lavabo_battery:
+  hidden: true
+sensor.termometro_suite_2_battery:
+  hidden: true

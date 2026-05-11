@@ -1,0 +1,199 @@
+esphome:
+  name: controle-alarme
+
+esp8266:
+  board: esp01_1m
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  min_auth_mode: WPA2
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Controle Alarme Fallback Hotspot"
+    password: "ivanrsc125"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+  platform: esphome
+
+status_led:
+  pin: 
+    number: GPIO13
+
+button:
+  - platform: template
+    name: "Controle Alarme Acionar Particao Portoes"
+    id: controle_alarme_acionar_particao_portoes
+    icon: "mdi:electric-switch"
+    on_press:
+      - switch.turn_on: rele1
+      - delay: 850ms
+      - switch.turn_off: rele1
+      - delay: 1s 
+
+  - platform: template
+    name: "Controle Alarme Acionar Particao Externa"
+    id: controle_alarme_acionar_particao_externa
+    icon: "mdi:electric-switch"
+    on_press:
+      - switch.turn_on: rele2
+      - delay: 850ms
+      - switch.turn_off: rele2
+      - delay: 1s 
+
+  - platform: template
+    name: "Controle Alarme Acionar Todas Particoes"
+    id: controle_alarme_acionar_todas_particoes
+    icon: "mdi:electric-switch"
+    on_press:
+      - switch.turn_on: rele3
+      - delay: 850ms
+      - switch.turn_off: rele3
+      - delay: 1s 
+
+binary_sensor:
+  # Monitor the Wifi connection status
+  - platform: status
+    name: "Controle Alarme Status"
+  - platform: gpio
+    name: "Controle GPIO0"
+    id: controle_alarme_gpio0
+    pin: 
+      number: GPIO0
+      mode: INPUT_PULLUP
+    filters:
+      - invert:
+      - delayed_off: 200ms
+      - delayed_on: 200ms
+  - platform: gpio
+    name: "Controle Alarme Partição Portões Ativada"
+    id: controle_alarme_particao_portoes_ativada
+    pin: 
+      number: GPIO09
+      mode: INPUT_PULLUP
+    filters:
+      - invert:
+      - delayed_off: 200ms
+      - delayed_on: 200ms
+  - platform: gpio
+    name: "Controle Alarme Partição Externa Ativada"
+    id: controle_alarme_particao_externa_ativada
+    pin: 
+      number: GPIO10 #usado pino RX, pois nao havia nenhum sobrando
+      mode: INPUT_PULLUP
+    filters:
+      - invert:
+      - delayed_off: 200ms
+      - delayed_on: 200ms
+  - platform: gpio
+    name: "Controle Alarme Portão Social Aberto"
+    id: controle_alarme_sirene_ativada
+    pin: 
+      number: GPIO14 #usado pino RX, pois nao havia nenhum sobrando
+      mode: INPUT_PULLUP
+    filters:
+      - invert:
+      - delayed_off: 200ms
+      - delayed_on: 200ms
+  - platform: template
+    name: "Controle Alarme Todas Partições Ativadas"
+    id: controle_alarme_todas_particoes_ativas
+    lambda: |-
+      if ((id(controle_alarme_particao_portoes_ativada).state != 0) && (id(controle_alarme_particao_externa_ativada).state != 0)) {
+        return true;
+      } else {
+        return false;
+      }
+  - platform: template
+    name: "Controle Alarme Ativado"
+    id: controle_alarme_alarme_ativado
+    lambda: |-
+      if ((id(controle_alarme_particao_portoes_ativada).state != 0) || (id(controle_alarme_particao_externa_ativada).state != 0)) {
+        return true;
+      } else {
+        return false;
+      }
+
+switch:
+  - platform: gpio
+    id: rele1
+    name: "Rele 1"
+    pin: GPIO12
+    restore_mode: ALWAYS_OFF
+  - platform: gpio
+    id: rele2
+    name: "Rele 2"
+    pin: GPIO5
+    restore_mode: ALWAYS_OFF
+  - platform: gpio
+    id: rele3
+    name: "Rele 3"
+    pin: GPIO4
+    restore_mode: ALWAYS_OFF
+  - platform: gpio
+    id: rele4
+    name: "Rele 4"
+    pin: GPIO15
+    restore_mode: ALWAYS_OFF
+    
+  # - platform: gpio
+  #   pin: GPIO12
+  #   id: particao_todas
+  #   restore_mode: ALWAYS_OFF
+  # - platform: template
+  #   name: "Particao Todas"
+  #   icon: "mdi:alarm-light"
+  #   turn_on_action:
+  #   - switch.turn_on: particao_todas
+  #   - delay: 850ms
+  #   - switch.turn_off: particao_todas    
+    
+  # - platform: gpio
+  #   pin: GPIO05
+  #   id: particao_portoes
+  #   restore_mode: ALWAYS_OFF
+  # - platform: template
+  #   name: "Particao Portoes"
+  #   icon: "mdi:alarm-light"
+  #   turn_on_action:
+  #   - switch.turn_on: particao_portoes
+  #   - delay: 850ms
+  #   - switch.turn_off: particao_portoes 
+
+  # - platform: gpio
+  #   pin: GPIO04
+  #   id: particao_externa
+  #   restore_mode: ALWAYS_OFF
+  # - platform: template
+  #   name: "Particao Externa"
+  #   icon: "mdi:alarm-light"
+  #   turn_on_action:
+  #   - switch.turn_on: particao_externa
+  #   - delay: 850ms
+  #   - switch.turn_off: particao_externa 
+
+  # - platform: gpio
+  #   pin: GPIO15
+  #   id: rele4
+  #   restore_mode: ALWAYS_OFF
+    
+# output:
+#   - platform: esp8266_pwm
+#     id: blue_led
+#     pin: GPIO13
+#     inverted: True
+
+# light:
+# - platform: monochromatic
+#   id: status_led
+#   name: "Sonoff 4CH Blue LED"
+#   output: blue_led

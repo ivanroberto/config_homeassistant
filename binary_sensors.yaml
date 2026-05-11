@@ -1,0 +1,76 @@
+- name: "raining_now"
+  unique_id: "template_bs_raining_now"
+  # valor fixo (original tinha value_template: "off")
+  state: "off"
+
+- name: "simulador_presenca_armado"
+  unique_id: "template_bs_simulador_presenca_armado"
+  device_class: "moving"
+  state: "{{ is_state('input_boolean.simulador_presenca_armado', 'on') }}"
+
+- name: "sensores_bateria_fraca"
+  unique_id: "template_bs_sensores_bateria_fraca"
+  state: "{{ is_state('input_boolean.sensor_bateria_fraca', 'on') }}"
+
+- name: "sensores_offline"
+  unique_id: "template_bs_sensores_offline"
+  state: "{{ is_state('input_boolean.sensor_offline', 'on') }}"
+
+####### Sensores do alarme  #######
+- name: "ha_alarme_ativado"
+  unique_id: "template_bs_ha_alarme_ativado"
+  # Para integração direta AMT (Via nodered)
+  state: "{{ is_state('binary_sensor.central_amt_central_ativada', 'off') }}"
+  # Para integração via placa (esphome)
+  # state: "{{ is_state('binary_sensor.controle_alarme_ativado', 'on') }}"
+
+- name: "ha_alarme_geral_ativado"
+  unique_id: "template_bs_ha_alarme_geral_ativado"
+  # Para integração direta AMT (Via nodered)
+  state: "{{ is_state('sensor.central_amt_particoes_ativadas', 'A, B, C, D') }}"
+  # Para integração via placa (esphome)
+  # state: "{{ is_state('binary_sensor.controle_alarme_todas_particoes_ativadas', 'on') }}"
+
+- name: "ha_alarme_portoes_ativado"
+  unique_id: "template_bs_ha_alarme_portoes_ativado"
+  # Para integração direta AMT (Via nodered)
+  state: "{{ is_state('binary_sensor.central_amt_particao_a', 'off') }}"
+  # Para integração via placa (esphome)
+  # state: "{{ is_state('binary_sensor.controle_alarme_particao_portoes_ativada', 'on') }}"
+
+- name: "ha_alarme_externo_ativado"
+  unique_id: "template_bs_ha_alarme_externo_ativado"
+  # Para integração direta AMT (Via nodered)
+  state: "{{ is_state('binary_sensor.central_amt_particao_b', 'off') }}"
+  # Para integração via placa (esphome)
+  # state: "{{ is_state('binary_sensor.controle_alarme_particao_externa_ativada', 'on') }}"
+
+- name: "ha_alarme_interno_ativado"
+  unique_id: "template_bs_ha_alarme_interno_ativado"
+  # Para integração direta AMT (Via nodered)
+  state: "{{ is_state('binary_sensor.central_amt_particao_c', 'off') }}"
+  # Para integração via placa (esphome)
+  # state: "{{ is_state('binary_sensor.controle_alarme_particao_portoes_ativada', 'on') }}"
+
+- name: "ha_alarme_d_ativado"
+  unique_id: "template_bs_ha_alarme_d_ativado"
+  # Para integração direta AMT (Via nodered)
+  state: "{{ is_state('binary_sensor.central_amt_particao_d', 'off') }}"
+
+- name: "ha_alarme_disparado"
+  unique_id: "template_bs_ha_alarme_disparado"
+  # Para integração direta AMT (Via nodered)
+  state: "{{ is_state('binary_sensor.central_amt_central_disparada', 'on') }}"
+
+- name: "ha_portao_social"
+  unique_id: "template_bs_ha_portao_social"
+  # Para integração direta AMT (Via nodered)
+  state: "{{ is_state('binary_sensor.controle_alarme_portao_social_aberto', 'on') }}"
+####### Fim sensores alarme #######
+
+
+- name: "Portão Social Template"
+  unique_id: "ha_portao_social_contact"
+  device_class: garage_door
+  state: "{{ not is_state('binary_sensor.portao_social_vazamento_water_leak', 'on') }}"
+    

@@ -1,0 +1,38 @@
+# CSE7766 single channel driver
+# UART deve ser configurado no arquivo do dispositivo:
+#   rx_pin: GPIO3, tx_pin: GPIO1, baud_rate: 4800, parity: EVEN
+
+sensor:
+  - platform: cse7766
+    voltage:
+      id: voltage_raw
+      internal: true
+    current:
+      id: current_1_raw
+      internal: true
+    power:
+      id: power_1_raw
+      internal: true
+    apparent_power:
+      id: apparent_power_1_raw
+      internal: true
+    power_factor:
+      id: power_pf_raw
+      accuracy_decimals: 2
+      device_class: power_factor
+      state_class: measurement
+      internal: true
+      filters:
+        - lambda: |-
+            if (std::isnan(x)) return {};
+            return x;
+    energy:
+      id: energy_1_raw
+      internal: true
+      on_value:
+        then:
+          - lambda: |-
+              if (id(energy_raw_last_1) > 0.0f && x >= id(energy_raw_last_1)) {
+                id(energy_total_1) += (x - id(energy_raw_last_1)) / 1000.0f;
+              }
+              id(energy_raw_last_1) = x;

@@ -1,0 +1,90 @@
+# google_actions:
+#   filter:
+#     include_entities:
+#       - input_boolean.dormir
+#       - input_boolean.banho
+#       - input_boolean.iluminacao_fundos
+#       - input_boolean.iluminacao_frente
+#       - input_boolean.iluminacao_externa
+#       - input_boolean.iluminacao_interna
+#       - input_boolean.iluminacao_jardim
+#       - input_boolean.iluminacao_geral
+#       - input_boolean.verificacao_casa
+#       - input_boolean.saindo_casa
+#       - switch.luz_jardim
+#       - switch.luz_gramado
+#       - switch.luz_pergolado
+#       - switch.luz_cozinha
+#       - switch.luz_sala_fundos_1
+#       - light.luz_bancada
+#       - switch.luz_sala_jantar
+#       - switch.luz_sala_tv
+#       - switch.luz_ante_sala
+#       - switch.luz_escada
+#       - switch.luz_escada_superior
+#       - switch.luz_suite
+#       - switch.luz_varanda
+#       - switch.luz_garagem
+#       - light.luz_rua
+#       - switch.luz_entrada_casa
+#       - switch.luz_entrada_externa
+#       - switch.luz_corredor_externo
+#       - switch.luz_corredor_andar_2
+#       - switch.luz_corredor_andar_2_fundos
+#       - switch.luz_servico
+#       - switch.luz_bancada_fogao
+#       - switch.fita_led_tv
+#       - switch.tv_sala
+#       - camera.camera_servico_mainstream
+#       - camera.camera_garagem_profile000
+#       - camera.rua_sobe_mainstream
+#       - camera.rua_desce_mainstream
+#       - camera.portoes_mainstream
+#       - camera.fundos_mainstream
+#       - camera.pergolado_mainstream
+#     include_domains:
+#     exclude_domains:
+#       - media_player
+#       - switch
+#       - light
+#       - input_boolean
+#       - sensor
+#       - input_number
+#       - input_text
+#       - input_select
+#       - binary_sensor
+#       - automation
+#       - camera
+#     exclude_entities:
+#       - switch.particao_portoes
+#       - switch.particao_externa
+#       - switch.particao_todas
+#       - input_boolean.alarme_geral_ativar
+#       - input_boolean.alarme_geral_desativar
+#       - input_boolean.alarme_portoes_ativar
+#       - input_boolean.alarme_portoes_desativar
+#       - input_boolean.alarme_externo_ativar
+#       - input_boolean.alarme_externo_desativar
+#       - light.alarme_externo
+#       - light.alarme_portoes
+#       - light.caixa_agua
+#   entity_config:
+#     input_boolean.dormir:
+#       name: Cena Dormir
+#       aliases:
+#         - dormir
+#         - cama
+#     input_boolean.banho:
+#       name: Cena Banho
+#       aliases:
+#         - subir
+#         - banho
+#     input_boolean.alarme:
+#       name: Segurança Casa
+#       aliases:
+#         - alarme casa
+#     input_boolean.verificacao_casa:
+#       name: Verificação Casa
+#       aliases:
+#         - verificação casa
+#         - status casa

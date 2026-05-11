@@ -1,0 +1,79 @@
+temp_ajuste_irrigacao:
+  name: Temp. Ajuste Irrigação
+  # initial: 26
+  min: 20
+  max: 30
+  step: 1
+  icon: mdi:thermometer
+umid_solo_ajuste_irrigacao:
+  name: Umid. Solo Ajuste Irrigação
+  # initial: 50
+  min: 0
+  max: 100
+  step: 1
+  icon: mdi:water-percent
+chuva_ajuste_irrigacao:
+  name: Chuva Ajuste Irrigação
+  # initial: 2
+  min: 0
+  max: 3
+  step: 0.25
+  icon: mdi:weather-rainy
+umidade_sala_min:
+  name: Umidade Sala Min
+  #initial: 20
+  min: 5
+  max: 90
+  step: 2
+  icon: mdi:watering-can-outline
+umidade_sala_ok:
+  name: Umidade Sala OK
+  #initial: 60
+  min: 30
+  max: 100
+  step: 2
+  icon: mdi:watering-can
+umidade_pergolado_min:
+  name: Umidade Pergolado Min
+  #initial: 20
+  min: 5
+  max: 80
+  step: 2
+  icon: mdi:watering-can-outline
+umidade_pergolado_ok:
+  name: Umidade Pergolado OK
+  #initial: 60
+  min: 30
+  max: 100
+  step: 2
+  icon: mdi:watering-can  
+tempo_tela_tablet_sala_tv:
+  name: Tempo tela tablet TV
+  min: 0
+  max: 300
+  step: 5
+  icon: mdi:tablet
+tempo_tela_tablet_cozinha:
+  name: Tempo tela tablet Cozinha
+  min: 0
+  max: 300
+  step: 5
+  icon: mdi:tablet
+tempo_tela_tablet_andar_2:
+  name: Tempo tela tablet 2º Andar
+  min: 0
+  max: 300
+  step: 5
+  icon: mdi:tablet
+bateria_casa_soc_baixo:
+  name: Bateria Casa SOC Baixo
+  min: 20
+  max: 100
+  step: 5
+  icon: mdi:battery-alert-variant-outline  
+bateria_casa_soc_normal:
+  name: Bateria Casa SOC Normal
+  min: 20
+  max: 100
+  step: 5
+  icon: mdi:battery-arrow-up-outline  

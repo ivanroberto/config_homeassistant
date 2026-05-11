@@ -1,0 +1,7 @@
+substitutions:
+  device_name: "pow-sala-tv"
+  friendly_name: "Pow Sala TV"
+  wifi_ap_password: "ivanrsc125"
+
+packages:
+  base: !include packages/base-dual-r3.yaml

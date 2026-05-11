@@ -1,0 +1,94 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+python_script:
+
+recorder:
+  purge_keep_days: 370
+  exclude:
+    domains:
+      - automation
+      - update
+    entity_globs:
+      - sensor.*_last_seen
+      - sensor.*_linkquality
+      - sensor.sun*
+      - weather.*
+      - sensor.clock*
+      - sensor.date*
+      - sensor.glances*
+      - sensor.load_*m
+      - sensor.time*
+      - sensor.uptime*
+      - sensor.home*
+      - number.office*
+      - select.office*
+    entities:
+      - sensor.date
+      - sensor.last_boot # Comes from 'systemmonitor' sensor platform
+      - sun.sun # Don't record sun data
+      - sensor.home_assistant_v2_db
+      - weather.openweathermap
+    event_types:
+      - call_service # Don't record actions  
+      
+#discovery:
+#  enable:
+#    - lg_smart_device
+
+zeroconf:
+
+logger:
+  default: info
+
+# influxdb:
+#   database: homeassistant
+#   host: a0d7b954-influxdb
+#   port: 8087
+#   username: !secret influxdb_user
+#   password: !secret influxdb_password
+#   max_retries: 3
+#   default_measurement: state
+
+# Text to speech
+tts:
+  #Google (google_say)
+  - platform: google_translate
+    #language: "pt-br"
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 57600
+
+homeassistant:
+  #packages: !include_dir_merge_named packages/
+  packages: !include_dir_named packages
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+#sonoff:
+  #username: !secret sonoff_username
+  #password: !secret sonoff_password
+  #mode: auto
+  #reload: always #busca sempre novos sonoffs adcinados em sua conta sonoff
+  #debug: false # you will get HA notification with a link to the logs page
+  #scan_interval: "00:00:30" # (optional) default 5 minutes
+  #sensors: [temperature, humidity, power, current, voltage, rssi, energy]
+  #devices:
+    #pow_lava_loucas:
+      #name: Sonoff Pow
+      #force_update: True
+      #sensors: [temperature, humidity, power, current, voltage, rssi]
+
+input_boolean: !include inputs_booleans.yaml
+input_number: !include inputs_numbers.yaml
+input_datetime: !include inputs_datetimes.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+sensor: !include_dir_merge_list sensors/
+cloud: !include cloud.yaml
+irrigation_unlimited: !include config_irrigation_unlimited.yaml
+utility_meter: !include utilitymeter.yaml
+mqtt: !include mqtt.yaml
+template: !include template.yaml

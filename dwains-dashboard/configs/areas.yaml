@@ -1,0 +1,92 @@
+sala_de_estar:
+  icon: mdi:sofa
+  floor: '1'
+  disabled: false
+cozinha:
+  icon: mdi:stove
+  floor: '1'
+  disabled: false
+quarto:
+  icon: mdi:bed-king
+  floor: '2'
+  disabled: false
+jardim:
+  icon: mdi:flower
+  floor: '1'
+  disabled: false
+escritorio:
+  icon: mdi:chair-rolling
+  floor: '2'
+  disabled: false
+garagem:
+  icon: mdi:car
+  floor: '1'
+  disabled: false
+pergolado:
+  icon: ''
+  floor: '1'
+  disabled: false
+oficina:
+  icon: mdi:pipe-wrench
+  floor: '1'
+  disabled: false
+rua:
+  icon: mdi:bus-articulated-front
+  floor: '1'
+  disabled: false
+sala_jantar:
+  icon: mdi:table-furniture
+  floor: '1'
+  disabled: false
+area_servico:
+  icon: mdi:washing-machine
+  floor: '1'
+  disabled: false
+corredor_andar_2:
+  icon: ''
+  floor: '2'
+  disabled: false
+entrada_externa:
+  icon: ''
+  floor: '1'
+  disabled: false
+telhado:
+  icon: mdi:home-roof
+  floor: '3'
+  disabled: false
+corredor_externo:
+  icon: ''
+  floor: '1'
+  disabled: false
+quarto_fundos:
+  icon: ''
+  floor: '2'
+  disabled: false
+lavabo:
+  icon: mdi:toilet
+  floor: '1'
+  disabled: false
+sala_fundos:
+  icon: ''
+  floor: '1'
+  disabled: false
+suite_convidados:
+  icon: mdi:bed-double
+  floor: '2'
+  disabled: false
+entrada_casa:
+  icon: mdi:home-import-outline
+  floor: '1'
+  disabled: false
+ante_sala:
+  icon: ''
+  floor: '1'
+  disabled: false
+varanda:
+  icon: mdi:balcony
+  floor: '2'
+  disabled: false
+escada:
+  icon: mdi:stairs
+  floor: ''
+  disabled: false

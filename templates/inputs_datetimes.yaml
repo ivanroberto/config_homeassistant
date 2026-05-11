@@ -1,0 +1,9 @@
+hora_luzes_outomatico_off:
+  name: Hora luzes automatico off
+  has_date: false
+  has_time: true
+
+hora_luzes_outomatico_on:
+  name: Hora luzes automatico on
+  has_date: false
+  has_time: true

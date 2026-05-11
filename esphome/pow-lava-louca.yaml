@@ -1,0 +1,7 @@
+substitutions:
+  device_name: "pow-lava-loucas"
+  friendly_name: "Pow Lava Loucas"
+  wifi_ap_password: "ivanrsc125"
+
+packages:
+  base: !include packages/base-pow-r2.yaml

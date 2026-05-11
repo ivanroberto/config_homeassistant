@@ -1,0 +1,90 @@
+#==================
+#=== Time and Date
+#==================
+- platform: time_date
+  display_options:
+    - "time"
+    - "date"
+
+- platform: command_line
+  name: CPU Temperature
+  command: "cat /sys/class/thermal/thermal_zone0/temp"
+  unit_of_measurement: "°C"
+  scan_interval: 60
+  value_template: "{{ value | multiply(0.001) | round(1) }}"
+
+################################################################################
+############################### NSPanel Cozinha ################################
+
+################################################################################
+
+# - platform: history_stats
+#   name: Chuva Balanca Contador
+#   entity_id: binary_sensor.pluviometro_water_leak
+#   state: "off"
+#   type: count
+#   start: '{{ today_at("00:00") }}'
+#   end: "{{ now() }}"
+
+# - platform: template
+#   sensors:
+#     chuva_hoje_local:
+#       friendly_name: Chuva Hoje Local
+#       unit_of_measurement: mm
+#       value_template: >-
+#         {% set count = states('sensor.chuva_balanca_contador') | int(0) %}
+#         {% set mm_per_pulse = 0.25000 %}
+#         {% set mm = count * mm_per_pulse %}
+#         {{ mm|round(2, 'floor') }}
+#     ajuste_irrigacao:
+#       friendly_name: Ajuste Irrigacao
+#       #unit_of_measurement: "%"
+#       value_template: "{{ state_attr('binary_sensor.irrigation_unlimited_c1_z1', 'adjustment') }}"
+#     energia_utilizada_hoje:
+#       friendly_name: Energia Utilizada Hoje
+#       unit_of_measurement: "kWh"
+#       value_template:
+#         "{{ ((states('sensor.consumo_concessionaria_hoje') | float(0))+states('sensor.medidor_producao_solar_energy_today') | float(0))
+#         - (states('sensor.injecao_solar_hoje') | float(0)) }}"
+
+
+
+- platform: command_line
+  name: cpu_temperatura
+  command: "cat /sys/class/thermal/thermal_zone2/temp"
+  unit_of_measurement: "°C"
+  value_template: "{{ value | multiply(0.001) | round(0) }}"
+# - platform: systemmonitor
+#   resources:
+#     - type: disk_use_percent
+#       arg: /config
+#     - type: disk_use
+#     - type: disk_free
+#     - type: memory_use_percent
+#     - type: memory_use
+#     - type: memory_free
+#     - type: swap_use_percent
+#     - type: swap_use
+#     - type: swap_free
+#     - type: load_1m
+#     - type: load_5m
+#     - type: load_15m
+#     # - type: network_in
+#     #   arg: eth0
+#     # - type: network_out
+#     #   arg: eth0
+#     # - type: throughput_network_in
+#     #   arg: eth0
+#     # - type: throughput_network_out
+#     #   arg: eth0
+#     # - type: packets_in
+#     #   arg: eth0
+#     # - type: packets_out
+#     #   arg: eth0
+#     # - type: ipv4_address
+#     #   arg: eth0
+#     # - type: ipv6_address
+#     #   arg: eth0
+#     - type: processor_use
+#     - type: processor_temperature
+#     - type: last_boot

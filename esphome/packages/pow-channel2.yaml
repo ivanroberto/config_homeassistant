@@ -1,0 +1,401 @@
+esphome:
+  on_boot:
+    priority: -100
+    then:
+      - delay: 3s
+      - number.set:
+          id: rele2_max_on_number
+          value: !lambda 'return (float)id(rele2_max_on);'
+      - number.set:
+          id: current_2_cal_number
+          value: !lambda 'return id(current_2_cal);'
+      - number.set:
+          id: overpower_2_threshold_number
+          value: !lambda 'return id(overpower_2_threshold);'
+      - number.set:
+          id: overpower_2_time_number
+          value: !lambda 'return (float)id(overpower_2_time);'
+      # Aplicar power-on state — só age se for Always_On ou Always_Off
+      # Restore_Last_State: não faz nada — o GPIO já restaurou o estado da flash
+      - if:
+          condition:
+            lambda: 'return id(rele2last).current_option() == "Always_On";'
+          then:
+            - switch.turn_on: rele2
+      - if:
+          condition:
+            lambda: 'return id(rele2last).current_option() == "Always_Off";'
+          then:
+            - switch.turn_off: rele2
+      - delay: 500ms
+      - if:
+          condition:
+            switch.is_on: rele2
+          then:
+            - globals.set:
+                id: rele2On
+                value: 'true'
+            - globals.set:
+                id: rele2_on_time
+                value: !lambda 'return (int)id(uptime_seconds).state;'
+          else:
+            - globals.set:
+                id: rele2On
+                value: 'false'
+            - globals.set:
+                id: rele2_on_time
+                value: '0'
+
+globals:
+  - id: rele2On
+    type: bool
+    restore_value: yes
+  - id: rele2_on_time
+    type: int
+    restore_value: no
+    initial_value: '0'
+  - id: rele2_max_on
+    type: int
+    restore_value: yes
+    initial_value: '0'
+  - id: current_2_cal
+    type: float
+    restore_value: yes
+    initial_value: '0.0'
+  - id: energy_yesterday_2
+    type: float
+    restore_value: yes
+    initial_value: '0.0'
+  - id: energy_total_2
+    type: float
+    restore_value: yes
+    initial_value: '0.0'
+  - id: energy_raw_last_2
+    type: float
+    restore_value: no
+    initial_value: '0.0'
+  - id: overpower_2_enabled
+    type: bool
+    restore_value: yes
+    initial_value: 'false'
+  - id: overpower_2_threshold
+    type: float
+    restore_value: yes
+    initial_value: '0.0'
+  - id: overpower_2_time
+    type: int
+    restore_value: yes
+    initial_value: '5'
+  - id: overpower_2_triggered_at
+    type: int
+    restore_value: no
+    initial_value: '0'
+
+script:
+  - id: rele2statechanged
+    mode: restart
+    then:
+      - if:
+          condition:
+            switch.is_on: rele2
+          then:
+            - globals.set:
+                id: rele2On
+                value: 'true'
+            - globals.set:
+                id: rele2_on_time
+                value: !lambda 'return (int)id(uptime_seconds).state;'
+            - globals.set:
+                id: overpower_2_triggered_at
+                value: '0'
+          else:
+            - globals.set:
+                id: rele2On
+                value: 'false'
+            - globals.set:
+                id: rele2_on_time
+                value: '0'
+            - globals.set:
+                id: overpower_2_triggered_at
+                value: '0'
+            - sensor.template.publish:
+                id: current_2_calibrated
+                state: 0.0
+            - sensor.template.publish:
+                id: power_2_calibrated
+                state: 0.0
+            - sensor.template.publish:
+                id: power_va_2
+                state: 0.0
+            - sensor.template.publish:
+                id: power_pf_2
+                state: 0.0
+
+sensor:
+  - platform: template
+    name: "Corrente 2"
+    id: current_2_calibrated
+    unit_of_measurement: A
+    accuracy_decimals: 2
+    device_class: current
+    state_class: measurement
+    update_interval: 5s
+    lambda: |-
+      if (!id(rele2).state) return 0.0f;
+      return id(current_2_raw).state + id(current_2_cal);
+    filters:
+      - lambda: 'return (x < 0.05f) ? 0.0f : x;'
+      - delta: 0.01
+
+  - platform: template
+    name: "Potência W 2"
+    id: power_2_calibrated
+    unit_of_measurement: W
+    accuracy_decimals: 1
+    device_class: power
+    state_class: measurement
+    update_interval: 5s
+    lambda: |-
+      if (!id(rele2).state) return 0.0f;
+      return id(power_2_raw).state;
+    filters:
+      - lambda: 'return (x < 1.0f) ? 0.0f : x;'
+      - delta: 1.0
+
+  - platform: template
+    name: "Potência VA 2"
+    id: power_va_2
+    unit_of_measurement: VA
+    accuracy_decimals: 1
+    state_class: measurement
+    update_interval: 5s
+    lambda: |-
+      if (!id(rele2).state) return 0.0f;
+      float v = id(voltage_raw).state + id(voltage_cal);
+      float i = id(current_2_raw).state + id(current_2_cal);
+      return v * i;
+    filters:
+      - lambda: 'return (x < 1.0f) ? 0.0f : x;'
+      - delta: 1.0
+
+  - platform: template
+    name: "Fator de Potência 2"
+    id: power_pf_2
+    accuracy_decimals: 2
+    device_class: power_factor
+    state_class: measurement
+    update_interval: 5s
+    lambda: |-
+      if (!id(rele2).state) return {};
+      float v = id(voltage_raw).state + id(voltage_cal);
+      float i = id(current_2_raw).state + id(current_2_cal);
+      float s = v * i;
+      if (s < 0.1f) return {};
+      float pf = id(power_2_raw).state / s;
+      if (pf > 1.0f) pf = 1.0f;
+      return pf;
+    filters:
+      - delta: 0.01
+
+  - platform: total_daily_energy
+    name: "Energia Hoje 2"
+    id: energy_today_2_sensor
+    power_id: power_2_calibrated
+    unit_of_measurement: kWh
+    accuracy_decimals: 3
+    device_class: energy
+    state_class: total_increasing
+    filters:
+      - multiply: 0.001
+
+  - platform: template
+    name: "Energia Ontem 2"
+    id: energy_yesterday_2_sensor
+    unit_of_measurement: kWh
+    accuracy_decimals: 3
+    device_class: energy
+    state_class: total_increasing
+    update_interval: 60s
+    lambda: 'return id(energy_yesterday_2);'
+    filters:
+      - delta: 0.001
+
+  - platform: template
+    name: "Energia Total 2"
+    id: energy_total_2_sensor
+    unit_of_measurement: kWh
+    accuracy_decimals: 3
+    device_class: energy
+    state_class: total_increasing
+    update_interval: 30s
+    lambda: 'return id(energy_total_2);'
+    filters:
+      - delta: 0.001
+
+select:
+  - platform: template
+    name: "Rele 2 PowerOnState"
+    optimistic: true
+    restore_value: true
+    initial_option: "Always_Off"
+    options: ["Restore_Last_State", "Always_Off", "Always_On"]
+    id: rele2last
+    entity_category: config
+
+number:
+  - platform: template
+    name: "Rele 2 Tempo Máx. (s)"
+    id: rele2_max_on_number
+    min_value: 0
+    max_value: 86400
+    step: 1
+    mode: box
+    optimistic: true
+    entity_category: config
+    set_action:
+      - globals.set:
+          id: rele2_max_on
+          value: !lambda 'return (int)x;'
+
+  - platform: template
+    name: "Calibração Corrente 2 (A)"
+    id: current_2_cal_number
+    min_value: -5.0
+    max_value: 5.0
+    step: 0.1
+    mode: box
+    optimistic: true
+    entity_category: config
+    set_action:
+      - globals.set:
+          id: current_2_cal
+          value: !lambda 'return x;'
+
+  - platform: template
+    name: "Sobrepotência 2 Limite (W)"
+    id: overpower_2_threshold_number
+    min_value: 0
+    max_value: 5000
+    step: 1
+    mode: box
+    optimistic: true
+    entity_category: config
+    set_action:
+      - globals.set:
+          id: overpower_2_threshold
+          value: !lambda 'return x;'
+      - globals.set:
+          id: overpower_2_triggered_at
+          value: '0'
+
+  - platform: template
+    name: "Sobrepotência 2 Tempo (s)"
+    id: overpower_2_time_number
+    min_value: 0
+    max_value: 60
+    step: 1
+    mode: box
+    optimistic: true
+    entity_category: config
+    set_action:
+      - globals.set:
+          id: overpower_2_time
+          value: !lambda 'return (int)x;'
+      - globals.set:
+          id: overpower_2_triggered_at
+          value: '0'
+
+switch:
+  - platform: template
+    name: "Todos"
+    id: rele_todos
+    optimistic: true
+    restore_mode: DISABLED
+    icon: mdi:toggle-switch
+    on_turn_on:
+      then:
+        - switch.turn_on: rele1
+        - switch.turn_on: rele2
+    on_turn_off:
+      then:
+        - switch.turn_off: rele1
+        - switch.turn_off: rele2
+
+  - platform: template
+    name: "Proteção Sobrepotência 2"
+    id: overpower_2_protection_switch
+    optimistic: true
+    restore_mode: DISABLED
+    icon: mdi:flash-alert
+    entity_category: config
+    lambda: 'return id(overpower_2_enabled);'
+    turn_on_action:
+      - globals.set:
+          id: overpower_2_enabled
+          value: 'true'
+      - globals.set:
+          id: overpower_2_triggered_at
+          value: '0'
+    turn_off_action:
+      - globals.set:
+          id: overpower_2_enabled
+          value: 'false'
+      - globals.set:
+          id: overpower_2_triggered_at
+          value: '0'
+
+interval:
+  - interval: 1s
+    then:
+      - if:
+          condition:
+            - switch.is_on: rele2
+            - lambda: 'return (id(rele2_max_on) > 0) && (((int)id(uptime_seconds).state - id(rele2_on_time)) >= id(rele2_max_on));'
+          then:
+            - lambda: |-
+                if (id(timeout_log_enabled)) {
+                  ESP_LOGI("rele_timeout", "Rele 2 desligado por timeout (max=%d s, elapsed=%d s)",
+                    id(rele2_max_on), ((int)id(uptime_seconds).state - id(rele2_on_time)));
+                }
+            - switch.turn_off: rele2
+      - if:
+          condition:
+            lambda: |-
+              return id(overpower_2_enabled)
+                && id(rele2).state
+                && (id(overpower_2_threshold) > 0.0f)
+                && (id(power_2_raw).state > id(overpower_2_threshold));
+          then:
+            - lambda: |-
+                if (id(overpower_2_triggered_at) == 0) {
+                  id(overpower_2_triggered_at) = (int)id(uptime_seconds).state;
+                } else if (((int)id(uptime_seconds).state - id(overpower_2_triggered_at)) >= id(overpower_2_time)) {
+                  ESP_LOGW("protection", "Rele 2 desligado por sobrepotencia (%.1f W > %.1f W, %d s)",
+                    id(power_2_raw).state, id(overpower_2_threshold),
+                    ((int)id(uptime_seconds).state - id(overpower_2_triggered_at)));
+                  id(rele2).turn_off();
+                  id(overpower_2_triggered_at) = 0;
+                }
+          else:
+            - lambda: 'id(overpower_2_triggered_at) = 0;'
+      - if:
+          condition:
+            lambda: |-
+              return id(voltage_protection_enabled)
+                && id(rele2).state
+                && !std::isnan(id(voltage_raw).state)
+                && (id(voltage_raw).state < id(undervoltage_threshold)
+                    || id(voltage_raw).state > id(overvoltage_threshold));
+          then:
+            - lambda: |-
+                if (id(voltage_fault_triggered_at) == 0) {
+                  id(voltage_fault_triggered_at) = (int)id(uptime_seconds).state;
+                } else if (((int)id(uptime_seconds).state - id(voltage_fault_triggered_at)) >= id(voltage_protection_time)) {
+                  ESP_LOGW("protection", "Rele 2 desligado por tensao fora da faixa (%.1f V, %.1f-%.1f V, %d s)",
+                    id(voltage_raw).state, id(undervoltage_threshold), id(overvoltage_threshold),
+                    ((int)id(uptime_seconds).state - id(voltage_fault_triggered_at)));
+                  if (id(rele2).state) id(rele2).turn_off();
+                  id(voltage_fault_triggered_at) = 0;
+                }
+          else:
+            - lambda: 'id(voltage_fault_triggered_at) = 0;'

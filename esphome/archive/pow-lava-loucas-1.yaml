@@ -1,0 +1,7 @@
+substitutions:
+  device_name: "pow-lava-loucas1"
+  friendly_name: "PowLavaLoucas1"
+  wifi_ap_password: "change_me"
+
+packages:
+  base: !include packages/base-pow-r2.yaml

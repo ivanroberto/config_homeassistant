@@ -1,0 +1,7 @@
+substitutions:
+  device_name: "pow-luz-cozinha"
+  friendly_name: "Pow Luzes Cozinha"
+  wifi_ap_password: "ivanrsc125"
+
+packages:
+  base: !include packages/base-dual-r3.yaml

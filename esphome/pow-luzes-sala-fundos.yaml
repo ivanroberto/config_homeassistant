@@ -1,0 +1,7 @@
+substitutions:
+  device_name: "pow-luzes-sala-fundos"
+  friendly_name: "Pow Luzes Sala Fundos"
+  wifi_ap_password: "ivanrsc125"
+
+packages:
+  base: !include packages/base-dual-r3.yaml

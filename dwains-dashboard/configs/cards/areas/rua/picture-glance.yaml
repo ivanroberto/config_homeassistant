@@ -1,0 +1,14 @@
+camera_image: camera.rua_sobe_mainstream
+camera_view: auto
+col_span: '1'
+col_span_lg: '1'
+col_span_xl: '1'
+entities:
+- entity: camera.rua_sobe_mainstream
+image: https://demo.home-assistant.io/stub_config/kitchen.png
+position: top
+row_span: '1'
+row_span_lg: '1'
+row_span_xl: '1'
+title: Rua Sobe
+type: picture-glance

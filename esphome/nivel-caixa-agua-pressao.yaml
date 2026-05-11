@@ -1,0 +1,61 @@
+esphome:
+  name: nivel-caixa-agua-pressao
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  min_auth_mode: WPA2
+  
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Nivel Caixa Agua"
+    password: "ivanrsc125"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+  platform: esphome
+
+binary_sensor:
+  - platform: status
+    name: "Nivel Caixa Status"
+    
+#Tank Depth = TD al the way from the cover where the sensor is mounted to the bottom
+#Sensor Value = x this is will stay the same as this is the reading from the sensor
+#Excluded Distance = EX which is the distance I have on top from the sensor which is mounted to the cover to the highest level the water can reach
+#     return ((((x*100)-EX)-(TD-EX))/(TD-EX))*-100
+#the same for the Water Tank Equation but you have the Tank Capacity in Liters = TC as for mine I have a 1000 Liters tank.
+#     return ((((x*100)-EX)-(TD-EX))/(TD-EX))*-TC
+
+sensor:
+  - platform: adc
+    name: "nivel_caixa_agua"
+    icon: "mdi:cup-water"
+    pin: GPIO34
+    accuracy_decimals: 0
+    update_interval: 1s
+    attenuation: 11dB
+    unit_of_measurement: "%"
+    filters:
+      - multiply: 2.0  # The voltage divider requires us to multiply by 2
+      - median:
+          window_size: 60
+          send_every: 60
+          send_first_at: 5
+      - calibrate_linear:
+        - 2.02 -> 100.00
+        - 0.30 -> 0.00
+      # # - lambda: if (x < 0) return 0; else if(x > 100) return 100; else return (x);
+      - lambda: if (x < 0) return 0; else return (x);
+    

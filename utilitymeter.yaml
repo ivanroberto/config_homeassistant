@@ -1,0 +1,12 @@
+producao_solar_hora:
+  name: Producao Solar Hora
+  source: sensor.medidor_producao_solar_energy_total
+  cycle: hourly
+injecao_solar_hoje:
+  name: Injeção Solar Hoje
+  source: sensor.energia_injetada
+  cycle: daily
+consumo_concessionaria_hoje:
+  name: Consumo Concessionaria Hoje
+  source: sensor.energia_consumida
+  cycle: daily

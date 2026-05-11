@@ -1,0 +1,167 @@
+- id: '1656534150434'
+  alias: tocar likes ivan
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: media_player.select_source
+    data:
+      source: cozinha
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.shuffle_set
+    data:
+      shuffle: true
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.play_media
+    data:
+      media_content_id: LM
+      media_content_type: playlist
+    target:
+      entity_id: media_player.ytube_music_player
+  mode: single
+- id: '1656534572098'
+  alias: tocar MIX3 ivan
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: media_player.select_source
+    data:
+      source: cozinha
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.shuffle_set
+    data:
+      shuffle: true
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.play_media
+    data:
+      media_content_id: RDTMAK5uy_k5UUl0lmrrfrjMpsT0CoMpdcBz1ruAO1k
+      media_content_type: playlist
+    target:
+      entity_id: media_player.ytube_music_player
+  mode: single
+- id: '1656534659003'
+  alias: tocar SUPERMIX ivan
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: media_player.select_source
+    data:
+      source: cozinha
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.shuffle_set
+    data:
+      shuffle: true
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.play_media
+    data:
+      media_content_id: RDTMAK5uy_kset8DisdE7LSD4TNjEVvrKRTmG7a56sY
+      media_content_type: playlist
+    target:
+      entity_id: media_player.ytube_music_player
+  mode: single
+- id: '1656534725587'
+  alias: tocar MIX7 ivan
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: media_player.select_source
+    data:
+      source: cozinha
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.shuffle_set
+    data:
+      shuffle: true
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.play_media
+    data:
+      media_content_id: RDTMAK5uy_lfhhWWw9v71CPrR7MRMHgZzbH6Vku9iJc
+      media_content_type: playlist
+    target:
+      entity_id: media_player.ytube_music_player
+  mode: single
+- id: '1656536728963'
+  alias: tocar FESTA ivan
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: media_player.select_source
+    data:
+      source: cozinha
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.shuffle_set
+    data:
+      shuffle: true
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.play_media
+    data:
+      media_content_id: RDCLAK5uy_n3HGLGTjb_X-mnyCA66JNINojrt41W5K0
+      media_content_type: playlist
+    target:
+      entity_id: media_player.ytube_music_player
+  mode: single
+- id: '1656537651754'
+  alias: tocar FESTA ROCK ivan
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: media_player.select_source
+    data:
+      source: cozinha
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.shuffle_set
+    data:
+      shuffle: true
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.play_media
+    data:
+      media_content_id: PLK9xwTK6_L9mNEg3MTi8kfBO1QwKYjVB9
+      media_content_type: playlist
+    target:
+      entity_id: media_player.ytube_music_player
+  mode: single
+- id: '1700602171816'
+  alias: Restart VsCode Memory Leak
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.studio_code_server_memory_percent
+    above: 20
+  action:
+  - service: hassio.addon_restart
+    data:
+      addon: a0d7b954_vscode
+  mode: single
+- id: '1777920917535'
+  alias: Reativar proteção automática (delay)
+  description: Quando proteger_numeros for desativado, aguarda X minutos e reativa
+    se ainda estiver desativado.
+  triggers:
+  - entity_id: input_boolean.proteger_numeros
+    to: 'off'
+    trigger: state
+  actions:
+  - delay: 00:05:00
+  - condition: state
+    entity_id: input_boolean.proteger_numeros
+    state: 'off'
+  - target:
+      entity_id: input_boolean.proteger_numeros
+    action: input_boolean.turn_on
+  mode: restart

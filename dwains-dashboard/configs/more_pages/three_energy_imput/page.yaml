@@ -1,0 +1,213 @@
+blueprint: three_energy_imput.yaml
+card:
+  cards:
+  - cards:
+    - name: $01_24_hours_box_title$
+      styles:
+        card:
+        - text-transform: uppercase
+        - color: var(--dwains-theme-accent)
+        - font-size: 125%
+        - border-radius: 0%
+        - font-weight: 100
+        - letter-spacing: 10px
+        - height: 70px
+      type: custom:button-card
+    - cards:
+      - aspect_ratio: 1/1.41
+        color: rgb(41, 158, 200)
+        entity: $04_24_hours_first_entity$
+        icon: $03_24_hours_first_entity_icon$
+        name: $02_24_hours_first_entity_name$
+        show_state: true
+        size: 40%
+        state:
+        - color: var(--disabled-text-color)
+          value: 'off'
+        - color: rgb(41, 158, 194)
+          value: 'on'
+        styles:
+          name:
+          - text-transform: uppercase
+          - font-size: 10px
+          state:
+          - text-transform: uppercase
+          - font-size: 15px
+          - font: bold
+        type: custom:button-card
+      - aspect_ratio: 1/1.41
+        color: rgb(41, 158, 200)
+        entity: $07_24_hours_second_entity$
+        icon: $06_24_hours_second_entity_icon$
+        name: $05_24_hours_second_entity_name$
+        show_state: true
+        size: 40%
+        state:
+        - color: var(--disabled-text-color)
+          value: 'off'
+        - color: rgb(41, 158, 194)
+          value: 'on'
+        styles:
+          name:
+          - text-transform: uppercase
+          - font-size: 10px
+          state:
+          - text-transform: uppercase
+          - font-size: 15px
+          - font: bold
+        type: custom:button-card
+      - aspect_ratio: 1/1.41
+        color: rgb(41, 158, 200)
+        entity: $10_24_hours_third_entity$
+        icon: $09_24_hours_third_entity_icon$
+        name: $08_24_hours_third_entity_name$
+        show_state: true
+        size: 40%
+        state:
+        - color: var(--disabled-text-color)
+          value: 'off'
+        - color: rgb(41, 158, 194)
+          value: 'on'
+        styles:
+          name:
+          - text-transform: uppercase
+          - font-size: 10px
+          state:
+          - text-transform: uppercase
+          - font-size: 15px
+          - font: bold
+        type: custom:button-card
+      type: horizontal-stack
+    - name: $11_30_days_box_title$
+      styles:
+        card:
+        - text-transform: uppercase
+        - color: var(--dwains-theme-accent)
+        - font-size: 125%
+        - border-radius: 0%
+        - font-weight: 100
+        - letter-spacing: 10px
+        - height: 70px
+      type: custom:button-card
+    - cards:
+      - aspect_ratio: 1/1.41
+        color: rgb(41, 158, 200)
+        entity: $14_30_days_first_entity$
+        icon: $13_30_days_first_entity_icon$
+        name: $12_30_days_first_entity_name$
+        show_state: true
+        size: 40%
+        state:
+        - color: var(--disabled-text-color)
+          value: 'off'
+        - color: rgb(41, 158, 194)
+          value: 'on'
+        styles:
+          name:
+          - text-transform: uppercase
+          - font-size: 10px
+          state:
+          - text-transform: uppercase
+          - font-size: 15px
+          - font: bold
+        type: custom:button-card
+      - aspect_ratio: 1/1.41
+        color: rgb(41, 158, 200)
+        entity: $17_30_days_second_entity$
+        icon: $16_30_days_second_entity_icon$
+        name: $15_30_days_second_entity_name$
+        show_state: true
+        size: 40%
+        state:
+        - color: var(--disabled-text-color)
+          value: 'off'
+        - color: rgb(41, 158, 194)
+          value: 'on'
+        styles:
+          name:
+          - text-transform: uppercase
+          - font-size: 10px
+          state:
+          - text-transform: uppercase
+          - font-size: 15px
+          - font: bold
+        type: custom:button-card
+      - aspect_ratio: 1/1.41
+        color: rgb(41, 158, 200)
+        entity: $20_30_days_third_entity$
+        icon: $19_30_days_third_entity_icon$
+        name: $18_30_days_third_entity_name$
+        show_state: true
+        size: 40%
+        state:
+        - color: var(--disabled-text-color)
+          value: 'off'
+        - color: rgb(41, 158, 194)
+          value: 'on'
+        styles:
+          name:
+          - text-transform: uppercase
+          - font-size: 10px
+          state:
+          - text-transform: uppercase
+          - font-size: 15px
+          - font: bold
+        type: custom:button-card
+      type: horizontal-stack
+    item_classes: col-xs-12 col-sm-4
+    type: vertical-stack
+  - cards:
+    - name: $21_graphic_name$
+      styles:
+        card:
+        - text-transform: uppercase
+        - color: var(--dwains-theme-accent)
+        - font-size: 125%
+        - border-radius: 0%
+        - font-weight: 100
+        - letter-spacing: 10px
+        - height: 50px
+      type: custom:button-card
+    - days_to_show: $28_graphic_days_to_show$
+      entities:
+      - entity: $23_graphic_first_entity$
+        name: $22_graphic_first_entity_name$
+      - entity: $25_graphic_second_entity$
+        name: $24_graphic_second_entity_name$
+      - entity: $27_graphic_third_entity$
+        name: $26_graphic_third_entity_name$
+      type: statistics-graph
+    item_classes: col-xs-12 col-sm-8
+    type: vertical-stack
+  items_classes: col-xs-12
+  type: custom:dwains-flexbox-card
+data:
+  01_24_hours_box_title: Telecom
+  02_24_hours_first_entity_name: sensor.pow_telecom_energy_today
+  03_24_hours_first_entity_icon: 03_24_hours_first_entity_icon
+  04_24_hours_first_entity: 04_24_hours_first_entity
+  05_24_hours_second_entity_name: 05_24_hours_second_entity_name
+  06_24_hours_second_entity_icon: 06_24_hours_second_entity_icon
+  07_24_hours_second_entity: 07_24_hours_second_entity
+  08_24_hours_third_entity_name: 08_24_hours_third_entity_name
+  09_24_hours_third_entity_icon: 09_24_hours_third_entity_icon
+  10_24_hours_third_entity: 10_24_hours_third_entity
+  11_30_days_box_title: 11_30_days_box_title
+  12_30_days_first_entity_name: 12_30_days_first_entity_name
+  13_30_days_first_entity_icon: 13_30_days_first_entity_icon
+  14_30_days_first_entity: 14_30_days_first_entity
+  15_30_days_second_entity_name: 15_30_days_second_entity_name
+  16_30_days_second_entity_icon: 16_30_days_second_entity_icon
+  17_30_days_second_entity: 17_30_days_second_entity
+  18_30_days_third_entity_name: 18_30_days_third_entity_name
+  19_30_days_third_entity_icon: 19_30_days_third_entity_icon
+  20_30_days_third_entity: 20_30_days_third_entity
+  21_graphic_name: 21_graphic_name
+  22_graphic_first_entity_name: 22_graphic_first_entity_name
+  23_graphic_first_entity: 23_graphic_first_entity
+  24_graphic_second_entity_name: 24_graphic_second_entity_name
+  25_graphic_second_entity: 25_graphic_second_entity
+  26_graphic_third_entity_name: 26_graphic_third_entity_name
+  27_graphic_third_entity: 27_graphic_third_entity
+  28_graphic_days_to_show: 28_graphic_days_to_show
+type: custom:dwains-blueprint-card

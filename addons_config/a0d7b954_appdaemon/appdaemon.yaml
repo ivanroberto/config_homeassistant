@@ -1,0 +1,27 @@
+---
+secrets: /homeassistant/secrets.yaml
+appdaemon:
+  latitude: -19.879610492354857
+  longitude: -44.0004806681401
+  elevation: 850
+  time_zone: America/Sao_Paulo
+  app_dir: /homeassistant/appdaemon/apps/ # !!! This is really important for AppDaemon HA Addon >= 15
+  plugins:
+    HASS:
+      type: hass
+      token: !env_var SUPERVISOR_TOKEN
+    MQTT:
+      type: mqtt
+      namespace: mqtt
+      client_id: "appdaemon"
+      #client_host: core-mosquitto.local.hass.io # This should work if you are using supervised HomeAssistant; if not use the IP Address instead.
+      client_host: 192.168.0.15
+      client_port: 1883
+      client_user: !secret mqtt_user
+      client_password: !secret mqtt_password
+      client_topics: NONE
+http:
+  url: http://0.0.0.0:5050
+admin:
+api:
+hadashboard:

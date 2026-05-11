@@ -1,0 +1,31 @@
+#==================
+#=== Time and Date
+#==================
+- platform: time_date
+  display_options:
+    - "time"
+    - "date"
+
+- platform: command_line
+  name: CPU Temperature
+  command: "cat /sys/class/thermal/thermal_zone0/temp"
+  unit_of_measurement: "°C"
+  scan_interval: 60
+  value_template: "{{ value | multiply(0.001) | round(1) }}"
+  
+
+# - name: "Casa Potência Total"
+#   unique_id: "casa_potencia_total"
+#   unit_of_measurement: "W"
+#   device_class: power
+#   state_class: measurement
+#   state: >-
+#     {{ ([ states('sensor.energia_casa_phase_a_active_power'),
+#           states('sensor.energia_casa_phase_b_active_power'),
+#           states('sensor.energia_casa_phase_c_active_power') ]
+#           | map('float') | sum) | round(2) }}
+#   availability: >-
+#     {{ not 'unavailable' in
+#       [ states('sensor.energia_casa_phase_a_active_power'),
+#          states('sensor.energia_casa_phase_b_active_power'),
+#          states('sensor.energia_casa_phase_c_active_power') ] }}

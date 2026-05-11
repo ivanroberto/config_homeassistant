@@ -1,0 +1,928 @@
+2025-11-06 16:54:29.671 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration average which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-11-06 16:54:29.672 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-11-06 16:54:29.673 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration roborock which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-11-06 16:54:29.673 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration nodered which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-11-06 16:54:29.674 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration ytube_music_player which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-11-06 16:54:29.674 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration thermal_comfort which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-11-06 16:54:29.675 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration solarman which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-11-06 16:54:29.675 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration irrigation_unlimited which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-11-06 16:54:29.676 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration sonoff which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-11-06 16:54:29.676 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration webrtc which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-11-06 16:54:29.677 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration localtuya which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-11-06 16:54:30.439 INFO (MainThread) [homeassistant.setup] Setup of domain http took 0.10 seconds
+2025-11-06 16:54:30.439 INFO (MainThread) [homeassistant.setup] Setup of domain system_log took 0.10 seconds
+2025-11-06 16:54:30.439 INFO (MainThread) [homeassistant.setup] Setup of domain logger took 0.10 seconds
+2025-11-06 16:54:30.439 INFO (MainThread) [homeassistant.setup] Setting up websocket_api
+2025-11-06 16:54:30.439 INFO (MainThread) [homeassistant.setup] Setup of domain websocket_api took 0.00 seconds
+2025-11-06 16:54:30.439 INFO (MainThread) [homeassistant.setup] Setting up network
+2025-11-06 16:54:30.441 INFO (MainThread) [homeassistant.setup] Setup of domain network took 0.00 seconds
+2025-11-06 16:54:30.441 INFO (MainThread) [homeassistant.bootstrap] Setting up stage frontend: {'frontend'}; already set up: {}
+Dependencies: {'repairs', 'lovelace', 'auth', 'api', 'diagnostics', 'device_automation', 'search', 'onboarding', 'config', 'file_upload'}; already set up: {'http', 'system_log', 'websocket_api'}
+2025-11-06 16:54:30.441 INFO (MainThread) [homeassistant.setup] Setting up repairs
+2025-11-06 16:54:30.442 INFO (MainThread) [homeassistant.setup] Setup of domain repairs took 0.00 seconds
+2025-11-06 16:54:30.442 INFO (MainThread) [homeassistant.setup] Setting up auth
+2025-11-06 16:54:30.442 INFO (MainThread) [homeassistant.setup] Setup of domain auth took 0.00 seconds
+2025-11-06 16:54:30.442 INFO (MainThread) [homeassistant.setup] Setting up onboarding
+2025-11-06 16:54:30.442 INFO (MainThread) [homeassistant.setup] Setup of domain onboarding took 0.00 seconds
+2025-11-06 16:54:30.443 INFO (MainThread) [homeassistant.setup] Setting up lovelace
+2025-11-06 16:54:30.443 INFO (MainThread) [homeassistant.setup] Setting up api
+2025-11-06 16:54:30.444 INFO (MainThread) [homeassistant.setup] Setup of domain api took 0.00 seconds
+2025-11-06 16:54:30.444 INFO (MainThread) [homeassistant.setup] Setting up config
+2025-11-06 16:54:30.445 INFO (MainThread) [homeassistant.setup] Setup of domain config took 0.00 seconds
+2025-11-06 16:54:30.445 INFO (MainThread) [homeassistant.setup] Setting up device_automation
+2025-11-06 16:54:30.445 INFO (MainThread) [homeassistant.setup] Setup of domain device_automation took 0.00 seconds
+2025-11-06 16:54:30.445 INFO (MainThread) [homeassistant.setup] Setting up diagnostics
+2025-11-06 16:54:30.446 INFO (MainThread) [homeassistant.setup] Setup of domain diagnostics took 0.00 seconds
+2025-11-06 16:54:30.446 INFO (MainThread) [homeassistant.setup] Setting up file_upload
+2025-11-06 16:54:30.446 INFO (MainThread) [homeassistant.setup] Setup of domain file_upload took 0.00 seconds
+2025-11-06 16:54:30.446 INFO (MainThread) [homeassistant.setup] Setting up search
+2025-11-06 16:54:30.446 INFO (MainThread) [homeassistant.setup] Setup of domain search took 0.00 seconds
+2025-11-06 16:54:30.447 INFO (MainThread) [homeassistant.setup] Setup of domain lovelace took 0.00 seconds
+2025-11-06 16:54:30.447 INFO (MainThread) [homeassistant.setup] Setting up frontend
+2025-11-06 16:54:30.451 INFO (MainThread) [homeassistant.setup] Setup of domain frontend took 0.00 seconds
+2025-11-06 16:54:30.451 INFO (MainThread) [homeassistant.bootstrap] Setting up stage recorder: {'recorder'}; already set up: {}
+Dependencies: {}; already set up: {}
+2025-11-06 16:54:30.452 INFO (MainThread) [homeassistant.setup] Setting up recorder
+2025-11-06 16:54:30.453 INFO (MainThread) [homeassistant.components.http] Now listening on port 8123
+2025-11-06 16:54:30.454 INFO (MainThread) [homeassistant.setup] Setup of domain http took 0.00 seconds
+2025-11-06 16:54:30.477 INFO (MainThread) [homeassistant.setup] Setup of domain recorder took 0.03 seconds
+2025-11-06 16:54:30.478 INFO (MainThread) [homeassistant.bootstrap] Nothing to set up in stage debugger: {'debugpy'}
+2025-11-06 16:54:30.478 INFO (MainThread) [homeassistant.bootstrap] Setting up stage zeroconf: {'zeroconf'}; already set up: {}
+Dependencies: {}; already set up: {'http', 'api', 'websocket_api', 'network'}
+2025-11-06 16:54:30.478 INFO (MainThread) [homeassistant.setup] Setting up zeroconf
+2025-11-06 16:54:30.481 INFO (MainThread) [homeassistant.components.zeroconf] Starting Zeroconf broadcast
+2025-11-06 16:54:30.481 INFO (MainThread) [homeassistant.setup] Setup of domain zeroconf took 0.00 seconds
+2025-11-06 16:54:30.481 INFO (MainThread) [homeassistant.bootstrap] Setting up stage 1: {'cloud', 'bluetooth', 'dhcp', 'hassio', 'ssdp', 'usb'}; already set up: {}
+Dependencies: {'backup', 'webhook', 'conversation', 'stt', 'assist_pipeline', 'tts', 'ffmpeg', 'intent', 'wake_word'}; already set up: {'repairs', 'http', 'auth', 'network', 'websocket_api'}
+2025-11-06 16:54:30.481 INFO (MainThread) [homeassistant.setup] Setting up hassio
+2025-11-06 16:54:30.483 INFO (MainThread) [homeassistant.setup] Setting up webhook
+2025-11-06 16:54:30.483 INFO (MainThread) [homeassistant.setup] Setup of domain webhook took 0.00 seconds
+2025-11-06 16:54:30.498 INFO (MainThread) [homeassistant.setup] Setting up intent
+2025-11-06 16:54:30.499 INFO (MainThread) [homeassistant.setup] Setup of domain intent took 0.00 seconds
+2025-11-06 16:54:30.504 INFO (MainThread) [homeassistant.setup] Setup of domain hassio took 0.02 seconds
+2025-11-06 16:54:30.512 INFO (MainThread) [homeassistant.setup] Setting up stt
+2025-11-06 16:54:30.512 INFO (MainThread) [homeassistant.setup] Setup of domain stt took 0.00 seconds
+2025-11-06 16:54:30.521 INFO (MainThread) [homeassistant.setup] Setting up update
+2025-11-06 16:54:30.521 INFO (MainThread) [homeassistant.setup] Setup of domain update took 0.00 seconds
+2025-11-06 16:54:30.523 INFO (MainThread) [homeassistant.components.update] Setting up hassio.update
+2025-11-06 16:54:30.525 INFO (MainThread) [homeassistant.setup] Setting up ffmpeg
+2025-11-06 16:54:30.525 INFO (MainThread) [homeassistant.setup] Setup of domain ffmpeg took 0.00 seconds
+2025-11-06 16:54:30.528 INFO (MainThread) [homeassistant.setup] Setting up wake_word
+2025-11-06 16:54:30.528 INFO (MainThread) [homeassistant.setup] Setup of domain wake_word took 0.00 seconds
+2025-11-06 16:54:30.539 INFO (MainThread) [homeassistant.setup] Setting up usb
+2025-11-06 16:54:30.540 INFO (MainThread) [homeassistant.setup] Setup of domain usb took 0.00 seconds
+2025-11-06 16:54:30.559 INFO (MainThread) [homeassistant.setup] Setting up ssdp
+2025-11-06 16:54:30.561 INFO (MainThread) [homeassistant.setup] Setup of domain ssdp took 0.00 seconds
+2025-11-06 16:54:31.667 INFO (MainThread) [homeassistant.components.webhook] Received message for unregistered webhook d3fcb65722ea529b6547dc5f996d14ee62ce6c5b0a0bc3d4f7c85d787885cd87 from 192.168.0.161
+2025-11-06 16:54:31.690 INFO (MainThread) [homeassistant.components.webhook] Received message for unregistered webhook d3fcb65722ea529b6547dc5f996d14ee62ce6c5b0a0bc3d4f7c85d787885cd87 from 192.168.0.114
+2025-11-06 16:54:31.702 INFO (MainThread) [homeassistant.setup] Setting up dhcp
+2025-11-06 16:54:31.702 INFO (MainThread) [homeassistant.setup] Setup of domain dhcp took 0.00 seconds
+2025-11-06 16:54:31.703 INFO (MainThread) [homeassistant.setup] Setting up conversation
+2025-11-06 16:54:31.703 INFO (MainThread) [homeassistant.setup] Setup of domain conversation took 0.00 seconds
+2025-11-06 16:54:31.719 INFO (MainThread) [homeassistant.setup] Setting up binary_sensor
+2025-11-06 16:54:31.719 INFO (MainThread) [homeassistant.setup] Setting up blueprint
+2025-11-06 16:54:31.719 INFO (MainThread) [homeassistant.setup] Setup of domain blueprint took 0.00 seconds
+2025-11-06 16:54:31.719 INFO (MainThread) [homeassistant.setup] Setting up group
+2025-11-06 16:54:31.720 INFO (MainThread) [homeassistant.setup] Setup of domain group took 0.00 seconds
+2025-11-06 16:54:31.720 INFO (MainThread) [homeassistant.setup] Setup of domain binary_sensor took 0.00 seconds
+2025-11-06 16:54:31.720 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up hassio.binary_sensor
+2025-11-06 16:54:31.757 INFO (MainThread) [homeassistant.setup] Setting up sensor
+2025-11-06 16:54:31.757 INFO (MainThread) [homeassistant.setup] Setting up command_line
+2025-11-06 16:54:31.757 INFO (MainThread) [homeassistant.setup] Setup of domain command_line took 0.00 seconds
+2025-11-06 16:54:31.757 INFO (MainThread) [homeassistant.setup] Setting up history
+2025-11-06 16:54:31.758 INFO (MainThread) [homeassistant.setup] Setup of domain history took 0.00 seconds
+2025-11-06 16:54:31.758 INFO (MainThread) [homeassistant.setup] Setting up average
+2025-11-06 16:54:31.758 INFO (MainThread) [custom_components.average] 
+-------------------------------------------------------------------
+Average Sensor
+Version: 2.4.0
+This is a custom integration!
+If you have ANY issues with this you need to open an issue here:
+https://github.com/Limych/ha-average/issues
+-------------------------------------------------------------------
+
+2025-11-06 16:54:31.758 INFO (MainThread) [homeassistant.setup] Setup of domain average took 0.00 seconds
+2025-11-06 16:54:31.759 INFO (MainThread) [homeassistant.setup] Setup of domain sensor took 0.00 seconds
+2025-11-06 16:54:31.759 INFO (MainThread) [homeassistant.components.sensor] Setting up hassio.sensor
+2025-11-06 16:54:31.762 INFO (MainThread) [homeassistant.components.webhook] Received message for unregistered webhook d3fcb65722ea529b6547dc5f996d14ee62ce6c5b0a0bc3d4f7c85d787885cd87 from 192.168.0.89
+2025-11-06 16:54:31.764 INFO (MainThread) [homeassistant.components.sensor] Setting up command_line.sensor
+2025-11-06 16:54:31.764 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.764 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.765 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.765 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.765 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.765 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.765 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.766 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.766 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.766 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.766 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.766 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.766 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.766 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.767 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.767 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.767 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.767 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.767 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.767 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.768 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.768 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.768 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.768 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.768 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.769 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.769 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.769 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.769 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.769 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.769 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.770 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.770 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.770 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.770 INFO (MainThread) [homeassistant.components.sensor] Setting up average.sensor
+2025-11-06 16:54:31.770 INFO (MainThread) [homeassistant.components.sensor] Setting up command_line.sensor
+2025-11-06 16:54:31.775 INFO (MainThread) [homeassistant.setup] Setting up switch_as_x
+2025-11-06 16:54:31.775 INFO (MainThread) [homeassistant.setup] Setup of domain switch_as_x took 0.00 seconds
+2025-11-06 16:54:31.785 INFO (MainThread) [homeassistant.setup] Setting up bluetooth
+2025-11-06 16:54:31.833 INFO (MainThread) [homeassistant.setup] Setting up template
+2025-11-06 16:54:31.834 INFO (MainThread) [homeassistant.setup] Setup of domain template took 0.00 seconds
+2025-11-06 16:54:31.835 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up template.binary_sensor
+2025-11-06 16:54:31.837 INFO (MainThread) [homeassistant.components.sensor] Setting up template.sensor
+2025-11-06 16:54:31.838 INFO (MainThread) [homeassistant.components.sensor] Setting up template.sensor
+2025-11-06 16:54:31.838 INFO (MainThread) [homeassistant.components.sensor] Setting up template.sensor
+2025-11-06 16:54:31.839 INFO (MainThread) [homeassistant.components.webhook] Received message for unregistered webhook d3fcb65722ea529b6547dc5f996d14ee62ce6c5b0a0bc3d4f7c85d787885cd87 from 192.168.0.190
+2025-11-06 16:54:31.840 INFO (MainThread) [homeassistant.components.sensor] Setting up time_date.sensor
+2025-11-06 16:54:31.842 INFO (MainThread) [homeassistant.components.sensor] Setting up history_stats.sensor
+2025-11-06 16:54:31.846 INFO (MainThread) [homeassistant.setup] Setting up light
+2025-11-06 16:54:31.849 INFO (MainThread) [homeassistant.setup] Setup of domain light took 0.00 seconds
+2025-11-06 16:54:31.858 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.858 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.859 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.859 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.859 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.859 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.859 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.860 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.860 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.860 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.860 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.861 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.861 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.861 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.861 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.861 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.862 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.862 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.862 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.862 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.862 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.863 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.863 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.863 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.863 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.863 INFO (MainThread) [homeassistant.components.light] Setting up switch_as_x.light
+2025-11-06 16:54:31.865 INFO (MainThread) [homeassistant.setup] Setting up switch
+2025-11-06 16:54:31.865 INFO (MainThread) [homeassistant.setup] Setup of domain switch took 0.00 seconds
+2025-11-06 16:54:31.865 INFO (MainThread) [homeassistant.components.switch] Setting up hassio.switch
+2025-11-06 16:54:31.868 INFO (MainThread) [homeassistant.setup] Setting up backup
+2025-11-06 16:54:31.869 INFO (MainThread) [homeassistant.setup] Setup of domain backup took 0.00 seconds
+2025-11-06 16:54:31.877 INFO (MainThread) [homeassistant.setup] Setting up tts
+2025-11-06 16:54:31.877 INFO (SyncWorker_4) [homeassistant.components.tts] Create cache dir /tmp/tts
+2025-11-06 16:54:31.880 INFO (MainThread) [homeassistant.setup] Setup of domain tts took 0.00 seconds
+2025-11-06 16:54:31.880 INFO (MainThread) [homeassistant.setup] Setting up assist_pipeline
+2025-11-06 16:54:31.881 INFO (MainThread) [homeassistant.setup] Setup of domain assist_pipeline took 0.00 seconds
+2025-11-06 16:54:31.884 INFO (MainThread) [homeassistant.setup] Setting up event
+2025-11-06 16:54:31.884 INFO (MainThread) [homeassistant.setup] Setup of domain event took 0.00 seconds
+2025-11-06 16:54:31.885 INFO (MainThread) [homeassistant.components.event] Setting up backup.event
+2025-11-06 16:54:31.885 INFO (MainThread) [homeassistant.components.sensor] Setting up backup.sensor
+2025-11-06 16:54:31.890 INFO (MainThread) [homeassistant.setup] Setup of domain bluetooth took 0.11 seconds
+2025-11-06 16:54:31.918 INFO (MainThread) [homeassistant.setup] Setting up cloud
+2025-11-06 16:54:31.919 INFO (MainThread) [homeassistant.setup] Setup of domain cloud took 0.00 seconds
+2025-11-06 16:54:31.943 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up cloud.binary_sensor
+2025-11-06 16:54:31.944 INFO (MainThread) [homeassistant.components.stt] Setting up cloud.stt
+2025-11-06 16:54:31.944 INFO (MainThread) [homeassistant.components.tts] Setting up cloud.tts
+2025-11-06 16:54:31.945 INFO (MainThread) [homeassistant.bootstrap] Setting up stage 2: {'tag', 'timer', 'utility_meter', 'roborock', 'zone', 'system_health', 'dlna_dms', 'input_number', 'upnp', 'nodered', 'sun', 'sonoff', 'input_button', 'input_datetime', 'person', 'samsungtv', 'systemmonitor', 'automation', 'irrigation_unlimited', 'python_script', 'thermal_comfort', 'esphome', 'cast', 'default_config', 'onvif', 'webrtc', 'input_text', 'synology_dsm', 'hardware', 'hacs', 'application_credentials', 'script', 'input_boolean', 'go2rtc', 'schedule', 'shelly', 'forecast_solar', 'dlna_dmr', 'fully_kiosk', 'mqtt', 'localtuya', 'scene', 'mobile_app', 'analytics', 'counter', 'speedtestdotnet', 'input_select', 'solarman', 'met', 'tasmota'}; already set up: {'backup', 'cloud', 'network', 'group', 'frontend', 'switch_as_x', 'zeroconf', 'binary_sensor', 'hassio', 'recorder', 'sensor', 'logger', 'template', 'tts', 'homeassistant'}
+Dependencies: {'usage_prediction', 'energy', 'homeassistant_alerts', 'file', 'trace', 'camera', 'media_source', 'image_upload', 'my', 'logbook', 'stream'}; already set up: {'repairs', 'api', 'websocket_api', 'onboarding', 'recorder', 'ffmpeg', 'ssdp', 'cloud', 'bluetooth', 'auth', 'zeroconf', 'history', 'assist_pipeline', 'blueprint', 'intent', 'wake_word', 'usb', 'http', 'network', 'system_log', 'stt', 'diagnostics', 'search', 'persistent_notification', 'hassio', 'config', 'backup', 'lovelace', 'frontend', 'conversation', 'webhook', 'device_automation', 'tts', 'dhcp', 'file_upload'}
+2025-11-06 16:54:31.945 INFO (MainThread) [homeassistant.setup] Setting up scene
+2025-11-06 16:54:31.945 INFO (MainThread) [homeassistant.components.scene] Setting up homeassistant.scene
+2025-11-06 16:54:31.946 INFO (MainThread) [homeassistant.setup] Setup of domain scene took 0.00 seconds
+2025-11-06 16:54:31.946 INFO (MainThread) [homeassistant.setup] Setting up camera
+2025-11-06 16:54:31.947 INFO (MainThread) [homeassistant.setup] Setup of domain camera took 0.00 seconds
+2025-11-06 16:54:31.947 INFO (MainThread) [homeassistant.setup] Setting up timer
+2025-11-06 16:54:31.948 INFO (MainThread) [homeassistant.setup] Setup of domain timer took 0.00 seconds
+2025-11-06 16:54:31.948 INFO (MainThread) [homeassistant.setup] Setting up zone
+2025-11-06 16:54:31.948 INFO (MainThread) [homeassistant.setup] Setting up system_health
+2025-11-06 16:54:31.948 INFO (MainThread) [homeassistant.setup] Setup of domain system_health took 0.00 seconds
+2025-11-06 16:54:31.948 INFO (MainThread) [homeassistant.setup] Setting up media_source
+2025-11-06 16:54:31.949 INFO (MainThread) [homeassistant.setup] Setup of domain media_source took 0.00 seconds
+2025-11-06 16:54:31.949 INFO (MainThread) [homeassistant.setup] Setting up input_number
+2025-11-06 16:54:31.949 INFO (MainThread) [homeassistant.setup] Setting up image_upload
+2025-11-06 16:54:31.950 INFO (MainThread) [homeassistant.setup] Setting up input_button
+2025-11-06 16:54:31.950 INFO (MainThread) [homeassistant.setup] Setup of domain input_button took 0.00 seconds
+2025-11-06 16:54:31.950 INFO (MainThread) [homeassistant.setup] Setting up input_datetime
+2025-11-06 16:54:31.951 INFO (MainThread) [homeassistant.setup] Setting up stream
+2025-11-06 16:54:31.951 INFO (MainThread) [homeassistant.setup] Setting up trace
+2025-11-06 16:54:31.951 INFO (MainThread) [homeassistant.setup] Setup of domain trace took 0.00 seconds
+2025-11-06 16:54:31.960 INFO (MainThread) [homeassistant.setup] Setting up logbook
+2025-11-06 16:54:31.960 INFO (MainThread) [homeassistant.setup] Setup of domain logbook took 0.00 seconds
+2025-11-06 16:54:31.962 INFO (MainThread) [homeassistant.setup] Setting up script
+2025-11-06 16:54:31.965 INFO (MainThread) [homeassistant.setup] Setup of domain script took 0.00 seconds
+2025-11-06 16:54:31.966 INFO (MainThread) [homeassistant.setup] Setting up input_boolean
+2025-11-06 16:54:31.966 INFO (MainThread) [homeassistant.setup] Setting up input_select
+2025-11-06 16:54:31.974 INFO (MainThread) [homeassistant.setup] Setup of domain zone took 0.03 seconds
+2025-11-06 16:54:31.975 INFO (MainThread) [homeassistant.setup] Setup of domain input_number took 0.03 seconds
+2025-11-06 16:54:31.975 INFO (MainThread) [homeassistant.setup] Setup of domain image_upload took 0.03 seconds
+2025-11-06 16:54:31.976 INFO (MainThread) [homeassistant.setup] Setup of domain input_datetime took 0.03 seconds
+2025-11-06 16:54:31.977 INFO (MainThread) [homeassistant.setup] Setup of domain input_select took 0.01 seconds
+2025-11-06 16:54:31.977 INFO (MainThread) [homeassistant.setup] Setting up person
+2025-11-06 16:54:31.978 INFO (MainThread) [homeassistant.setup] Setup of domain input_boolean took 0.01 seconds
+2025-11-06 16:54:31.978 INFO (MainThread) [homeassistant.setup] Setup of domain person took 0.00 seconds
+2025-11-06 16:54:32.094 INFO (MainThread) [homeassistant.setup] Setting up tag
+2025-11-06 16:54:32.095 INFO (MainThread) [homeassistant.setup] Setup of domain tag took 0.00 seconds
+2025-11-06 16:54:32.107 INFO (MainThread) [homeassistant.setup] Setting up utility_meter
+2025-11-06 16:54:32.107 INFO (MainThread) [homeassistant.setup] Setup of domain utility_meter took 0.00 seconds
+2025-11-06 16:54:32.202 INFO (MainThread) [homeassistant.setup] Setup of domain stream took 0.25 seconds
+2025-11-06 16:54:32.324 INFO (MainThread) [homeassistant.setup] Setting up roborock
+2025-11-06 16:54:32.324 INFO (MainThread) [homeassistant.setup] Setup of domain roborock took 0.00 seconds
+2025-11-06 16:54:32.340 INFO (MainThread) [homeassistant.setup] Setting up dlna_dms
+2025-11-06 16:54:32.340 INFO (MainThread) [homeassistant.setup] Setup of domain dlna_dms took 0.00 seconds
+2025-11-06 16:54:32.354 INFO (MainThread) [homeassistant.setup] Setting up upnp
+2025-11-06 16:54:32.354 INFO (MainThread) [homeassistant.setup] Setup of domain upnp took 0.00 seconds
+2025-11-06 16:54:32.383 INFO (MainThread) [homeassistant.setup] Setting up mqtt
+2025-11-06 16:54:32.383 INFO (MainThread) [homeassistant.setup] Setup of domain mqtt took 0.00 seconds
+2025-11-06 16:54:32.388 INFO (MainThread) [homeassistant.setup] Setting up sun
+2025-11-06 16:54:32.388 INFO (MainThread) [homeassistant.setup] Setup of domain sun took 0.00 seconds
+2025-11-06 16:54:32.392 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up sun.binary_sensor
+2025-11-06 16:54:32.392 INFO (MainThread) [homeassistant.components.sensor] Setting up sun.sensor
+2025-11-06 16:54:32.420 INFO (MainThread) [homeassistant.setup] Setting up sonoff
+2025-11-06 16:54:32.420 INFO (MainThread) [homeassistant.setup] Setup of domain sonoff took 0.00 seconds
+2025-11-06 16:54:32.480 INFO (MainThread) [homeassistant.setup] Setting up samsungtv
+2025-11-06 16:54:32.480 INFO (MainThread) [homeassistant.setup] Setup of domain samsungtv took 0.00 seconds
+2025-11-06 16:54:32.492 INFO (MainThread) [homeassistant.setup] Setting up systemmonitor
+2025-11-06 16:54:32.492 INFO (MainThread) [homeassistant.setup] Setup of domain systemmonitor took 0.00 seconds
+2025-11-06 16:54:32.511 INFO (MainThread) [homeassistant.setup] Setting up irrigation_unlimited
+2025-11-06 16:54:32.511 INFO (MainThread) [custom_components.irrigation_unlimited] 
+-------------------------------------------------------------------
+Irrigation Unlimited
+Version: 2025.10.0
+If you have any issues with this you need to open an issue here:
+https://github.com/rgc99/irrigation_unlimited/issues
+-------------------------------------------------------------------
+
+2025-11-06 16:54:32.512 INFO (MainThread) [homeassistant.setup] Setup of domain irrigation_unlimited took 0.00 seconds
+2025-11-06 16:54:32.521 INFO (MainThread) [homeassistant.setup] Setting up python_script
+2025-11-06 16:54:32.523 INFO (MainThread) [homeassistant.setup] Setup of domain python_script took 0.00 seconds
+2025-11-06 16:54:32.528 INFO (MainThread) [homeassistant.setup] Setting up thermal_comfort
+2025-11-06 16:54:32.529 INFO (MainThread) [homeassistant.setup] Setup of domain thermal_comfort took 0.00 seconds
+2025-11-06 16:54:32.531 INFO (MainThread) [homeassistant.components.sensor] Setting up thermal_comfort.sensor
+2025-11-06 16:54:32.531 INFO (MainThread) [custom_components.thermal_comfort.sensor] Temperature has an invalid value: None. Can't calculate new states.
+2025-11-06 16:54:32.531 INFO (MainThread) [custom_components.thermal_comfort.sensor] Relative humidity has an invalid value: None. Can't calculate new states.
+2025-11-06 16:54:32.533 INFO (MainThread) [homeassistant.components.sensor] Setting up thermal_comfort.sensor
+2025-11-06 16:54:32.533 INFO (MainThread) [custom_components.thermal_comfort.sensor] Temperature has an invalid value: None. Can't calculate new states.
+2025-11-06 16:54:32.533 INFO (MainThread) [custom_components.thermal_comfort.sensor] Relative humidity has an invalid value: None. Can't calculate new states.
+2025-11-06 16:54:32.539 INFO (MainThread) [homeassistant.setup] Setting up file
+2025-11-06 16:54:32.539 INFO (MainThread) [homeassistant.setup] Setup of domain file took 0.00 seconds
+2025-11-06 16:54:32.576 INFO (MainThread) [homeassistant.setup] Setting up cast
+2025-11-06 16:54:32.576 INFO (MainThread) [homeassistant.setup] Setup of domain cast took 0.00 seconds
+2025-11-06 16:54:32.583 INFO (MainThread) [homeassistant.setup] Setting up energy
+2025-11-06 16:54:32.583 INFO (MainThread) [homeassistant.setup] Setup of domain energy took 0.00 seconds
+2025-11-06 16:54:32.613 INFO (MainThread) [homeassistant.setup] Setting up go2rtc
+2025-11-06 16:54:32.616 INFO (MainThread) [homeassistant.setup] Setting up homeassistant_alerts
+2025-11-06 16:54:32.617 INFO (MainThread) [homeassistant.setup] Setup of domain homeassistant_alerts took 0.00 seconds
+2025-11-06 16:54:32.618 INFO (MainThread) [homeassistant.setup] Setting up my
+2025-11-06 16:54:32.618 INFO (MainThread) [homeassistant.setup] Setup of domain my took 0.00 seconds
+2025-11-06 16:54:32.621 INFO (MainThread) [homeassistant.setup] Setting up usage_prediction
+2025-11-06 16:54:32.621 INFO (MainThread) [homeassistant.setup] Setup of domain usage_prediction took 0.00 seconds
+2025-11-06 16:54:32.679 INFO (MainThread) [homeassistant.setup] Setup of domain go2rtc took 0.07 seconds
+2025-11-06 16:54:32.709 INFO (MainThread) [homeassistant.setup] Setting up onvif
+2025-11-06 16:54:32.710 INFO (MainThread) [homeassistant.setup] Setup of domain onvif took 0.00 seconds
+2025-11-06 16:54:32.722 INFO (MainThread) [homeassistant.setup] Setting up webrtc
+2025-11-06 16:54:32.730 INFO (MainThread) [homeassistant.setup] Setup of domain webrtc took 0.01 seconds
+2025-11-06 16:54:32.732 INFO (MainThread) [homeassistant.setup] Setting up input_text
+2025-11-06 16:54:32.734 INFO (MainThread) [homeassistant.setup] Setup of domain input_text took 0.00 seconds
+2025-11-06 16:54:33.304 INFO (MainThread) [homeassistant.components.webhook] Received message for unregistered webhook d3fcb65722ea529b6547dc5f996d14ee62ce6c5b0a0bc3d4f7c85d787885cd87 from 192.168.0.190
+2025-11-06 16:54:33.746 INFO (MainThread) [homeassistant.setup] Setting up synology_dsm
+2025-11-06 16:54:33.746 INFO (MainThread) [homeassistant.setup] Setup of domain synology_dsm took 0.00 seconds
+2025-11-06 16:54:34.224 INFO (MainThread) [homeassistant.setup] Setting up hardware
+2025-11-06 16:54:34.439 INFO (MainThread) [homeassistant.setup] Setting up application_credentials
+2025-11-06 16:54:34.440 INFO (MainThread) [homeassistant.setup] Setup of domain application_credentials took 0.00 seconds
+2025-11-06 16:54:34.444 INFO (MainThread) [homeassistant.setup] Setup of domain hardware took 0.22 seconds
+2025-11-06 16:54:34.445 INFO (MainThread) [homeassistant.setup] Setting up schedule
+2025-11-06 16:54:34.445 INFO (MainThread) [homeassistant.setup] Setup of domain schedule took 0.00 seconds
+2025-11-06 16:54:34.449 INFO (MainThread) [homeassistant.setup] Setting up alarm_control_panel
+2025-11-06 16:54:34.449 INFO (MainThread) [homeassistant.setup] Setup of domain alarm_control_panel took 0.00 seconds
+2025-11-06 16:54:34.449 INFO (MainThread) [homeassistant.components.alarm_control_panel] Setting up sonoff.alarm_control_panel
+2025-11-06 16:54:34.449 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up sonoff.binary_sensor
+2025-11-06 16:54:34.449 INFO (MainThread) [homeassistant.setup] Setting up button
+2025-11-06 16:54:34.449 INFO (MainThread) [homeassistant.setup] Setup of domain button took 0.00 seconds
+2025-11-06 16:54:34.449 INFO (MainThread) [homeassistant.components.button] Setting up sonoff.button
+2025-11-06 16:54:34.449 INFO (MainThread) [homeassistant.setup] Setting up climate
+2025-11-06 16:54:34.450 INFO (MainThread) [homeassistant.setup] Setup of domain climate took 0.00 seconds
+2025-11-06 16:54:34.450 INFO (MainThread) [homeassistant.components.climate] Setting up sonoff.climate
+2025-11-06 16:54:34.451 INFO (MainThread) [homeassistant.setup] Setting up cover
+2025-11-06 16:54:34.451 INFO (MainThread) [homeassistant.setup] Setup of domain cover took 0.00 seconds
+2025-11-06 16:54:34.451 INFO (MainThread) [homeassistant.components.cover] Setting up sonoff.cover
+2025-11-06 16:54:34.451 INFO (MainThread) [homeassistant.setup] Setting up fan
+2025-11-06 16:54:34.452 INFO (MainThread) [homeassistant.setup] Setup of domain fan took 0.00 seconds
+2025-11-06 16:54:34.452 INFO (MainThread) [homeassistant.components.fan] Setting up sonoff.fan
+2025-11-06 16:54:34.452 INFO (MainThread) [homeassistant.components.light] Setting up sonoff.light
+2025-11-06 16:54:34.452 INFO (MainThread) [homeassistant.setup] Setting up media_player
+2025-11-06 16:54:34.455 INFO (MainThread) [homeassistant.setup] Setup of domain media_player took 0.00 seconds
+2025-11-06 16:54:34.455 INFO (MainThread) [homeassistant.components.media_player] Setting up sonoff.media_player
+2025-11-06 16:54:34.455 INFO (MainThread) [homeassistant.setup] Setting up remote
+2025-11-06 16:54:34.456 INFO (MainThread) [homeassistant.setup] Setup of domain remote took 0.00 seconds
+2025-11-06 16:54:34.456 INFO (MainThread) [homeassistant.components.remote] Setting up sonoff.remote
+2025-11-06 16:54:34.456 INFO (MainThread) [homeassistant.components.sensor] Setting up sonoff.sensor
+2025-11-06 16:54:34.456 INFO (MainThread) [homeassistant.components.switch] Setting up sonoff.switch
+2025-11-06 16:54:34.456 INFO (MainThread) [homeassistant.setup] Setting up number
+2025-11-06 16:54:34.457 INFO (MainThread) [homeassistant.setup] Setup of domain number took 0.00 seconds
+2025-11-06 16:54:34.457 INFO (MainThread) [homeassistant.components.number] Setting up sonoff.number
+2025-11-06 16:54:34.457 INFO (MainThread) [homeassistant.setup] Setting up select
+2025-11-06 16:54:34.461 INFO (MainThread) [homeassistant.setup] Setup of domain select took 0.00 seconds
+2025-11-06 16:54:34.462 INFO (MainThread) [homeassistant.components.select] Setting up sonoff.select
+2025-11-06 16:54:34.526 INFO (MainThread) [homeassistant.setup] Setting up shelly
+2025-11-06 16:54:34.526 INFO (MainThread) [homeassistant.setup] Setup of domain shelly took 0.00 seconds
+2025-11-06 16:54:34.528 INFO (MainThread) [homeassistant.components.shelly] Starting CoAP context with UDP port 5683
+2025-11-06 16:54:34.621 INFO (MainThread) [homeassistant.setup] Setting up forecast_solar
+2025-11-06 16:54:34.621 INFO (MainThread) [homeassistant.setup] Setup of domain forecast_solar took 0.00 seconds
+2025-11-06 16:54:34.690 INFO (MainThread) [homeassistant.setup] Setting up dlna_dmr
+2025-11-06 16:54:34.690 INFO (MainThread) [homeassistant.setup] Setup of domain dlna_dmr took 0.00 seconds
+2025-11-06 16:54:34.956 INFO (MainThread) [homeassistant.setup] Setting up localtuya
+2025-11-06 16:54:34.957 INFO (MainThread) [homeassistant.setup] Setup of domain localtuya took 0.00 seconds
+2025-11-06 16:54:34.958 INFO (MainThread) [homeassistant.setup] Setting up counter
+2025-11-06 16:54:34.959 INFO (MainThread) [homeassistant.setup] Setup of domain counter took 0.00 seconds
+2025-11-06 16:54:34.968 INFO (MainThread) [homeassistant.setup] Setting up speedtestdotnet
+2025-11-06 16:54:34.968 INFO (MainThread) [homeassistant.setup] Setup of domain speedtestdotnet took 0.00 seconds
+2025-11-06 16:54:34.990 INFO (MainThread) [homeassistant.setup] Setting up solarman
+2025-11-06 16:54:34.990 INFO (MainThread) [custom_components.solarman] Solarman 25.08.16
+2025-11-06 16:54:34.991 INFO (MainThread) [homeassistant.setup] Setup of domain solarman took 0.00 seconds
+2025-11-06 16:54:35.003 INFO (MainThread) [homeassistant.setup] Setting up met
+2025-11-06 16:54:35.003 INFO (MainThread) [homeassistant.setup] Setup of domain met took 0.00 seconds
+2025-11-06 16:54:35.114 INFO (MainThread) [homeassistant.setup] Setting up esphome
+2025-11-06 16:54:35.118 INFO (MainThread) [homeassistant.setup] Setup of domain esphome took 0.00 seconds
+2025-11-06 16:54:35.134 INFO (MainThread) [homeassistant.setup] Setting up mobile_app
+2025-11-06 16:54:35.135 INFO (MainThread) [homeassistant.setup] Setting up notify
+2025-11-06 16:54:35.136 INFO (MainThread) [homeassistant.setup] Setup of domain notify took 0.00 seconds
+2025-11-06 16:54:35.136 INFO (MainThread) [homeassistant.setup] Setup of domain mobile_app took 0.00 seconds
+2025-11-06 16:54:35.136 INFO (MainThread) [homeassistant.setup] Setting up device_tracker
+2025-11-06 16:54:35.136 INFO (MainThread) [homeassistant.setup] Setup of domain device_tracker took 0.00 seconds
+2025-11-06 16:54:35.138 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up mobile_app.binary_sensor
+2025-11-06 16:54:35.139 INFO (MainThread) [homeassistant.components.device_tracker] Setting up mobile_app.device_tracker
+2025-11-06 16:54:35.139 INFO (MainThread) [homeassistant.components.sensor] Setting up mobile_app.sensor
+2025-11-06 16:54:35.140 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up mobile_app.binary_sensor
+2025-11-06 16:54:35.140 INFO (MainThread) [homeassistant.components.device_tracker] Setting up mobile_app.device_tracker
+2025-11-06 16:54:35.141 INFO (MainThread) [homeassistant.components.sensor] Setting up mobile_app.sensor
+2025-11-06 16:54:35.142 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up mobile_app.binary_sensor
+2025-11-06 16:54:35.142 INFO (MainThread) [homeassistant.components.device_tracker] Setting up mobile_app.device_tracker
+2025-11-06 16:54:35.142 INFO (MainThread) [homeassistant.components.sensor] Setting up mobile_app.sensor
+2025-11-06 16:54:35.143 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up mobile_app.binary_sensor
+2025-11-06 16:54:35.143 INFO (MainThread) [homeassistant.components.device_tracker] Setting up mobile_app.device_tracker
+2025-11-06 16:54:35.143 INFO (MainThread) [homeassistant.components.sensor] Setting up mobile_app.sensor
+2025-11-06 16:54:35.144 INFO (MainThread) [homeassistant.components.notify] Setting up notify.mobile_app
+2025-11-06 16:54:35.144 INFO (MainThread) [homeassistant.setup] Setting up default_config
+2025-11-06 16:54:35.144 INFO (MainThread) [homeassistant.setup] Setup of domain default_config took 0.00 seconds
+2025-11-06 16:54:35.147 INFO (MainThread) [homeassistant.components.sensor] Setting up utility_meter.sensor
+2025-11-06 16:54:35.148 INFO (MainThread) [homeassistant.components.sensor] Setting up utility_meter.sensor
+2025-11-06 16:54:35.148 INFO (MainThread) [homeassistant.components.sensor] Setting up utility_meter.sensor
+2025-11-06 16:54:35.152 INFO (MainThread) [homeassistant.setup] Setting up automation
+2025-11-06 16:54:35.153 INFO (MainThread) [homeassistant.setup] Setup of domain automation took 0.00 seconds
+2025-11-06 16:54:35.158 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up systemmonitor.binary_sensor
+2025-11-06 16:54:35.158 INFO (MainThread) [homeassistant.components.sensor] Setting up systemmonitor.sensor
+2025-11-06 16:54:35.159 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up irrigation_unlimited.binary_sensor
+2025-11-06 16:54:35.159 INFO (MainThread) [custom_components.irrigation_unlimited] CALL [2025-11-06 16:54:35] service: disable, controller: 1, zone: 0, sequence: 0, data: {}
+2025-11-06 16:54:35.160 INFO (MainThread) [custom_components.irrigation_unlimited] CALL [2025-11-06 16:54:35] service: adjust_time, controller: 1, zone: 1, sequence: 0, data: {"percentage": 75.0}
+2025-11-06 16:54:35.160 INFO (MainThread) [custom_components.irrigation_unlimited] CALL [2025-11-06 16:54:35] service: adjust_time, controller: 1, zone: 2, sequence: 0, data: {"percentage": 75.0}
+2025-11-06 16:54:35.160 INFO (MainThread) [custom_components.irrigation_unlimited] CALL [2025-11-06 16:54:35] service: adjust_time, controller: 1, zone: 3, sequence: 0, data: {"percentage": 75.0}
+2025-11-06 16:54:35.160 INFO (MainThread) [custom_components.irrigation_unlimited] CALL [2025-11-06 16:54:35] service: adjust_time, controller: 1, zone: 0, sequence: 1, data: {"percentage": 0.0, "zones": [1]}
+2025-11-06 16:54:35.161 INFO (MainThread) [custom_components.irrigation_unlimited] CALL [2025-11-06 16:54:35] service: adjust_time, controller: 1, zone: 0, sequence: 1, data: {"percentage": 0.0, "zones": [2]}
+2025-11-06 16:54:35.161 INFO (MainThread) [custom_components.irrigation_unlimited] CALL [2025-11-06 16:54:35] service: adjust_time, controller: 1, zone: 0, sequence: 1, data: {"percentage": 0.0, "zones": [3]}
+2025-11-06 16:54:35.161 INFO (MainThread) [custom_components.irrigation_unlimited] CALL [2025-11-06 16:54:35] service: disable, controller: 2, zone: 0, sequence: 0, data: {}
+2025-11-06 16:54:35.161 INFO (MainThread) [custom_components.irrigation_unlimited] CALL [2025-11-06 16:54:35] service: disable, controller: 2, zone: 1, sequence: 0, data: {}
+2025-11-06 16:54:35.161 INFO (MainThread) [custom_components.irrigation_unlimited] CALL [2025-11-06 16:54:35] service: adjust_time, controller: 2, zone: 1, sequence: 0, data: {"percentage": 0.0}
+2025-11-06 16:54:35.161 INFO (MainThread) [custom_components.irrigation_unlimited] CALL [2025-11-06 16:54:35] service: disable, controller: 3, zone: 0, sequence: 0, data: {}
+2025-11-06 16:54:35.162 INFO (MainThread) [custom_components.irrigation_unlimited] CALL [2025-11-06 16:54:35] service: adjust_time, controller: 3, zone: 1, sequence: 0, data: {"percentage": 0.0}
+2025-11-06 16:54:35.736 INFO (MainThread) [aioshelly.rpc_device.wsrpc] Connected to 192.168.0.144
+2025-11-06 16:54:35.803 INFO (MainThread) [homeassistant.setup] Setting up hacs
+2025-11-06 16:54:35.803 INFO (MainThread) [homeassistant.setup] Setup of domain hacs took 0.00 seconds
+2025-11-06 16:54:35.803 INFO (MainThread) [custom_components.hacs] 
+-------------------------------------------------------------------
+HACS (Home Assistant Community Store)
+
+Version: 2.0.5
+This is a custom integration
+If you have any issues with this you need to open an issue here:
+https://github.com/hacs/integration/issues
+-------------------------------------------------------------------
+
+2025-11-06 16:54:35.806 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up upnp.binary_sensor
+2025-11-06 16:54:35.806 INFO (MainThread) [homeassistant.components.sensor] Setting up upnp.sensor
+2025-11-06 16:54:35.819 INFO (MainThread) [custom_components.hacs] <HacsData restore> Restore started
+2025-11-06 16:54:35.866 INFO (MainThread) [custom_components.hacs] <HacsData restore> Restore done
+2025-11-06 16:54:35.866 INFO (MainThread) [custom_components.hacs] Enable category: integration
+2025-11-06 16:54:35.867 INFO (MainThread) [custom_components.hacs] Enable category: plugin
+2025-11-06 16:54:35.867 INFO (MainThread) [custom_components.hacs] Enable category: template
+2025-11-06 16:54:35.867 INFO (MainThread) [custom_components.hacs] Enable category: python_script
+2025-11-06 16:54:35.867 INFO (MainThread) [custom_components.hacs] Enable category: theme
+2025-11-06 16:54:35.867 INFO (MainThread) [custom_components.hacs] Enable category: appdaemon
+2025-11-06 16:54:35.870 INFO (MainThread) [custom_components.hacs] Setting up plugin endpoint
+2025-11-06 16:54:35.870 INFO (MainThread) [custom_components.hacs] <HacsFrontend> storage mode, cache for /hacsfiles/: True
+2025-11-06 16:54:35.872 INFO (MainThread) [homeassistant.components.media_player] Setting up cast.media_player
+2025-11-06 16:54:35.888 INFO (MainThread) [homeassistant.setup] Setting up analytics
+2025-11-06 16:54:35.888 INFO (MainThread) [homeassistant.setup] Setup of domain analytics took 0.00 seconds
+2025-11-06 16:54:35.890 INFO (MainThread) [homeassistant.components.sensor] Setting up energy.sensor
+2025-11-06 16:54:35.894 INFO (MainThread) [homeassistant.components.media_player] Setting up dlna_dmr.media_player
+2025-11-06 16:54:35.897 INFO (MainThread) [homeassistant.components.media_player] Setting up dlna_dmr.media_player
+2025-11-06 16:54:35.898 INFO (MainThread) [homeassistant.components.media_player] Setting up dlna_dmr.media_player
+2025-11-06 16:54:35.899 INFO (MainThread) [homeassistant.components.media_player] Setting up dlna_dmr.media_player
+2025-11-06 16:54:35.905 INFO (MainThread) [homeassistant.setup] Setting up humidifier
+2025-11-06 16:54:35.906 INFO (MainThread) [homeassistant.setup] Setup of domain humidifier took 0.00 seconds
+2025-11-06 16:54:35.906 INFO (MainThread) [homeassistant.setup] Setting up lock
+2025-11-06 16:54:35.907 INFO (MainThread) [homeassistant.setup] Setup of domain lock took 0.00 seconds
+2025-11-06 16:54:35.907 INFO (MainThread) [homeassistant.setup] Setting up siren
+2025-11-06 16:54:35.907 INFO (MainThread) [homeassistant.setup] Setup of domain siren took 0.00 seconds
+2025-11-06 16:54:35.908 INFO (MainThread) [homeassistant.setup] Setting up vacuum
+2025-11-06 16:54:35.908 INFO (MainThread) [homeassistant.setup] Setup of domain vacuum took 0.00 seconds
+2025-11-06 16:54:35.908 INFO (MainThread) [homeassistant.setup] Setting up water_heater
+2025-11-06 16:54:35.909 INFO (MainThread) [homeassistant.setup] Setup of domain water_heater took 0.00 seconds
+2025-11-06 16:54:35.912 INFO (MainThread) [homeassistant.components.alarm_control_panel] Setting up localtuya.alarm_control_panel
+2025-11-06 16:54:35.912 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up localtuya.binary_sensor
+2025-11-06 16:54:35.913 INFO (MainThread) [homeassistant.components.button] Setting up localtuya.button
+2025-11-06 16:54:35.913 INFO (MainThread) [homeassistant.components.climate] Setting up localtuya.climate
+2025-11-06 16:54:35.913 INFO (MainThread) [homeassistant.components.cover] Setting up localtuya.cover
+2025-11-06 16:54:35.913 INFO (MainThread) [homeassistant.components.fan] Setting up localtuya.fan
+2025-11-06 16:54:35.913 INFO (MainThread) [homeassistant.components.humidifier] Setting up localtuya.humidifier
+2025-11-06 16:54:35.913 INFO (MainThread) [homeassistant.components.light] Setting up localtuya.light
+2025-11-06 16:54:35.913 INFO (MainThread) [homeassistant.components.lock] Setting up localtuya.lock
+2025-11-06 16:54:35.914 INFO (MainThread) [homeassistant.components.number] Setting up localtuya.number
+2025-11-06 16:54:35.914 INFO (MainThread) [homeassistant.components.remote] Setting up localtuya.remote
+2025-11-06 16:54:35.914 INFO (MainThread) [homeassistant.components.select] Setting up localtuya.select
+2025-11-06 16:54:35.914 INFO (MainThread) [homeassistant.components.sensor] Setting up localtuya.sensor
+2025-11-06 16:54:35.915 INFO (MainThread) [homeassistant.components.siren] Setting up localtuya.siren
+2025-11-06 16:54:35.915 INFO (MainThread) [homeassistant.components.switch] Setting up localtuya.switch
+2025-11-06 16:54:35.915 INFO (MainThread) [homeassistant.components.vacuum] Setting up localtuya.vacuum
+2025-11-06 16:54:35.915 INFO (MainThread) [homeassistant.components.water_heater] Setting up localtuya.water_heater
+2025-11-06 16:54:35.916 INFO (MainThread) [custom_components.localtuya] localtuya: Setup completed
+2025-11-06 16:54:35.923 INFO (MainThread) [homeassistant.components.button] Setting up onvif.button
+2025-11-06 16:54:35.924 INFO (MainThread) [homeassistant.components.camera] Setting up onvif.camera
+2025-11-06 16:54:35.925 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up onvif.binary_sensor
+2025-11-06 16:54:35.926 INFO (MainThread) [homeassistant.components.sensor] Setting up onvif.sensor
+2025-11-06 16:54:35.926 INFO (MainThread) [homeassistant.components.switch] Setting up onvif.switch
+2025-11-06 16:54:35.927 INFO (MainThread) [homeassistant.components.button] Setting up onvif.button
+2025-11-06 16:54:35.927 INFO (MainThread) [homeassistant.components.camera] Setting up onvif.camera
+2025-11-06 16:54:35.929 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up onvif.binary_sensor
+2025-11-06 16:54:35.930 INFO (MainThread) [homeassistant.components.sensor] Setting up onvif.sensor
+2025-11-06 16:54:35.931 INFO (MainThread) [homeassistant.components.switch] Setting up onvif.switch
+2025-11-06 16:54:35.932 INFO (MainThread) [homeassistant.components.button] Setting up onvif.button
+2025-11-06 16:54:35.932 INFO (MainThread) [homeassistant.components.camera] Setting up onvif.camera
+2025-11-06 16:54:35.934 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up onvif.binary_sensor
+2025-11-06 16:54:35.935 INFO (MainThread) [homeassistant.components.sensor] Setting up onvif.sensor
+2025-11-06 16:54:35.936 INFO (MainThread) [homeassistant.components.switch] Setting up onvif.switch
+2025-11-06 16:54:35.943 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up esphome.binary_sensor
+2025-11-06 16:54:35.943 INFO (MainThread) [homeassistant.components.sensor] Setting up esphome.sensor
+2025-11-06 16:54:35.943 INFO (MainThread) [homeassistant.components.update] Setting up esphome.update
+2025-11-06 16:54:35.944 INFO (MainThread) [aioesphomeapi.reconnect_logic] Successfully resolved nivel-caixa-agua-pressao @ 192.168.0.102 in 0.000s
+2025-11-06 16:54:35.945 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up esphome.binary_sensor
+2025-11-06 16:54:35.945 INFO (MainThread) [homeassistant.components.switch] Setting up esphome.switch
+2025-11-06 16:54:35.945 INFO (MainThread) [homeassistant.components.button] Setting up esphome.button
+2025-11-06 16:54:35.945 INFO (MainThread) [homeassistant.components.update] Setting up esphome.update
+2025-11-06 16:54:35.948 INFO (MainThread) [aioesphomeapi.reconnect_logic] Successfully resolved controle-alarme @ 192.168.0.148 in 0.000s
+2025-11-06 16:54:35.972 INFO (MainThread) [homeassistant.components.button] Setting up mqtt.button
+2025-11-06 16:54:35.973 INFO (MainThread) [homeassistant.components.update] Setting up mqtt.update
+2025-11-06 16:54:35.973 INFO (MainThread) [homeassistant.components.event] Setting up mqtt.event
+2025-11-06 16:54:35.973 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up mqtt.binary_sensor
+2025-11-06 16:54:35.973 INFO (MainThread) [homeassistant.components.number] Setting up mqtt.number
+2025-11-06 16:54:35.973 INFO (MainThread) [homeassistant.components.sensor] Setting up mqtt.sensor
+2025-11-06 16:54:35.975 INFO (MainThread) [homeassistant.components.select] Setting up mqtt.select
+2025-11-06 16:54:35.975 INFO (MainThread) [homeassistant.components.switch] Setting up mqtt.switch
+2025-11-06 16:54:35.984 INFO (MainThread) [homeassistant.components.media_player] Setting up samsungtv.media_player
+2025-11-06 16:54:35.985 INFO (MainThread) [homeassistant.components.remote] Setting up samsungtv.remote
+2025-11-06 16:54:35.986 INFO (MainThread) [homeassistant.components.sensor] Setting up speedtestdotnet.sensor
+2025-11-06 16:54:36.005 INFO (MainThread) [aioesphomeapi.reconnect_logic] Successfully connected to nivel-caixa-agua-pressao @ 192.168.0.102 in 0.061s
+2025-11-06 16:54:36.029 INFO (MainThread) [aioesphomeapi.reconnect_logic] Successful handshake with nivel-caixa-agua-pressao @ 192.168.0.102 in 0.024s
+2025-11-06 16:54:36.032 INFO (MainThread) [homeassistant.setup] Setting up text
+2025-11-06 16:54:36.033 INFO (MainThread) [homeassistant.setup] Setup of domain text took 0.00 seconds
+2025-11-06 16:54:36.033 INFO (MainThread) [homeassistant.setup] Setting up valve
+2025-11-06 16:54:36.033 INFO (MainThread) [homeassistant.setup] Setup of domain valve took 0.00 seconds
+2025-11-06 16:54:36.034 INFO (MainThread) [aioesphomeapi.reconnect_logic] Successfully connected to controle-alarme @ 192.168.0.148 in 0.086s
+2025-11-06 16:54:36.036 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up shelly.binary_sensor
+2025-11-06 16:54:36.037 INFO (MainThread) [homeassistant.components.button] Setting up shelly.button
+2025-11-06 16:54:36.037 INFO (MainThread) [homeassistant.components.climate] Setting up shelly.climate
+2025-11-06 16:54:36.037 INFO (MainThread) [homeassistant.components.cover] Setting up shelly.cover
+2025-11-06 16:54:36.038 INFO (MainThread) [homeassistant.components.event] Setting up shelly.event
+2025-11-06 16:54:36.038 INFO (MainThread) [homeassistant.components.light] Setting up shelly.light
+2025-11-06 16:54:36.039 INFO (MainThread) [homeassistant.components.number] Setting up shelly.number
+2025-11-06 16:54:36.039 INFO (MainThread) [homeassistant.components.select] Setting up shelly.select
+2025-11-06 16:54:36.039 INFO (MainThread) [homeassistant.components.sensor] Setting up shelly.sensor
+2025-11-06 16:54:36.041 INFO (MainThread) [homeassistant.components.switch] Setting up shelly.switch
+2025-11-06 16:54:36.042 INFO (MainThread) [homeassistant.components.text] Setting up shelly.text
+2025-11-06 16:54:36.042 INFO (MainThread) [homeassistant.components.update] Setting up shelly.update
+2025-11-06 16:54:36.043 INFO (MainThread) [homeassistant.components.valve] Setting up shelly.valve
+2025-11-06 16:54:36.044 INFO (MainThread) [homeassistant.components.switch] Setting up hacs.switch
+2025-11-06 16:54:36.047 INFO (MainThread) [homeassistant.components.update] Setting up hacs.update
+2025-11-06 16:54:36.053 INFO (MainThread) [custom_components.hacs] Stage changed: setup
+2025-11-06 16:54:36.054 INFO (MainThread) [custom_components.hacs] Stage changed: waiting
+2025-11-06 16:54:36.054 INFO (MainThread) [custom_components.hacs] Setup complete, waiting for Home Assistant before startup tasks starts
+2025-11-06 16:54:36.057 INFO (MainThread) [aioesphomeapi.reconnect_logic] Successful handshake with controle-alarme @ 192.168.0.148 in 0.023s
+2025-11-06 16:54:36.059 INFO (MainThread) [homeassistant.setup] Setting up fully_kiosk
+2025-11-06 16:54:36.059 INFO (MainThread) [homeassistant.setup] Setup of domain fully_kiosk took 0.00 seconds
+2025-11-06 16:54:36.090 INFO (MainThread) [homeassistant.setup] Setting up tasmota
+2025-11-06 16:54:36.090 INFO (MainThread) [homeassistant.setup] Setup of domain tasmota took 0.00 seconds
+2025-11-06 16:54:36.094 INFO (MainThread) [homeassistant.setup] Setting up nodered
+2025-11-06 16:54:36.094 INFO (MainThread) [homeassistant.setup] Setup of domain nodered took 0.00 seconds
+2025-11-06 16:54:36.094 INFO (MainThread) [custom_components.nodered] 
+-------------------------------------------------------------------
+Node-RED Companion
+Version: 4.1.3
+This is a custom integration!
+If you have any issues with this you need to open an issue here:
+https://github.com/zachowj/hass-node-red/issues
+-------------------------------------------------------------------
+
+2025-11-06 16:54:36.099 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up tasmota.binary_sensor
+2025-11-06 16:54:36.099 INFO (MainThread) [homeassistant.components.camera] Setting up tasmota.camera
+2025-11-06 16:54:36.099 INFO (MainThread) [homeassistant.components.cover] Setting up tasmota.cover
+2025-11-06 16:54:36.100 INFO (MainThread) [homeassistant.components.fan] Setting up tasmota.fan
+2025-11-06 16:54:36.100 INFO (MainThread) [homeassistant.components.light] Setting up tasmota.light
+2025-11-06 16:54:36.100 INFO (MainThread) [homeassistant.components.sensor] Setting up tasmota.sensor
+2025-11-06 16:54:36.100 INFO (MainThread) [homeassistant.components.switch] Setting up tasmota.switch
+2025-11-06 16:54:36.111 INFO (MainThread) [homeassistant.setup] Setting up image
+2025-11-06 16:54:36.111 INFO (MainThread) [homeassistant.setup] Setup of domain image took 0.00 seconds
+2025-11-06 16:54:36.113 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up fully_kiosk.binary_sensor
+2025-11-06 16:54:36.114 INFO (MainThread) [homeassistant.components.esphome.manager] No `friendly_name` set in the `esphome:` section of the YAML config for device 'nivel-caixa-agua-pressao' (MAC: d8:a0:1d:40:a5:38); It's recommended to add one for easier identification and better alignment with Home Assistant naming conventions
+2025-11-06 16:54:36.115 INFO (MainThread) [homeassistant.components.button] Setting up fully_kiosk.button
+2025-11-06 16:54:36.117 INFO (MainThread) [homeassistant.components.camera] Setting up fully_kiosk.camera
+2025-11-06 16:54:36.119 INFO (MainThread) [homeassistant.components.image] Setting up fully_kiosk.image
+2025-11-06 16:54:36.120 WARNING (MainThread) [homeassistant.components.sensor] Entity sensor.nivel_caixa_agua (<class 'homeassistant.components.esphome.sensor.EsphomeSensor'>) is using native unit of measurement '%' which is not a valid unit for the device class ('voltage') it is using; expected one of ['MV', 'kV', 'mV', 'μV', 'V']; Please update your configuration if your entity is manually configured, otherwise create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+esphome%22
+2025-11-06 16:54:36.120 INFO (MainThread) [homeassistant.components.media_player] Setting up fully_kiosk.media_player
+2025-11-06 16:54:36.120 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up fully_kiosk.binary_sensor
+2025-11-06 16:54:36.125 INFO (MainThread) [homeassistant.components.button] Setting up fully_kiosk.button
+2025-11-06 16:54:36.126 INFO (MainThread) [homeassistant.components.camera] Setting up fully_kiosk.camera
+2025-11-06 16:54:36.126 INFO (MainThread) [homeassistant.components.image] Setting up fully_kiosk.image
+2025-11-06 16:54:36.127 INFO (MainThread) [homeassistant.components.media_player] Setting up fully_kiosk.media_player
+2025-11-06 16:54:36.127 INFO (MainThread) [homeassistant.components.notify] Setting up fully_kiosk.notify
+2025-11-06 16:54:36.127 INFO (MainThread) [homeassistant.components.number] Setting up fully_kiosk.number
+2025-11-06 16:54:36.128 INFO (MainThread) [homeassistant.components.sensor] Setting up fully_kiosk.sensor
+2025-11-06 16:54:36.129 INFO (MainThread) [homeassistant.components.switch] Setting up fully_kiosk.switch
+2025-11-06 16:54:36.131 INFO (MainThread) [homeassistant.components.notify] Setting up fully_kiosk.notify
+2025-11-06 16:54:36.132 INFO (MainThread) [homeassistant.components.number] Setting up fully_kiosk.number
+2025-11-06 16:54:36.134 INFO (MainThread) [homeassistant.components.button] Setting up onvif.button
+2025-11-06 16:54:36.135 INFO (MainThread) [homeassistant.components.camera] Setting up onvif.camera
+2025-11-06 16:54:36.136 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up onvif.binary_sensor
+2025-11-06 16:54:36.137 INFO (MainThread) [homeassistant.components.sensor] Setting up onvif.sensor
+2025-11-06 16:54:36.138 INFO (MainThread) [homeassistant.components.switch] Setting up onvif.switch
+2025-11-06 16:54:36.139 INFO (MainThread) [homeassistant.components.sensor] Setting up fully_kiosk.sensor
+2025-11-06 16:54:36.141 INFO (MainThread) [homeassistant.components.switch] Setting up fully_kiosk.switch
+2025-11-06 16:54:36.142 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up fully_kiosk.binary_sensor
+2025-11-06 16:54:36.144 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up shelly.binary_sensor
+2025-11-06 16:54:36.144 INFO (MainThread) [homeassistant.components.button] Setting up shelly.button
+2025-11-06 16:54:36.144 INFO (MainThread) [homeassistant.components.climate] Setting up shelly.climate
+2025-11-06 16:54:36.144 INFO (MainThread) [homeassistant.components.cover] Setting up shelly.cover
+2025-11-06 16:54:36.144 INFO (MainThread) [homeassistant.components.event] Setting up shelly.event
+2025-11-06 16:54:36.145 INFO (MainThread) [homeassistant.components.light] Setting up shelly.light
+2025-11-06 16:54:36.145 INFO (MainThread) [homeassistant.components.number] Setting up shelly.number
+2025-11-06 16:54:36.145 INFO (MainThread) [homeassistant.components.select] Setting up shelly.select
+2025-11-06 16:54:36.145 INFO (MainThread) [homeassistant.components.sensor] Setting up shelly.sensor
+2025-11-06 16:54:36.149 INFO (MainThread) [homeassistant.components.switch] Setting up shelly.switch
+2025-11-06 16:54:36.150 INFO (MainThread) [homeassistant.components.text] Setting up shelly.text
+2025-11-06 16:54:36.150 INFO (MainThread) [homeassistant.components.update] Setting up shelly.update
+2025-11-06 16:54:36.150 INFO (MainThread) [homeassistant.components.valve] Setting up shelly.valve
+2025-11-06 16:54:36.154 INFO (MainThread) [homeassistant.components.button] Setting up fully_kiosk.button
+2025-11-06 16:54:36.170 INFO (MainThread) [homeassistant.components.camera] Setting up fully_kiosk.camera
+2025-11-06 16:54:36.184 INFO (MainThread) [homeassistant.setup] Setting up weather
+2025-11-06 16:54:36.184 INFO (MainThread) [homeassistant.setup] Setup of domain weather took 0.00 seconds
+2025-11-06 16:54:36.186 INFO (MainThread) [homeassistant.components.image] Setting up fully_kiosk.image
+2025-11-06 16:54:36.189 INFO (MainThread) [homeassistant.components.esphome.manager] No `friendly_name` set in the `esphome:` section of the YAML config for device 'controle-alarme' (MAC: f4:cf:a2:31:8f:ab); It's recommended to add one for easier identification and better alignment with Home Assistant naming conventions
+2025-11-06 16:54:36.192 INFO (MainThread) [homeassistant.components.media_player] Setting up fully_kiosk.media_player
+2025-11-06 16:54:36.193 INFO (MainThread) [homeassistant.components.notify] Setting up fully_kiosk.notify
+2025-11-06 16:54:36.194 INFO (MainThread) [homeassistant.components.number] Setting up fully_kiosk.number
+2025-11-06 16:54:36.196 INFO (MainThread) [homeassistant.components.sensor] Setting up fully_kiosk.sensor
+2025-11-06 16:54:36.198 INFO (MainThread) [homeassistant.components.switch] Setting up fully_kiosk.switch
+2025-11-06 16:54:36.204 INFO (MainThread) [homeassistant.components.weather] Setting up met.weather
+2025-11-06 16:54:36.206 INFO (MainThread) [homeassistant.components.weather] Setting up met.weather
+2025-11-06 16:54:36.311 INFO (MainThread) [homeassistant.components.button] Setting up onvif.button
+2025-11-06 16:54:36.311 INFO (MainThread) [homeassistant.components.camera] Setting up onvif.camera
+2025-11-06 16:54:36.313 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up onvif.binary_sensor
+2025-11-06 16:54:36.314 INFO (MainThread) [homeassistant.components.sensor] Setting up onvif.sensor
+2025-11-06 16:54:36.315 INFO (MainThread) [homeassistant.components.switch] Setting up onvif.switch
+2025-11-06 16:54:36.316 INFO (MainThread) [homeassistant.components.button] Setting up onvif.button
+2025-11-06 16:54:36.316 INFO (MainThread) [homeassistant.components.camera] Setting up onvif.camera
+2025-11-06 16:54:36.317 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up onvif.binary_sensor
+2025-11-06 16:54:36.318 INFO (MainThread) [homeassistant.components.sensor] Setting up onvif.sensor
+2025-11-06 16:54:36.319 INFO (MainThread) [homeassistant.components.switch] Setting up onvif.switch
+2025-11-06 16:54:36.320 INFO (MainThread) [homeassistant.components.button] Setting up onvif.button
+2025-11-06 16:54:36.321 INFO (MainThread) [homeassistant.components.camera] Setting up onvif.camera
+2025-11-06 16:54:36.322 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up onvif.binary_sensor
+2025-11-06 16:54:36.323 INFO (MainThread) [homeassistant.components.sensor] Setting up onvif.sensor
+2025-11-06 16:54:36.323 INFO (MainThread) [homeassistant.components.switch] Setting up onvif.switch
+2025-11-06 16:54:36.339 INFO (MainThread) [homeassistant.components.button] Setting up onvif.button
+2025-11-06 16:54:36.340 INFO (MainThread) [homeassistant.components.camera] Setting up onvif.camera
+2025-11-06 16:54:36.341 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up onvif.binary_sensor
+2025-11-06 16:54:36.342 INFO (MainThread) [homeassistant.components.sensor] Setting up onvif.sensor
+2025-11-06 16:54:36.342 INFO (MainThread) [homeassistant.components.switch] Setting up onvif.switch
+2025-11-06 16:54:36.459 WARNING (MainThread) [custom_components.localtuya.core.cloud_api] [az1...AAP] Cloud API connection failed: Error 28841002: No permissions. Your subscription to cloud development plan has expired.
+2025-11-06 16:54:36.507 INFO (MainThread) [homeassistant.components.sensor] Setting up forecast_solar.sensor
+2025-11-06 16:54:36.717 INFO (MainThread) [homeassistant.setup] Setting up datetime
+2025-11-06 16:54:36.718 INFO (MainThread) [homeassistant.setup] Setup of domain datetime took 0.00 seconds
+2025-11-06 16:54:36.718 INFO (MainThread) [homeassistant.setup] Setting up time
+2025-11-06 16:54:36.718 INFO (MainThread) [homeassistant.setup] Setup of domain time took 0.00 seconds
+2025-11-06 16:54:36.720 INFO (MainThread) [homeassistant.components.sensor] Setting up solarman.sensor
+2025-11-06 16:54:36.734 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up solarman.binary_sensor
+2025-11-06 16:54:36.735 INFO (MainThread) [homeassistant.components.number] Setting up solarman.number
+2025-11-06 16:54:36.745 INFO (MainThread) [homeassistant.components.switch] Setting up solarman.switch
+2025-11-06 16:54:36.748 INFO (MainThread) [homeassistant.components.button] Setting up solarman.button
+2025-11-06 16:54:36.749 INFO (MainThread) [homeassistant.components.select] Setting up solarman.select
+2025-11-06 16:54:36.753 INFO (MainThread) [homeassistant.components.datetime] Setting up solarman.datetime
+2025-11-06 16:54:36.756 INFO (MainThread) [homeassistant.components.time] Setting up solarman.time
+2025-11-06 16:54:37.271 INFO (MainThread) [homeassistant.components.webhook] Received message for unregistered webhook d3fcb65722ea529b6547dc5f996d14ee62ce6c5b0a0bc3d4f7c85d787885cd87 from 192.168.0.161
+2025-11-06 16:54:37.719 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up synology_dsm.binary_sensor
+2025-11-06 16:54:37.721 INFO (MainThread) [homeassistant.components.button] Setting up synology_dsm.button
+2025-11-06 16:54:37.721 INFO (MainThread) [homeassistant.components.camera] Setting up synology_dsm.camera
+2025-11-06 16:54:37.721 INFO (MainThread) [homeassistant.components.sensor] Setting up synology_dsm.sensor
+2025-11-06 16:54:37.726 INFO (MainThread) [homeassistant.components.switch] Setting up synology_dsm.switch
+2025-11-06 16:54:37.726 INFO (MainThread) [homeassistant.components.update] Setting up synology_dsm.update
+2025-11-06 16:54:37.804 INFO (MainThread) [hass_nabucasa.iot] Connected
+2025-11-06 16:54:37.816 INFO (MainThread) [snitun.utils.aiohttp_client] AioHTTP snitun client started on 127.0.0.1:57453
+2025-11-06 16:54:38.555 INFO (MainThread) [snitun.utils.aiohttp_client] AioHTTP snitun client connected to: us-east-1-1.ui.nabu.casa:443
+2025-11-06 16:54:39.008 WARNING (MainThread) [custom_components.localtuya.coordinator] [eb3...bbp - Saída Inversor] Connection failed: [Errno 113] Host is unreachable ('192.168.0.88', '6668')
+2025-11-06 16:54:39.296 INFO (MainThread) [homeassistant.components.button] Setting up onvif.button
+2025-11-06 16:54:39.297 INFO (MainThread) [homeassistant.components.camera] Setting up onvif.camera
+2025-11-06 16:54:39.298 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up onvif.binary_sensor
+2025-11-06 16:54:39.299 INFO (MainThread) [homeassistant.components.sensor] Setting up onvif.sensor
+2025-11-06 16:54:39.299 INFO (MainThread) [homeassistant.components.switch] Setting up onvif.switch
+2025-11-06 16:54:39.778 INFO (MainThread) [homeassistant.components.button] Setting up onvif.button
+2025-11-06 16:54:39.779 INFO (MainThread) [homeassistant.components.camera] Setting up onvif.camera
+2025-11-06 16:54:39.781 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up onvif.binary_sensor
+2025-11-06 16:54:39.781 INFO (MainThread) [homeassistant.components.sensor] Setting up onvif.sensor
+2025-11-06 16:54:39.781 INFO (MainThread) [homeassistant.components.switch] Setting up onvif.switch
+2025-11-06 16:54:40.560 INFO (MainThread) [homeassistant.components.button] Setting up onvif.button
+2025-11-06 16:54:40.561 INFO (MainThread) [homeassistant.components.camera] Setting up onvif.camera
+2025-11-06 16:54:40.562 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up onvif.binary_sensor
+2025-11-06 16:54:40.562 INFO (MainThread) [homeassistant.components.sensor] Setting up onvif.sensor
+2025-11-06 16:54:40.563 INFO (MainThread) [homeassistant.components.switch] Setting up onvif.switch
+2025-11-06 16:54:45.055 INFO (MainThread) [roborock.version_1_apis.roborock_local_client_v1] [Roborock S5 Max] Connected to 192.168.0.111
+2025-11-06 16:54:45.193 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up roborock.binary_sensor
+2025-11-06 16:54:45.194 INFO (MainThread) [homeassistant.components.button] Setting up roborock.button
+2025-11-06 16:54:45.195 INFO (MainThread) [homeassistant.components.camera] Setting up roborock.camera
+2025-11-06 16:54:45.596 INFO (MainThread) [roborock.cloud_api] Starting mqtt loop
+2025-11-06 16:54:45.597 INFO (MainThread) [homeassistant.components.number] Setting up roborock.number
+2025-11-06 16:54:45.598 INFO (MainThread) [homeassistant.components.select] Setting up roborock.select
+2025-11-06 16:54:45.600 INFO (MainThread) [homeassistant.components.sensor] Setting up roborock.sensor
+2025-11-06 16:54:45.604 INFO (MainThread) [homeassistant.components.switch] Setting up roborock.switch
+2025-11-06 16:54:45.605 INFO (MainThread) [homeassistant.components.time] Setting up roborock.time
+2025-11-06 16:54:45.609 INFO (MainThread) [homeassistant.components.vacuum] Setting up roborock.vacuum
+2025-11-06 16:54:45.611 WARNING (MainThread) [homeassistant.helpers.frame] Detected that custom integration 'roborock' is setting state directly. Entity None (<class 'custom_components.roborock.vacuum.RoborockVacuum'>) should implement the 'activity' property and return its state using the VacuumActivity enum. This will stop working in Home Assistant 2026.1, please create a bug report at https://github.com/humbertogontijo/homeassistant-roborock/issues
+2025-11-06 16:54:45.611 WARNING (MainThread) [homeassistant.helpers.frame] Detected that custom integration 'roborock' is setting the battery_level which has been deprecated. Integration roborock should implement a sensor instead with a correct device class and link it to the same device. This will stop working in Home Assistant 2026.8, please create a bug report at https://github.com/humbertogontijo/homeassistant-roborock/issues
+2025-11-06 16:54:45.611 WARNING (MainThread) [homeassistant.helpers.frame] Detected that custom integration 'roborock' is setting the battery supported feature which has been deprecated. Integration roborock should remove this as part of migrating the battery level and icon to a sensor. This will stop working in Home Assistant 2026.8, please create a bug report at https://github.com/humbertogontijo/homeassistant-roborock/issues
+2025-11-06 16:54:45.724 INFO (paho-mqtt-client-) [roborock.version_1_apis.roborock_mqtt_client_v1] [Roborock S5 Max] Connected to mqtt mqtt-us.roborock.com:8883
+2025-11-06 16:54:45.725 INFO (paho-mqtt-client-) [roborock.version_1_apis.roborock_mqtt_client_v1] [Roborock S5 Max] Subscribed to topic rr/m/o/6yWCydOHv25Y9dkAcRbP6i/fa1bd962/1Zis3Krn5f83LwpXC1dYFb
+2025-11-06 16:54:47.195 INFO (MainThread) [homeassistant.bootstrap] Home Assistant initialized in 17.48s
+2025-11-06 16:54:47.196 INFO (MainThread) [homeassistant.core] Starting Home Assistant 2025.10.4
+2025-11-06 16:54:47.211 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection] [139702495761792] dashboard from 192.168.0.107 (Mozilla/5.0 (Linux; Android 9; KFTRWI Build/PS7321; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/90.0.4430.91 Safari/537.36): Client unable to keep up with pending messages. Reached 4096 pending messages. The system's load is too high or an integration is misbehaving; Last message was: b'{"type":"event","event":{"event_type":"state_changed","data":{"entity_id":"input_boolean.irrigation_cycle2_zone8_sun","old_state":null,"new_state":{"entity_id":"input_boolean.irrigation_cycle2_zone8_sun","state":"unavailable","attributes":{"restored":true,"icon":"mdi:numeric-7-box-outline","friendly_name":"Cycle 2, Zone 8, Sunday","supported_features":0},"last_changed":"2025-11-06T19:54:47.211592+00:00","last_reported":"2025-11-06T19:54:47.211592+00:00","last_updated":"2025-11-06T19:54:47.211592+00:00","context":{"id":"01K9DBRS1BAD0FWSGQD390QQ1G","parent_id":null,"user_id":null}}},"origin":"LOCAL","time_fired":"2025-11-06T19:54:47.211592+00:00","context":{"id":"01K9DBRS1BAD0FWSGQD390QQ1G","parent_id":null,"user_id":null}},"id":35}'
+2025-11-06 16:54:47.243 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection] [139702519786656] Ivan Roberto Silva Correa from 192.168.0.109 (Mozilla/5.0 (Linux; Android 9; KFTRWI Build/PS7318; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/84.0.4147.125 Safari/537.36): Client unable to keep up with pending messages. Reached 4096 pending messages. The system's load is too high or an integration is misbehaving; Last message was: b'{"type":"event","event":{"a":{"select.presenca_sala_tv_motion_detection_mode":{"s":"unavailable","a":{"restored":true,"options":["only_pir","pir_and_radar","only_radar"],"friendly_name":"Motion detection mode","supported_features":0},"c":"01K9DBRS2BYFX3J1Z9FKE6S7RV","lc":1762458887.2431931}}},"id":7}'
+2025-11-06 16:54:47.260 INFO (MainThread) [custom_components.hacs] Stage changed: startup
+2025-11-06 16:54:47.260 INFO (MainThread) [homeassistant.setup] Setting up google_assistant
+2025-11-06 16:54:47.269 INFO (MainThread) [custom_components.thermal_comfort.sensor] Temperature has an invalid value: <state sensor.termometro_suite_temperature=unavailable; restored=True, state_class=measurement, device_class=temperature, friendly_name=Temperatura, supported_features=0, unit_of_measurement=°C @ 2025-11-06T16:54:47.222590-03:00>. Can't calculate new states.
+2025-11-06 16:54:47.270 INFO (MainThread) [custom_components.thermal_comfort.sensor] Relative humidity has an invalid value: <state sensor.termometro_suite_humidity=unavailable; restored=True, state_class=measurement, device_class=humidity, friendly_name=Umidade, supported_features=0, unit_of_measurement=% @ 2025-11-06T16:54:47.222635-03:00>. Can't calculate new states.
+2025-11-06 16:54:47.270 INFO (MainThread) [custom_components.thermal_comfort.sensor] Temperature has an invalid value: <state sensor.termometro_escritorio_temperature=unavailable; restored=True, state_class=measurement, device_class=temperature, friendly_name=Temperatura, supported_features=0, unit_of_measurement=°C @ 2025-11-06T16:54:47.236511-03:00>. Can't calculate new states.
+2025-11-06 16:54:47.270 INFO (MainThread) [custom_components.thermal_comfort.sensor] Relative humidity has an invalid value: <state sensor.termometro_escritorio_humidity=unavailable; restored=True, state_class=measurement, device_class=humidity, friendly_name=Umidade, supported_features=0, unit_of_measurement=% @ 2025-11-06T16:54:47.236555-03:00>. Can't calculate new states.
+2025-11-06 16:54:47.273 INFO (MainThread) [custom_components.hacs] Loading removed repositories
+2025-11-06 16:54:47.278 INFO (MainThread) [homeassistant.setup] Setup of domain google_assistant took 0.02 seconds
+2025-11-06 16:54:47.434 WARNING (MainThread) [custom_components.hacs] You have 'custom-cards/bar-card' installed with HACS this repository has been removed from HACS, please consider removing it. Removal reason (Repository is no longer maintained)
+2025-11-06 16:54:47.434 INFO (MainThread) [custom_components.hacs] Loading known repositories
+2025-11-06 16:54:47.600 INFO (MainThread) [custom_components.hacs] Stage changed: running
+2025-11-06 16:55:02.261 WARNING (MainThread) [homeassistant.core] Something is blocking Home Assistant from wrapping up the start up phase. We're going to continue anyway. Please report the following info at https://github.com/home-assistant/core/issues: roborock, onvif.switch, api, event, input_number, dlna_dms, sun.sensor, upnp, shelly.cover, solarman.time, esphome.switch, onboarding, systemmonitor.sensor, logger, sonoff.fan, systemmonitor.binary_sensor, dlna_dmr.media_player, hacs.switch, shelly.valve, average.sensor, history_stats.sensor, template.sensor, cloud, stream, sonoff.switch, sonoff.button, python_script, automation, localtuya.fan, localtuya.water_heater, onvif.camera, mqtt.binary_sensor, mqtt.event, mqtt.switch, tasmota.binary_sensor, backup.sensor, command_line, assist_pipeline, cover, mqtt.update, localtuya.binary_sensor, solarman.switch, sonoff.remote, fully_kiosk.button, time, synology_dsm.binary_sensor, alarm_control_panel, webrtc, shelly.event, network, solarman.button, persistent_notification, media_source, sonoff.light, sonoff.select, tasmota.light, fully_kiosk.camera, weather, fully_kiosk.media_player, go2rtc, localtuya.alarm_control_panel, hassio.sensor, usage_prediction, sonoff.alarm_control_panel, dlna_dmr, media_player, cast.media_player, solarman.sensor, conversation, scene, homeassistant_alerts, localtuya, localtuya.light, counter, roborock.time, vacuum, localtuya.cover, tts, roborock.vacuum, irrigation_unlimited.binary_sensor, select, localtuya.vacuum, shelly.select, mqtt.select, timer, utility_meter, met.weather, backup.event, mobile_app.sensor, roborock.button, synology_dsm.update, esphome.update, roborock.sensor, esphome.sensor, lock, ffmpeg, sonoff, ssdp, input_button, input_datetime, humidifier, person, samsungtv, localtuya.siren, shelly.switch, solarman.binary_sensor, tasmota.cover, roborock.switch, tasmota.camera, roborock.camera, auth, thermal_comfort, fully_kiosk.notify, history, esphome, onvif, forecast_solar.sensor, sun.binary_sensor, intent, samsungtv.remote, homeassistant, tasmota.fan, usb, localtuya.number, datetime, synology_dsm.button, thermal_comfort.sensor, sonoff.climate, hassio, logbook, config, mobile_app.binary_sensor, image, fully_kiosk.binary_sensor, shelly, backup, sonoff.number, fully_kiosk, fan, mqtt, localtuya.select, roborock.select, shelly.light, input_select, camera, solarman, solarman.datetime, fully_kiosk.number, met, shelly.number, dhcp, cloud.tts, localtuya.humidifier, upnp.binary_sensor, tag, zone, button, websocket_api, switch_as_x, onvif.sensor, tasmota.switch, image_upload, synology_dsm.camera, sun, recorder, shelly.climate, climate, google_assistant, roborock.number, group, bluetooth, update, roborock.binary_sensor, zeroconf, solarman.select, cast, localtuya.remote, synology_dsm.sensor, text, blueprint, fully_kiosk.sensor, localtuya.climate, shelly.sensor, wake_word, shelly.update, siren, fully_kiosk.image, energy, system_log, solarman.number, mqtt.number, onvif.button, application_credentials, hacs, switch_as_x.light, onvif.binary_sensor, script, template, synology_dsm.switch, input_boolean, schedule, mobile_app.device_tracker, forecast_solar, lovelace, cloud.binary_sensor, webhook, hassio.update, device_automation, binary_sensor, remote, speedtestdotnet, notify, sonoff.media_player, hassio.switch, homeassistant.scene, time_date.sensor, repairs, sonoff.sensor, sonoff.cover, system_health, samsungtv.media_player, mqtt.sensor, nodered, sensor, template.binary_sensor, systemmonitor, valve, irrigation_unlimited, device_tracker, shelly.text, mobile_app.notify, file, default_config, sonoff.binary_sensor, water_heater, input_text, hacs.update, http, tasmota.sensor, localtuya.lock, stt, cloud.stt, diagnostics, search, synology_dsm, hardware, localtuya.button, number, shelly.binary_sensor, esphome.binary_sensor, my, hassio.binary_sensor, average, shelly.button, light, command_line.sensor, utility_meter.sensor, esphome.button, localtuya.sensor, switch, upnp.sensor, speedtestdotnet.sensor, energy.sensor, frontend, mqtt.button, mobile_app, localtuya.switch, analytics, trace, google_translate.tts, fully_kiosk.switch, tasmota, file_upload The system is waiting for tasks: {<Task pending name='Task-1815' coro=<AbstractConfig.async_initialize.<locals>.sync_google() running at /usr/src/homeassistant/homeassistant/components/google_assistant/helpers.py:114> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[set.remove()]>}
+2025-11-06 16:55:02.267 WARNING (MainThread) [homeassistant.components.homeassistant.triggers.numeric_state] Error initializing 'Restart VsCode Memory Leak' trigger: In 'numeric_state' condition: unknown entity sensor.studio_code_server_memory_percent
+2025-11-06 16:55:02.268 INFO (MainThread) [homeassistant.components.automation.restart_vscode_memory_leak] Initialized trigger Restart VsCode Memory Leak
+2025-11-06 16:55:02.274 INFO (SyncWorker_5) [homeassistant.loader] Loaded zha from homeassistant.components.zha
+2025-11-06 16:55:02.277 INFO (SyncWorker_10) [homeassistant.loader] Loaded homeassistant_hardware from homeassistant.components.homeassistant_hardware
+2025-11-06 16:55:02.283 INFO (MainThread) [homeassistant.setup] Setting up homeassistant_hardware
+2025-11-06 16:55:02.573 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up upnp.binary_sensor
+2025-11-06 16:55:02.574 INFO (MainThread) [homeassistant.components.sensor] Setting up upnp.sensor
+2025-11-06 16:55:02.825 INFO (ImportExecutor_0) [zigpy.serial] Using pyserial-asyncio-fast in place of pyserial-asyncio
+2025-11-06 16:55:07.269 INFO (MainThread) [homeassistant.components.mqtt.client] MQTT client initialized, birth message sent
+2025-11-06 16:55:12.409 INFO (MainThread) [custom_components.thermal_comfort.sensor] Temperature has an invalid value: <state sensor.termometro_escritorio_temperature=unavailable; state_class=measurement, unit_of_measurement=°C, device_class=temperature, friendly_name=Termômetro Escritório Temperatura @ 2025-11-06T16:54:47.236511-03:00>. Can't calculate new states.
+2025-11-06 16:55:12.412 INFO (MainThread) [custom_components.thermal_comfort.sensor] Relative humidity has an invalid value: <state sensor.termometro_escritorio_humidity=unavailable; state_class=measurement, unit_of_measurement=%, device_class=humidity, friendly_name=Termômetro Escritório Umidade @ 2025-11-06T16:54:47.236555-03:00>. Can't calculate new states.
+2025-11-06 16:55:12.606 INFO (MainThread) [custom_components.thermal_comfort.sensor] Temperature has an invalid value: <state sensor.termometro_suite_temperature=unavailable; state_class=measurement, unit_of_measurement=°C, device_class=temperature, friendly_name=Termômetro Suíte Temperatura @ 2025-11-06T16:54:47.222590-03:00>. Can't calculate new states.
+2025-11-06 16:55:12.607 INFO (MainThread) [custom_components.thermal_comfort.sensor] Relative humidity has an invalid value: <state sensor.termometro_suite_humidity=unavailable; state_class=measurement, unit_of_measurement=%, device_class=humidity, friendly_name=Termômetro Suíte Umidade @ 2025-11-06T16:54:47.222635-03:00>. Can't calculate new states.
+2025-11-06 16:55:13.098 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 d35c96439f6bb260
+2025-11-06 16:55:13.100 INFO (MainThread) [homeassistant.components.button] Setting up nodered.button
+2025-11-06 16:55:13.104 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 d3592080b3f36c83
+2025-11-06 16:55:13.123 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 695c4ba4051d6882
+2025-11-06 16:55:13.137 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 b010689d3bf89aef
+2025-11-06 16:55:13.138 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 f25e9f77ed8aa60b
+2025-11-06 16:55:13.147 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 7d7cce1e3ee173ee
+2025-11-06 16:55:13.153 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 d2d7aa01fa4054bd
+2025-11-06 16:55:13.159 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 0cded1f6130821d6
+2025-11-06 16:55:13.163 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 8e4676584364d0ae
+2025-11-06 16:55:13.166 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 14e3ba8b4411b03c
+2025-11-06 16:55:13.171 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 59ee5ee5374d41d0
+2025-11-06 16:55:13.742 INFO (MainThread) [custom_components.thermal_comfort.sensor] Temperature has an invalid value: <state sensor.termometro_escritorio_temperature=unknown; state_class=measurement, unit_of_measurement=°C, device_class=temperature, friendly_name=Termômetro Escritório Temperatura @ 2025-11-06T16:55:13.716382-03:00>. Can't calculate new states.
+2025-11-06 16:55:13.742 INFO (MainThread) [custom_components.thermal_comfort.sensor] Relative humidity has an invalid value: <state sensor.termometro_suite_humidity=unknown; state_class=measurement, unit_of_measurement=%, device_class=humidity, friendly_name=Termômetro Suíte Umidade @ 2025-11-06T16:55:13.716527-03:00>. Can't calculate new states.
+2025-11-06 16:55:13.743 INFO (MainThread) [custom_components.thermal_comfort.sensor] Temperature has an invalid value: <state sensor.termometro_suite_temperature=unknown; state_class=measurement, unit_of_measurement=°C, device_class=temperature, friendly_name=Termômetro Suíte Temperatura @ 2025-11-06T16:55:13.718949-03:00>. Can't calculate new states.
+2025-11-06 16:55:13.743 INFO (MainThread) [custom_components.thermal_comfort.sensor] Relative humidity has an invalid value: <state sensor.termometro_escritorio_humidity=unknown; state_class=measurement, unit_of_measurement=%, device_class=humidity, friendly_name=Termômetro Escritório Umidade @ 2025-11-06T16:55:13.732114-03:00>. Can't calculate new states.
+2025-11-06 16:55:13.743 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 c8f1ad1d4f1fba42
+2025-11-06 16:55:13.743 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 bb04b71b61e7445d
+2025-11-06 16:55:13.744 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 c9009e9bac8c5891
+2025-11-06 16:55:13.744 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 12077268a3be47f8
+2025-11-06 16:55:13.744 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 1a1497477c4b9dc6
+2025-11-06 16:55:13.744 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 edb01a8fcabd1a3b
+2025-11-06 16:55:13.744 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 fdc482b890e27735
+2025-11-06 16:55:13.847 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 6e439fcfc4f85e84
+2025-11-06 16:55:13.867 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 6dd80ba716338cb3
+2025-11-06 16:55:13.868 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 8b9189309ff31540
+2025-11-06 16:55:13.870 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up nodered.binary_sensor
+2025-11-06 16:55:13.891 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 4df4a62baf04acde
+2025-11-06 16:55:13.908 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 1619e79d62e9980d
+2025-11-06 16:55:13.916 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 f0422dc717ecb7d1
+2025-11-06 16:55:13.930 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 7688d1590889b3e5
+2025-11-06 16:55:13.947 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 e7b9ed374368057d
+2025-11-06 16:55:13.956 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 72edd2790f505e39
+2025-11-06 16:55:13.971 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 faa40d0e7331dc54
+2025-11-06 16:55:13.973 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 8779b7d27f26e63d
+2025-11-06 16:55:13.983 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 75e024ab85259021
+2025-11-06 16:55:13.988 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 90c2b2da76024589
+2025-11-06 16:55:13.990 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 cf238f66ab22c326
+2025-11-06 16:55:13.992 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 aa165d5474bc3955
+2025-11-06 16:55:13.994 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 969b8193851b19ce
+2025-11-06 16:55:13.995 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 336560565c45143a
+2025-11-06 16:55:13.999 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 8ad865b1023e2460
+2025-11-06 16:55:14.000 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 5be449232f3bcc11
+2025-11-06 16:55:14.002 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 16d4c818d1b5a89c
+2025-11-06 16:55:14.006 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 2ba534b7e71ea1db
+2025-11-06 16:55:14.008 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 d3b06f6448076111
+2025-11-06 16:55:14.011 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 3d39b678926db418
+2025-11-06 16:55:14.013 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 e960ce8a6bdbedcf
+2025-11-06 16:55:14.017 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 bc0cc494f30d31ed
+2025-11-06 16:55:14.018 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 8547677410437b1b
+2025-11-06 16:55:14.019 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 5565c3b278ed83dd
+2025-11-06 16:55:14.020 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 5037c8b1ce173788
+2025-11-06 16:55:14.021 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 447e54f5d7a9b315
+2025-11-06 16:55:14.022 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 27946bd5f1e5d040
+2025-11-06 16:55:14.023 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 9d5be6fd322e9d63
+2025-11-06 16:55:14.023 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 29f1d8372257e4c6
+2025-11-06 16:55:14.024 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 8fd0dbe716c0107b
+2025-11-06 16:55:14.024 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 73e93955a3e72d38
+2025-11-06 16:55:14.024 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 9673f1b79775f5c0
+2025-11-06 16:55:14.025 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 e2d38e085faa84d3
+2025-11-06 16:55:14.025 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 d87fefb41ea8db04
+2025-11-06 16:55:14.025 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 d4d3a5dd7a54bf21
+2025-11-06 16:55:14.025 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 7436f47611da08e1
+2025-11-06 16:55:14.026 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 d205d1a8be9277bf
+2025-11-06 16:55:14.027 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 62deaff9673833a6
+2025-11-06 16:55:14.027 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 c6dbd3f1f8b01522
+2025-11-06 16:55:14.027 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 19753d6b970c85cc
+2025-11-06 16:55:14.289 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 d790c796d88bbf0d
+2025-11-06 16:55:14.568 INFO (MainThread) [custom_components.nodered.discovery] Creating sensor 33803899.487d48 76c2ca0502e54c5a
+2025-11-06 16:55:14.569 INFO (MainThread) [homeassistant.components.sensor] Setting up nodered.sensor
+2025-11-06 16:55:14.595 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 1cf1dfe863c6c02d
+2025-11-06 16:55:14.596 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 5a10bfd9d69f3d1c
+2025-11-06 16:55:14.600 INFO (MainThread) [custom_components.nodered.discovery] Creating sensor 33803899.487d48 1c65969dd0a0f970
+2025-11-06 16:55:14.875 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 99039b3e9ddde58e
+2025-11-06 16:55:14.876 INFO (MainThread) [custom_components.nodered.discovery] Creating sensor 33803899.487d48 579133403b01d215
+2025-11-06 16:55:14.890 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 4461ab575b6084dd
+2025-11-06 16:55:14.892 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 d024de5a5460e0c1
+2025-11-06 16:55:14.894 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 6ab8740ffc886f97
+2025-11-06 16:55:14.898 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 3ef55813426b82f0
+2025-11-06 16:55:14.900 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 026cc42a074482a8
+2025-11-06 16:55:14.902 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 6456dfc1db43b180
+2025-11-06 16:55:14.905 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 f6559973d450d694
+2025-11-06 16:55:14.906 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 6a899a8e57d6cca7
+2025-11-06 16:55:14.910 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 8f20b018eda48d8c
+2025-11-06 16:55:14.911 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 249374d3eb71bbb0
+2025-11-06 16:55:14.914 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 9df51711bc7d27f0
+2025-11-06 16:55:14.917 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 bb7a962758a39637
+2025-11-06 16:55:14.932 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 ecee6ffb775ef838
+2025-11-06 16:55:14.933 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 6bdfe15bf789b8c0
+2025-11-06 16:55:14.936 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 2742afb18745a450
+2025-11-06 16:55:14.938 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 e87aab7104c9fee2
+2025-11-06 16:55:14.940 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 8907172193f31691
+2025-11-06 16:55:14.942 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 405324c2e203bade
+2025-11-06 16:55:14.946 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 16a8ab04999acf7d
+2025-11-06 16:55:14.948 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 14ad498594e65c0e
+2025-11-06 16:55:14.950 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 10de8ae2a446be46
+2025-11-06 16:55:14.952 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 d2593eb1063ba42c
+2025-11-06 16:55:14.954 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 9c96ba725d953294
+2025-11-06 16:55:14.956 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 52e75a982f9b0883
+2025-11-06 16:55:14.957 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 2f01abf3dffca6e1
+2025-11-06 16:55:14.961 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 5d07abad4a368690
+2025-11-06 16:55:14.963 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 97c30213a2b5fa03
+2025-11-06 16:55:14.965 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 5c2fe2a56c20a97c
+2025-11-06 16:55:14.967 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 3958eb4694793eeb
+2025-11-06 16:55:14.970 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 c96c3f039ed9161e
+2025-11-06 16:55:14.972 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 081773f09afcb97d
+2025-11-06 16:55:14.974 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 924c94c70c09fb1d
+2025-11-06 16:55:14.976 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 5938add64155cca1
+2025-11-06 16:55:14.980 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 a93d5c205f4030f2
+2025-11-06 16:55:14.982 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 a6184e3727c73d8f
+2025-11-06 16:55:14.983 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 580ca3aa8fa6df0a
+2025-11-06 16:55:14.987 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 fce314d19a1ac4b7
+2025-11-06 16:55:14.994 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 ed59d34fa25cc7c1
+2025-11-06 16:55:14.995 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 a1b0b41e7d83f4b3
+2025-11-06 16:55:15.012 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 b607851b6666b42a
+2025-11-06 16:55:15.013 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 51bcaa98d8c1de5f
+2025-11-06 16:55:15.055 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 1ffc430948677d41
+2025-11-06 16:55:15.057 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 3388a6cdb1d2d291
+2025-11-06 16:55:15.066 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 0c0a4d5d4ef842dd
+2025-11-06 16:55:15.068 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 c0a35786f7c5af63
+2025-11-06 16:55:15.089 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 4199caf3a758be9c
+2025-11-06 16:55:15.091 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 1ac8e881e74eb549
+2025-11-06 16:55:15.096 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 0e03a05f8956cae8
+2025-11-06 16:55:15.100 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 03dcde34c0b333c2
+2025-11-06 16:55:15.101 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 7e820d0a53684a6e
+2025-11-06 16:55:15.103 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 4882a4898e772634
+2025-11-06 16:55:15.109 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 e54d2895f25e5912
+2025-11-06 16:55:15.112 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 169cb87c265e7078
+2025-11-06 16:55:15.114 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 b3252bdf391d4857
+2025-11-06 16:55:15.117 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 9d25359fbe3da2ee
+2025-11-06 16:55:15.119 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 515af5e3c4926fb8
+2025-11-06 16:55:15.122 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 c2dfacc90fb80833
+2025-11-06 16:55:15.124 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 d9ed3d7387350c62
+2025-11-06 16:55:15.127 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 b7f9c4a5afe55954
+2025-11-06 16:55:15.129 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 add565c7919271a7
+2025-11-06 16:55:15.131 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 87d602f6518fd4e9
+2025-11-06 16:55:15.133 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 5b110c24951cff61
+2025-11-06 16:55:15.136 INFO (MainThread) [custom_components.nodered.discovery] Creating sensor 33803899.487d48 7be159e771fc19a2
+2025-11-06 16:55:15.137 INFO (MainThread) [custom_components.nodered.discovery] Creating sensor 33803899.487d48 30a5d2643ae1ffbb
+2025-11-06 16:55:15.139 INFO (MainThread) [custom_components.nodered.discovery] Creating sensor 33803899.487d48 1351fef4418b235c
+2025-11-06 16:55:15.142 INFO (MainThread) [custom_components.nodered.discovery] Creating sensor 33803899.487d48 c49bbd51c59d722f
+2025-11-06 16:55:15.143 INFO (MainThread) [custom_components.nodered.discovery] Creating sensor 33803899.487d48 65696f72d5b56dc4
+2025-11-06 16:55:15.145 INFO (MainThread) [custom_components.nodered.discovery] Creating sensor 33803899.487d48 9b246a7e0c25aa00
+2025-11-06 16:55:15.148 INFO (MainThread) [custom_components.nodered.discovery] Creating sensor 33803899.487d48 a7e88bd3fa433cbf
+2025-11-06 16:55:15.151 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 bd36505a140118b0
+2025-11-06 16:55:15.154 INFO (MainThread) [custom_components.nodered.discovery] Creating switch 33803899.487d48 91fc58085d08e75e
+2025-11-06 16:55:15.156 INFO (MainThread) [homeassistant.components.switch] Setting up nodered.switch
+2025-11-06 16:55:15.157 INFO (MainThread) [custom_components.nodered.discovery] Creating sensor 33803899.487d48 d80fe782487a7397
+2025-11-06 16:55:15.160 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 eaa477944dbaf67f
+2025-11-06 16:55:15.163 INFO (MainThread) [custom_components.nodered.discovery] Creating binary_sensor 33803899.487d48 01054c84ddd22bfc
+2025-11-06 16:55:15.165 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 1614892b664325c9
+2025-11-06 16:55:15.167 INFO (MainThread) [custom_components.nodered.discovery] Creating sensor 33803899.487d48 c9a5b62b8acde6a5
+2025-11-06 16:55:15.174 INFO (MainThread) [custom_components.nodered.discovery] Creating switch 33803899.487d48 25a219f2f045ec35
+2025-11-06 16:55:15.174 INFO (MainThread) [custom_components.nodered.discovery] Creating switch 33803899.487d48 3261bd5940e9e5f7
+2025-11-06 16:55:15.174 INFO (MainThread) [custom_components.nodered.discovery] Creating switch 33803899.487d48 80e2887599ad7f26
+2025-11-06 16:55:15.176 INFO (MainThread) [custom_components.nodered.discovery] Creating switch 33803899.487d48 e4f789953ceaf3ca
+2025-11-06 16:55:15.179 INFO (MainThread) [custom_components.nodered.discovery] Creating switch 33803899.487d48 4e91a7ffb92ee039
+2025-11-06 16:55:15.181 INFO (MainThread) [custom_components.nodered.discovery] Creating switch 33803899.487d48 45cda6770b20e868
+2025-11-06 16:55:15.182 INFO (MainThread) [custom_components.nodered.discovery] Creating switch 33803899.487d48 7331dac4c53d6826
+2025-11-06 16:55:15.185 INFO (MainThread) [custom_components.nodered.discovery] Creating switch 33803899.487d48 4c3c2c6e413a29dc
+2025-11-06 16:55:15.189 INFO (MainThread) [custom_components.nodered.discovery] Creating switch 33803899.487d48 0324dcb58ca681eb
+2025-11-06 16:55:15.191 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 50f5c53f1b61b974
+2025-11-06 16:55:15.195 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 baf6eaecce83380c
+2025-11-06 16:55:15.198 INFO (MainThread) [custom_components.nodered.discovery] Creating button 33803899.487d48 1a6a828a1cc42223
+2025-11-06 16:55:38.345 INFO (MainThread) [hass_nabucasa.google_report_state] Connected
+2025-11-06 16:56:07.796 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities switch.tomada_pernilongo_0 are missing or not currently available
+2025-11-06 16:56:40.378 WARNING (MainThread) [custom_components.sonoff.core.ewelink.cloud] Cloud ERROR: {'error': 504, 'reason': 'Request Timeout', 'deviceid': '1002245e10', 'apikey': '4aeef851-d5de-463a-a82c-e4ee6d033fbc', 'sequence': '1762458995182'}
+2025-11-06 16:56:58.500 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 16:57:53.628 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 16:58:48.756 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 16:59:10.519 WARNING (MainThread) [custom_components.sonoff.core.ewelink.cloud] Cloud ERROR: {'error': 504, 'reason': 'Request Timeout', 'deviceid': '1002245e10', 'apikey': '4aeef851-d5de-463a-a82c-e4ee6d033fbc', 'sequence': '1762459145186'}
+2025-11-06 16:59:43.884 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:00:10.159 WARNING (Recorder) [homeassistant.components.sensor.recorder] Entity sensor.sonoff_1002245e10_energy from integration sonoff has state class total_increasing, but its state is not strictly increasing. Triggered by state 266.3 (266.31) with last_updated set to 2025-11-06T19:57:57.532007+00:00. Please create a bug report at https://github.com/AlexxIT/SonoffLAN/issues
+2025-11-06 17:00:39.469 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:01:34.597 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:02:07.783 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities switch.tomada_pernilongo_0 are missing or not currently available
+2025-11-06 17:02:29.727 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:03:10.392 WARNING (MainThread) [custom_components.sonoff.core.ewelink.cloud] Cloud ERROR: {'error': 504, 'reason': 'Request Timeout', 'deviceid': '1002245e10', 'apikey': '4aeef851-d5de-463a-a82c-e4ee6d033fbc', 'sequence': '1762459385195'}
+2025-11-06 17:03:24.857 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:04:20.874 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:04:30.736 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up upnp.binary_sensor
+2025-11-06 17:04:30.736 INFO (MainThread) [homeassistant.components.sensor] Setting up upnp.sensor
+2025-11-06 17:05:16.001 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:06:11.130 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:06:37.362 ERROR (MainThread) [frontend.js.modern.202510014] Uncaught error from Chrome WebView 138.0.7204.224 on Android 9
+Error: Failed to execute 'define' on 'CustomElementRegistry': the name "xiaomi-vacuum-map-card-editor" has already been used with this registry
+A.define (node_modules/@webcomponents/scoped-custom-element-registry/src/scoped-custom-element-registry.ts:180:12)
+/hacsfiles/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js:30:61
+/hacsfiles/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js:30:76
+e (/hacsfiles/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js:1:250)
+/hacsfiles/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js:316:208
+2025-11-06 17:07:06.257 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:08:01.385 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:08:07.803 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities switch.tomada_pernilongo_0 are missing or not currently available
+2025-11-06 17:08:56.532 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:09:51.660 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:10:03.043 INFO (MainThread) [homeassistant.components.analytics] Submitted analytics to Home Assistant servers. Information submitted includes {'uuid': '0c3cba0bf3a04f3ca83af181652404dc', 'version': '2025.10.4', 'installation_type': 'Home Assistant OS', 'supervisor': {'healthy': True, 'supported': True, 'arch': 'amd64'}, 'operating_system': {'board': 'ova', 'version': '16.3'}, 'certificate': False, 'integrations': ['input_number', 'dlna_dms', 'upnp', 'logger', 'automation', 'cloud', 'python_script', 'command_line', 'dlna_dmr', 'scene', 'tts', 'timer', 'utility_meter', 'history_stats', 'input_datetime', 'person', 'samsungtv', 'esphome', 'onvif', 'homeassistant', 'hassio', 'google_translate', 'shelly', 'backup', 'fully_kiosk', 'mqtt', 'input_select', 'met', 'time_date', 'zone', 'switch_as_x', 'sun', 'recorder', 'group', 'zeroconf', 'cast', 'energy', 'script', 'template', 'input_boolean', 'forecast_solar', 'binary_sensor', 'speedtestdotnet', 'sensor', 'systemmonitor', 'default_config', 'input_text', 'synology_dsm', 'frontend', 'mobile_app', 'tasmota'], 'custom_integrations': [{'domain': 'roborock', 'version': <AwesomeVersion SemVer '1.0.16'>}, {'domain': 'webrtc', 'version': <AwesomeVersion SemVer '3.6.1'>}, {'domain': 'localtuya', 'version': <AwesomeVersion CalVer '2025.10.0'>}, {'domain': 'sonoff', 'version': <AwesomeVersion SemVer '3.9.3'>}, {'domain': 'thermal_comfort', 'version': <AwesomeVersion SemVer '0.0.0'>}, {'domain': 'solarman', 'version': <AwesomeVersion CalVer '25.08.16'>}, {'domain': 'hacs', 'version': <AwesomeVersion SemVer '2.0.5'>}, {'domain': 'nodered', 'version': <AwesomeVersion SemVer '4.1.3'>}, {'domain': 'irrigation_unlimited', 'version': <AwesomeVersion CalVer '2025.10.0'>}, {'domain': 'average', 'version': <AwesomeVersion SemVer '2.4.0'>}], 'addons': [{'slug': '5c53de3b_esphome', 'protected': True, 'version': '2025.10.4', 'auto_update': True}, {'slug': 'core_configurator', 'protected': True, 'version': '5.8.0', 'auto_update': True}, {'slug': 'db21ed7f_filebrowser', 'protected': True, 'version': '2.44.2', 'auto_update': True}, {'slug': 'a0d7b954_appdaemon', 'protected': True, 'version': '0.17.11', 'auto_update': True}, {'slug': 'a0d7b954_sqlite-web', 'protected': True, 'version': '4.4.1', 'auto_update': True}, {'slug': 'core_samba', 'protected': True, 'version': '12.5.4', 'auto_update': True}, {'slug': 'a0d7b954_nodered', 'protected': True, 'version': '20.0.0', 'auto_update': True}, {'slug': 'a0d7b954_glances', 'protected': False, 'version': '0.21.1', 'auto_update': True}, {'slug': 'a0d7b954_emqx', 'protected': True, 'version': '0.8.0', 'auto_update': True}, {'slug': 'a0d7b954_sonweb', 'protected': True, 'version': '0.32.2', 'auto_update': True}, {'slug': 'a0d7b954_zerotier', 'protected': True, 'version': '0.23.1', 'auto_update': True}, {'slug': '45df7312_zigbee2mqtt', 'protected': True, 'version': '2.6.3-1', 'auto_update': True}, {'slug': 'a0d7b954_ssh', 'protected': True, 'version': '21.0.4', 'auto_update': False}], 'energy': {'configured': True}, 'recorder': {'engine': 'sqlite', 'version': <AwesomeVersion SimpleVer '3.49.2'>}, 'state_count': 2179, 'automation_count': 11, 'integration_count': 51, 'addon_count': 13, 'user_count': 3}
+2025-11-06 17:10:46.790 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:11:41.919 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:12:37.049 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:12:40.546 WARNING (MainThread) [custom_components.sonoff.core.ewelink.cloud] Cloud ERROR: {'error': 504, 'reason': 'Request Timeout', 'deviceid': '1002245e10', 'apikey': '4aeef851-d5de-463a-a82c-e4ee6d033fbc', 'sequence': '1762459955215'}
+2025-11-06 17:13:32.177 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:14:07.773 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities switch.tomada_pernilongo_0 are missing or not currently available
+2025-11-06 17:14:27.306 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:15:22.472 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:16:17.601 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:17:13.215 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:18:08.344 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:18:40.423 WARNING (MainThread) [custom_components.sonoff.core.ewelink.cloud] Cloud ERROR: {'error': 504, 'reason': 'Request Timeout', 'deviceid': '1002245e10', 'apikey': '4aeef851-d5de-463a-a82c-e4ee6d033fbc', 'sequence': '1762460315228'}
+2025-11-06 17:19:03.472 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:19:07.788 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities switch.tomada_pernilongo_0 are missing or not currently available
+2025-11-06 17:19:58.607 INFO (MainThread) [hass_nabucasa.google_report_state] Timeout while waiting to receive message
+2025-11-06 17:20:26.193 INFO (MainThread) [habluetooth.channels.bluez] Bluetooth management socket connection closed
+2025-11-06 17:20:26.201 INFO (MainThread) [hass_nabucasa.google_report_state] Connection closed: Closed by server. None (None)
+2025-11-06 17:20:26.208 INFO (MainThread) [snitun.utils.aiohttp_client] AioHTTP snitun client disconnected from: us-east-1-1.ui.nabu.casa:443
+2025-11-06 17:20:26.208 INFO (MainThread) [snitun.utils.aiohttp_client] AioHTTP snitun client closed
+2025-11-06 17:20:26.209 INFO (MainThread) [custom_components.localtuya] localtuya: Shutdown completed
+2025-11-06 17:20:26.328 INFO (MainThread) [hass_nabucasa.iot] Connection closed: Closed by server. None (None)
+2025-11-06 17:20:29.231 INFO (Recorder) [homeassistant.components.recorder.pool.RecorderPool] Pool recreating
+2025-11-06 17:20:29.287 INFO (MainThread) [aioesphomeapi.reconnect_logic] Processing expected disconnect from ESPHome API for controle-alarme @ 192.168.0.148
+2025-11-06 17:20:29.380 INFO (MainThread) [aioesphomeapi.reconnect_logic] Processing expected disconnect from ESPHome API for nivel-caixa-agua-pressao @ 192.168.0.102

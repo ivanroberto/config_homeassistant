@@ -1,0 +1,7 @@
+substitutions:
+  device_name: "pow-luzes-sala-jantar"
+  friendly_name: "Pow Luzes Sala Jantar"
+  wifi_ap_password: "ivanrsc125"
+
+packages:
+  base: !include packages/base-dual-r3.yaml

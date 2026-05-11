@@ -1,0 +1,42 @@
+# BL0939 dual channel driver
+# UART deve ser configurado no arquivo do dispositivo:
+#   tx_pin: GPIO25, rx_pin: GPIO26, baud_rate: 4800
+
+sensor:
+  - platform: bl0939
+    update_interval: 5s
+    voltage:
+      id: voltage_raw
+      internal: true
+    current_1:
+      id: current_1_raw
+      internal: true
+    current_2:
+      id: current_2_raw
+      internal: true
+    active_power_1:
+      id: power_1_raw
+      internal: true
+    active_power_2:
+      id: power_2_raw
+      internal: true
+    energy_1:
+      id: energy_1_raw
+      internal: true
+      on_value:
+        then:
+          - lambda: |-
+              if (id(energy_raw_last_1) > 0.0f && x >= id(energy_raw_last_1)) {
+                id(energy_total_1) += (x - id(energy_raw_last_1)) / 1000.0f;
+              }
+              id(energy_raw_last_1) = x;
+    energy_2:
+      id: energy_2_raw
+      internal: true
+      on_value:
+        then:
+          - lambda: |-
+              if (id(energy_raw_last_2) > 0.0f && x >= id(energy_raw_last_2)) {
+                id(energy_total_2) += (x - id(energy_raw_last_2)) / 1000.0f;
+              }
+              id(energy_raw_last_2) = x;

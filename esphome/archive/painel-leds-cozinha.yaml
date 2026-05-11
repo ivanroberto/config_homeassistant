@@ -1,0 +1,7 @@
+---
+substitutions:
+  devicename: painel-leds-cozinha
+  friendly_name: Painel Leds Cozinha
+
+<<: !include .base.yaml
+<<: !include .base.indicador-status.yaml

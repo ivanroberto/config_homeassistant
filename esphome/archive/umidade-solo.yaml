@@ -1,0 +1,49 @@
+esphome:
+  name: umidade-solo
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Umidade Solo Fallback Hotspot"
+    password: "ivanrsc125"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+binary_sensor:
+  - platform: status
+    name: "Indicador Umidade Status"
+
+sensor:
+  - platform: adc
+    pin: A0
+    name: "umidade_solo"
+    icon: "mdi:water-percent"
+    update_interval: 3s
+    unit_of_measurement: "%"
+    filters:
+    - median:
+        window_size: 301
+        send_every: 300
+        send_first_at: 3
+    - calibrate_linear:
+        - 0.08 -> 100.00
+        - 0.80 -> 0.00
+    - lambda: |
+        if (x < 0) return 0; 
+        else if (x > 100) return 100;
+        else return (x);
+    accuracy_decimals: 0

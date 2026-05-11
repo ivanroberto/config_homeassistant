@@ -1,0 +1,54 @@
+tocar_playlist_mix7_ivan:
+  alias: tocar playlist MIX7 ivan
+  sequence:
+  - service: automation.trigger
+    data: {}
+    target:
+      entity_id: automation.tocar_mix7_ivan
+  mode: single
+  icon: mdi:music
+tocar_playlist_supermix_ivan_2:
+  alias: tocar playlist SUPERMIX ivan
+  sequence:
+  - service: automation.trigger
+    data: {}
+    target:
+      entity_id: automation.tocar_supermix_ivan
+  mode: single
+  icon: mdi:music
+tocar_playlist_likes_ivan2:
+  alias: tocar playlist LIKES ivan
+  sequence:
+  - service: automation.trigger
+    data: {}
+    target:
+      entity_id: automation.tocar_likes_ivan
+  mode: single
+  icon: mdi:music
+tocar_playlist_mix3_ivan:
+  alias: tocar playlist MIX3 ivan
+  sequence:
+  - service: automation.trigger
+    data: {}
+    target:
+      entity_id: automation.tocar_mix3_ivan
+  mode: single
+  icon: mdi:music
+tocar_playlist_festa_ivan:
+  alias: tocar playlist FESTA ivan
+  sequence:
+  - service: automation.trigger
+    data: {}
+    target:
+      entity_id: automation.tocar_festa_ivan
+  mode: single
+  icon: mdi:music
+tocar_playlist_festa_rock_ivan:
+  alias: tocar playlist FESTA ROCK ivan
+  sequence:
+  - service: automation.trigger
+    data: {}
+    target:
+      entity_id: automation.tocar_festa_rock_ivan
+  mode: single
+  icon: mdi:music

@@ -1,0 +1,48 @@
+{
+    "_": {
+        "editor": {
+            "view": {
+                "view-show-grid": true,
+                "view-snap-grid": true,
+                "view-grid-size": "20",
+                "view-node-status": true,
+                "view-node-show-label": true,
+                "view-show-tips": false,
+                "view-show-welcome-tours": true,
+                "view-store-position": false,
+                "view-store-zoom": false,
+                "view-node-info-icon": true
+            },
+            "context": {
+                "flowRefresh": true
+            },
+            "tours": {
+                "welcome": "4.1.1"
+            },
+            "dialog": {
+                "export": {
+                    "pretty": false,
+                    "json-view": false
+                }
+            }
+        },
+        "menu-menu-item-sidebar": true,
+        "menu-menu-item-palette": true,
+        "menu-deploymenu-item-flow": true,
+        "menu-deploymenu-item-full": false,
+        "menu-deploymenu-item-node": false,
+        "debug": {
+            "filteredNodes": [
+                "35525b3f.e6b714",
+                "23d69072.9f818",
+                "3501143b9250e29b",
+                "7fb45cb6d4db0123",
+                "ea48ef4f3c2e04f8",
+                "99f807a3dac14111",
+                "973a6c9e39076822",
+                "ce14939549575dca"
+            ],
+            "filter": "filterAll"
+        }
+    }
+}

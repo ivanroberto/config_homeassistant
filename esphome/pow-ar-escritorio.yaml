@@ -1,0 +1,7 @@
+substitutions:
+  device_name: "pow-ar-escritorio"
+  friendly_name: "Pow Ar Escritório"
+  wifi_ap_password: "ivanrsc125"
+
+packages:
+  base: !include packages/base-pow-r2.yaml

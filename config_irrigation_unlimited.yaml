@@ -1,0 +1,126 @@
+granularity: 10
+refresh_interval: 5
+
+controllers:
+  - name: "Jardim"
+    zones:
+      - name: "Fundos"
+        entity_id: "switch.irrigacaofundos_relay_4"
+        zone_id: "fundos"
+        minimum: "00:00:00"
+        maximum: "00:02:30"
+      - name: "Gramado"
+        entity_id: "switch.irrigacaofundos_relay_3"
+        zone_id: "gramado"
+        minimum: "00:00:00"
+        maximum: "00:03:00"
+      - name: "Frente"
+        entity_id: "switch.irrigacaofrente_rele_1"
+        zone_id: "frente"
+        minimum: "00:00:00"
+        maximum: "00:02:00"
+    sequences:
+      - name: "Sequência Jardim"
+        delay: "00:00:10"  # tempo entre uma zona e outra
+        schedules:
+          - name: "Alvorada"
+            time:
+              sun: "sunrise"
+            # Executa todo o ciclo de sequência ao nascer do sol
+          - name: "Por do Sol"
+            month: [sep, oct, nov, dec, jan, feb, mar, apr]
+            time:
+              sun: "sunset"
+              after: "00:10"
+            # Executa o ciclo ao pôr do sol só nestes meses
+        zones:
+          - zone_id: "fundos"
+            duration: "00:02:00"
+          - zone_id: "gramado"
+            duration: "00:02:30"
+          - zone_id: "frente"
+            duration: "00:02:00"
+  - name: "Hortalicas"
+    zones:
+      - name: "Horta"
+        entity_id: "switch.irrigacaofrente_rele_2"
+        zone_id: "horta"
+        minimum: "00:00:00"
+        maximum: "00:03:00"
+        schedules:
+          - name: "Alvorada Verão"
+            month: [sep, oct, nov, dec, jan, feb, mar, apr]
+            time:
+              sun: "sunrise"
+              before: "00:30"
+            duration: "00:02:00"
+          - name: "Alvorada Inverno"
+            month: [may, jun, jul, aug]
+            time:
+              sun: "sunrise"
+              before: "00:30"
+            duration: "00:01:30"
+          - name: "Tarde Verão"
+            month: [sep, oct, nov, dec, jan, feb, mar, apr]
+            time: "14:30"
+            duration: "00:02:00"
+          - name: "Tarde Inverno"
+            month: [may, jun, jul, aug]
+            time: "14:30"
+            duration: "00:01:00"
+          - name: "Por do Sol Verão"
+            month: [sep, oct, nov, dec, jan, feb, mar, apr]
+            time:
+              sun: "sunset"
+              after: "00:30"
+            duration: "00:02:00"
+          - name: "Por do Sol Inverno"
+            month: [may, jun, jul, aug]
+            time:
+              sun: "sunset"
+              after: "00:30"
+            duration: "00:01:30"
+  - name: "Corredor"
+    zones:
+      - name: "Corredor"
+        entity_id: "switch.irrigacaofrente_rele_3"
+        zone_id: "corredor"
+        minimum: "00:00:00"
+        maximum: "00:04:00"
+        schedules:
+          - name: "Alvorada Verão"
+            month: [aug, sep, oct, nov, dec, jan, feb, mar, apr]
+            time:
+              sun: "sunrise"
+              after: "00:10"
+            duration: "00:02:30"
+          - name: "Alvorada Inverno"
+            month: [may, jun, jul]
+            time:
+              sun: "sunrise"
+              after: "00:10"
+            duration: "00:02:00"
+          - name: "Tarde Verão"
+            month: [aug, sep, oct, nov, dec, jan, feb, mar, apr]
+            time: "15:30"
+            duration: "00:01:30"
+          - name: "Tarde Inverno"
+            month: [may, jun, jul]
+            time: "15:30"
+            duration: "00:01:30"
+    # sequences:
+    #   - name: "Run 1"
+    #     delay: "00:00:10"
+    #     schedules:
+    #       - name: "Alvorada"
+    #         time:
+    #           sun: "sunrise"
+    #           after: "00:10"
+    #       - name: "Por do Sol"
+    #         time:
+    #           sun: "sunset"
+    #           after: "00:20"
+    #         month: [sep, oct, nov, dec, jan, feb, mar, apr]
+    #     zones:
+    #       - zone_id: "corredor"
+    #         duration: "00:02:30"

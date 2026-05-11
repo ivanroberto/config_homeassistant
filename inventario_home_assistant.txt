@@ -1,0 +1,776 @@
+### HA_CONFIG_BASE=/config
+
+## 1) Estrutura de diretórios (2 níveis)
+
+## 2) Arquivos YAML (até 3 níveis)
+
+## 3) Tamanho dos principais arquivos
+94 /config/configuration.yaml
+167 /config/automations.yaml
+54 /config/scripts.yaml
+1 /config/scenes.yaml
+30 /config/secrets.yaml
+
+## 4) Includes e referências no configuration.yaml
+2:default_config:
+3:python_script:
+47:#   username: !secret influxdb_user
+48:#   password: !secret influxdb_password
+61:homeassistant:
+62:  #packages: !include_dir_merge_named packages/
+63:  packages: !include_dir_named packages
+65:frontend:
+66:  themes: !include_dir_merge_named themes
+69:  #username: !secret sonoff_username
+70:  #password: !secret sonoff_password
+82:input_boolean: !include inputs_booleans.yaml
+83:input_number: !include inputs_numbers.yaml
+84:input_datetime: !include inputs_datetimes.yaml
+85:group: !include groups.yaml
+86:automation: !include automations.yaml
+87:script: !include scripts.yaml
+88:scene: !include scenes.yaml
+89:sensor: !include_dir_merge_list sensors/
+90:cloud: !include cloud.yaml
+91:irrigation_unlimited: !include config_irrigation_unlimited.yaml
+92:utility_meter: !include utilitymeter.yaml
+93:mqtt: !include mqtt.yaml
+94:template: !include template.yaml
+
+## 5) Primeiras 250 linhas do configuration.yaml
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+python_script:
+
+recorder:
+  purge_keep_days: 370
+  exclude:
+    domains:
+      - automation
+      - update
+    entity_globs:
+      - sensor.*_last_seen
+      - sensor.*_linkquality
+      - sensor.sun*
+      - weather.*
+      - sensor.clock*
+      - sensor.date*
+      - sensor.glances*
+      - sensor.load_*m
+      - sensor.time*
+      - sensor.uptime*
+      - sensor.home*
+      - number.office*
+      - select.office*
+    entities:
+      - sensor.date
+      - sensor.last_boot # Comes from 'systemmonitor' sensor platform
+      - sun.sun # Don't record sun data
+      - sensor.home_assistant_v2_db
+      - weather.openweathermap
+    event_types:
+      - call_service # Don't record actions  
+      
+#discovery:
+#  enable:
+#    - lg_smart_device
+
+zeroconf:
+
+logger:
+  default: info
+
+# influxdb:
+#   database: homeassistant
+#   host: a0d7b954-influxdb
+#   port: 8087
+#   username: !secret influxdb_user
+#   password: !secret influxdb_password
+#   max_retries: 3
+#   default_measurement: state
+
+# Text to speech
+tts:
+  #Google (google_say)
+  - platform: google_translate
+    #language: "pt-br"
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 57600
+
+homeassistant:
+  #packages: !include_dir_merge_named packages/
+  packages: !include_dir_named packages
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+#sonoff:
+  #username: !secret sonoff_username
+  #password: !secret sonoff_password
+  #mode: auto
+  #reload: always #busca sempre novos sonoffs adcinados em sua conta sonoff
+  #debug: false # you will get HA notification with a link to the logs page
+  #scan_interval: "00:00:30" # (optional) default 5 minutes
+  #sensors: [temperature, humidity, power, current, voltage, rssi, energy]
+  #devices:
+    #pow_lava_loucas:
+      #name: Sonoff Pow
+      #force_update: True
+      #sensors: [temperature, humidity, power, current, voltage, rssi]
+
+input_boolean: !include inputs_booleans.yaml
+input_number: !include inputs_numbers.yaml
+input_datetime: !include inputs_datetimes.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+sensor: !include_dir_merge_list sensors/
+cloud: !include cloud.yaml
+irrigation_unlimited: !include config_irrigation_unlimited.yaml
+utility_meter: !include utilitymeter.yaml
+mqtt: !include mqtt.yaml
+template: !include template.yaml
+
+## 6) Primeiras 250 linhas de automations.yaml
+- id: '1656534150434'
+  alias: tocar likes ivan
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: media_player.select_source
+    data:
+      source: cozinha
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.shuffle_set
+    data:
+      shuffle: true
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.play_media
+    data:
+      media_content_id: LM
+      media_content_type: playlist
+    target:
+      entity_id: media_player.ytube_music_player
+  mode: single
+- id: '1656534572098'
+  alias: tocar MIX3 ivan
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: media_player.select_source
+    data:
+      source: cozinha
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.shuffle_set
+    data:
+      shuffle: true
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.play_media
+    data:
+      media_content_id: RDTMAK5uy_k5UUl0lmrrfrjMpsT0CoMpdcBz1ruAO1k
+      media_content_type: playlist
+    target:
+      entity_id: media_player.ytube_music_player
+  mode: single
+- id: '1656534659003'
+  alias: tocar SUPERMIX ivan
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: media_player.select_source
+    data:
+      source: cozinha
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.shuffle_set
+    data:
+      shuffle: true
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.play_media
+    data:
+      media_content_id: RDTMAK5uy_kset8DisdE7LSD4TNjEVvrKRTmG7a56sY
+      media_content_type: playlist
+    target:
+      entity_id: media_player.ytube_music_player
+  mode: single
+- id: '1656534725587'
+  alias: tocar MIX7 ivan
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: media_player.select_source
+    data:
+      source: cozinha
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.shuffle_set
+    data:
+      shuffle: true
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.play_media
+    data:
+      media_content_id: RDTMAK5uy_lfhhWWw9v71CPrR7MRMHgZzbH6Vku9iJc
+      media_content_type: playlist
+    target:
+      entity_id: media_player.ytube_music_player
+  mode: single
+- id: '1656536728963'
+  alias: tocar FESTA ivan
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: media_player.select_source
+    data:
+      source: cozinha
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.shuffle_set
+    data:
+      shuffle: true
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.play_media
+    data:
+      media_content_id: RDCLAK5uy_n3HGLGTjb_X-mnyCA66JNINojrt41W5K0
+      media_content_type: playlist
+    target:
+      entity_id: media_player.ytube_music_player
+  mode: single
+- id: '1656537651754'
+  alias: tocar FESTA ROCK ivan
+  description: ''
+  trigger: []
+  condition: []
+  action:
+  - service: media_player.select_source
+    data:
+      source: cozinha
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.shuffle_set
+    data:
+      shuffle: true
+    target:
+      entity_id: media_player.ytube_music_player
+  - service: media_player.play_media
+    data:
+      media_content_id: PLK9xwTK6_L9mNEg3MTi8kfBO1QwKYjVB9
+      media_content_type: playlist
+    target:
+      entity_id: media_player.ytube_music_player
+  mode: single
+- id: '1700602171816'
+  alias: Restart VsCode Memory Leak
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.studio_code_server_memory_percent
+    above: 20
+  action:
+  - service: hassio.addon_restart
+    data:
+      addon: a0d7b954_vscode
+  mode: single
+- id: '1777920917535'
+  alias: Reativar proteção automática (delay)
+  description: Quando proteger_numeros for desativado, aguarda X minutos e reativa
+    se ainda estiver desativado.
+  triggers:
+  - entity_id: input_boolean.proteger_numeros
+    to: 'off'
+    trigger: state
+  actions:
+  - delay: 00:05:00
+  - condition: state
+    entity_id: input_boolean.proteger_numeros
+    state: 'off'
+  - target:
+      entity_id: input_boolean.proteger_numeros
+    action: input_boolean.turn_on
+  mode: restart
+
+## 7) Primeiras 250 linhas de scripts.yaml
+tocar_playlist_mix7_ivan:
+  alias: tocar playlist MIX7 ivan
+  sequence:
+  - service: automation.trigger
+    data: {}
+    target:
+      entity_id: automation.tocar_mix7_ivan
+  mode: single
+  icon: mdi:music
+tocar_playlist_supermix_ivan_2:
+  alias: tocar playlist SUPERMIX ivan
+  sequence:
+  - service: automation.trigger
+    data: {}
+    target:
+      entity_id: automation.tocar_supermix_ivan
+  mode: single
+  icon: mdi:music
+tocar_playlist_likes_ivan2:
+  alias: tocar playlist LIKES ivan
+  sequence:
+  - service: automation.trigger
+    data: {}
+    target:
+      entity_id: automation.tocar_likes_ivan
+  mode: single
+  icon: mdi:music
+tocar_playlist_mix3_ivan:
+  alias: tocar playlist MIX3 ivan
+  sequence:
+  - service: automation.trigger
+    data: {}
+    target:
+      entity_id: automation.tocar_mix3_ivan
+  mode: single
+  icon: mdi:music
+tocar_playlist_festa_ivan:
+  alias: tocar playlist FESTA ivan
+  sequence:
+  - service: automation.trigger
+    data: {}
+    target:
+      entity_id: automation.tocar_festa_ivan
+  mode: single
+  icon: mdi:music
+tocar_playlist_festa_rock_ivan:
+  alias: tocar playlist FESTA ROCK ivan
+  sequence:
+  - service: automation.trigger
+    data: {}
+    target:
+      entity_id: automation.tocar_festa_rock_ivan
+  mode: single
+  icon: mdi:music
+
+## 8) Primeiras 250 linhas de scenes.yaml
+[]
+
+## 9) Packages (se existir)
+/config/packages/irrigation_unlimited_controls.yaml
+
+### FILE: /config/packages/irrigation_unlimited_controls.yaml
+# Irrigation Unlimited support file.
+#
+# Filename: irrigation_unlimited_controls.yaml
+#
+# This file is a package and should be located in the config/packages
+# folder. If you do not have a packages folder then create it and add
+# the following to configuration.yaml
+#
+# homeassistant:
+#  packages: !include_dir_named packages
+#
+# More information on packages can be found at https://www.home-assistant.io/docs/configuration/packages
+#
+input_select:
+  irrigation_unlimited_entities:
+    name: Irrigation Unlimited Entities
+    options:
+      - <none>
+
+  irrigation_unlimited_sequences:
+    name: Irrigation Unlimited Sequences
+    options:
+      - <none>
+
+input_datetime:
+  irrigation_unlimited_run_time:
+    name: Run Time
+    has_date: false
+    has_time: true
+
+automation:
+  - alias: Irrigation Unlimited Load UI Controls
+    trigger:
+      - platform: homeassistant
+        event: start
+    action:
+      - service: irrigation_unlimited.list_config
+        data:
+          entity_id: input_select.irrigation_unlimited_entities
+          section: entities
+          first: <none>
+      - service: irrigation_unlimited.list_config
+        data:
+          entity_id: input_select.irrigation_unlimited_sequences
+          section: sequences
+          first: <none>
+
+
+## 10) Custom components
+/config/custom_components/average/__init__.py
+/config/custom_components/average/const.py
+/config/custom_components/average/manifest.json
+/config/custom_components/average/sensor.py
+/config/custom_components/average/services.yaml
+/config/custom_components/hacs/__init__.py
+/config/custom_components/hacs/base.py
+/config/custom_components/hacs/config_flow.py
+/config/custom_components/hacs/const.py
+/config/custom_components/hacs/coordinator.py
+/config/custom_components/hacs/data_client.py
+/config/custom_components/hacs/diagnostics.py
+/config/custom_components/hacs/entity.py
+/config/custom_components/hacs/enums.py
+/config/custom_components/hacs/exceptions.py
+/config/custom_components/hacs/frontend.py
+/config/custom_components/hacs/icons.json
+/config/custom_components/hacs/iconset.js
+/config/custom_components/hacs/manifest.json
+/config/custom_components/hacs/repairs.py
+/config/custom_components/hacs/switch.py
+/config/custom_components/hacs/system_health.py
+/config/custom_components/hacs/types.py
+/config/custom_components/hacs/update.py
+/config/custom_components/irrigation_unlimited/__init__.py
+/config/custom_components/irrigation_unlimited/binary_sensor.py
+/config/custom_components/irrigation_unlimited/const.py
+/config/custom_components/irrigation_unlimited/entity.py
+/config/custom_components/irrigation_unlimited/history.py
+/config/custom_components/irrigation_unlimited/irrigation_unlimited.py
+/config/custom_components/irrigation_unlimited/manifest.json
+/config/custom_components/irrigation_unlimited/schema.py
+/config/custom_components/irrigation_unlimited/service.py
+/config/custom_components/irrigation_unlimited/services.yaml
+/config/custom_components/irrigation_unlimited/util.py
+/config/custom_components/localtuya/__init__.py
+/config/custom_components/localtuya/alarm_control_panel.py
+/config/custom_components/localtuya/binary_sensor.py
+/config/custom_components/localtuya/button.py
+/config/custom_components/localtuya/climate.py
+/config/custom_components/localtuya/config_flow.py
+/config/custom_components/localtuya/const.py
+/config/custom_components/localtuya/coordinator.py
+/config/custom_components/localtuya/cover.py
+/config/custom_components/localtuya/diagnostics.py
+/config/custom_components/localtuya/discovery.py
+/config/custom_components/localtuya/entity.py
+/config/custom_components/localtuya/fan.py
+/config/custom_components/localtuya/humidifier.py
+/config/custom_components/localtuya/light.py
+/config/custom_components/localtuya/lock.py
+/config/custom_components/localtuya/manifest.json
+/config/custom_components/localtuya/number.py
+/config/custom_components/localtuya/remote.py
+/config/custom_components/localtuya/select.py
+/config/custom_components/localtuya/sensor.py
+/config/custom_components/localtuya/services.yaml
+/config/custom_components/localtuya/siren.py
+/config/custom_components/localtuya/strings.json
+/config/custom_components/localtuya/switch.py
+/config/custom_components/localtuya/vacuum.py
+/config/custom_components/localtuya/water_heater.py
+/config/custom_components/nodered/__init__.py
+/config/custom_components/nodered/binary_sensor.py
+/config/custom_components/nodered/button.py
+/config/custom_components/nodered/config_flow.py
+/config/custom_components/nodered/const.py
+/config/custom_components/nodered/discovery.py
+/config/custom_components/nodered/entity.py
+/config/custom_components/nodered/manifest.json
+/config/custom_components/nodered/number.py
+/config/custom_components/nodered/select.py
+/config/custom_components/nodered/sensor.py
+/config/custom_components/nodered/sentence.py
+/config/custom_components/nodered/services.yaml
+/config/custom_components/nodered/switch.py
+/config/custom_components/nodered/text.py
+/config/custom_components/nodered/time.py
+/config/custom_components/nodered/utils.py
+/config/custom_components/nodered/version.py
+/config/custom_components/nodered/websocket.py
+/config/custom_components/roborock/__init__.py
+/config/custom_components/roborock/binary_sensor.py
+/config/custom_components/roborock/button.py
+/config/custom_components/roborock/camera.py
+/config/custom_components/roborock/config_flow.py
+/config/custom_components/roborock/const.py
+/config/custom_components/roborock/coordinator.py
+/config/custom_components/roborock/device.py
+/config/custom_components/roborock/domain.py
+/config/custom_components/roborock/manifest.json
+/config/custom_components/roborock/number.py
+/config/custom_components/roborock/roborock_typing.py
+/config/custom_components/roborock/select.py
+/config/custom_components/roborock/sensor.py
+/config/custom_components/roborock/services.yaml
+/config/custom_components/roborock/store.py
+/config/custom_components/roborock/switch.py
+/config/custom_components/roborock/time.py
+/config/custom_components/roborock/utils.py
+/config/custom_components/roborock/vacuum.py
+/config/custom_components/solarman/__init__.py
+/config/custom_components/solarman/binary_sensor.py
+/config/custom_components/solarman/button.py
+/config/custom_components/solarman/common.py
+/config/custom_components/solarman/config_flow.py
+/config/custom_components/solarman/const.py
+/config/custom_components/solarman/coordinator.py
+/config/custom_components/solarman/datetime.py
+/config/custom_components/solarman/device.py
+/config/custom_components/solarman/diagnostics.py
+/config/custom_components/solarman/discovery.py
+/config/custom_components/solarman/entity.py
+/config/custom_components/solarman/license
+/config/custom_components/solarman/manifest.json
+/config/custom_components/solarman/number.py
+/config/custom_components/solarman/parser.py
+/config/custom_components/solarman/provider.py
+/config/custom_components/solarman/select.py
+/config/custom_components/solarman/sensor.py
+/config/custom_components/solarman/services.py
+/config/custom_components/solarman/services.yaml
+/config/custom_components/solarman/switch.py
+/config/custom_components/solarman/time.py
+/config/custom_components/sonoff/__init__.py
+/config/custom_components/sonoff/alarm_control_panel.py
+/config/custom_components/sonoff/binary_sensor.py
+/config/custom_components/sonoff/button.py
+/config/custom_components/sonoff/climate.py
+/config/custom_components/sonoff/config_flow.py
+/config/custom_components/sonoff/cover.py
+/config/custom_components/sonoff/diagnostics.py
+/config/custom_components/sonoff/fan.py
+/config/custom_components/sonoff/light.py
+/config/custom_components/sonoff/manifest.json
+/config/custom_components/sonoff/media_player.py
+/config/custom_components/sonoff/number.py
+/config/custom_components/sonoff/remote.py
+/config/custom_components/sonoff/select.py
+/config/custom_components/sonoff/sensor.py
+/config/custom_components/sonoff/services.yaml
+/config/custom_components/sonoff/switch.py
+/config/custom_components/sonoff/system_health.py
+/config/custom_components/thermal_comfort/__init__.py
+/config/custom_components/thermal_comfort/config_flow.py
+/config/custom_components/thermal_comfort/const.py
+/config/custom_components/thermal_comfort/manifest.json
+/config/custom_components/thermal_comfort/sensor.py
+/config/custom_components/thermal_comfort/services.yaml
+/config/custom_components/webrtc/__init__.py
+/config/custom_components/webrtc/config_flow.py
+/config/custom_components/webrtc/manifest.json
+/config/custom_components/webrtc/media_player.py
+/config/custom_components/webrtc/services.yaml
+/config/custom_components/webrtc/utils.py
+/config/custom_components/ytube_music_player/__init__.py
+/config/custom_components/ytube_music_player/browse_media.py
+/config/custom_components/ytube_music_player/config_flow.py
+/config/custom_components/ytube_music_player/const.py
+/config/custom_components/ytube_music_player/manifest.json
+/config/custom_components/ytube_music_player/media_player.py
+/config/custom_components/ytube_music_player/select.py
+/config/custom_components/ytube_music_player/sensor.py
+/config/custom_components/ytube_music_player/services.yaml
+
+## 11) Themes / templates / packages / blueprints
+### DIR: /config/themes
+/config/themes
+/config/themes/mushroom
+/config/themes/mushroom/mushroom-shadow.yaml
+/config/themes/mushroom/mushroom-square-shadow.yaml
+/config/themes/mushroom/mushroom-square.yaml
+/config/themes/mushroom/mushroom.yaml
+
+### DIR: /config/blueprints
+/config/blueprints
+/config/blueprints/automation
+/config/blueprints/automation/homeassistant
+/config/blueprints/script
+/config/blueprints/script/homeassistant
+/config/blueprints/script/homeassistant/confirmable_notification.yaml
+/config/blueprints/template
+/config/blueprints/template/homeassistant
+/config/blueprints/template/homeassistant/inverted_binary_sensor.yaml
+
+### DIR: /config/packages
+/config/packages
+/config/packages/irrigation_unlimited_controls.yaml
+
+### DIR: /config/appdaemon
+/config/appdaemon
+/config/appdaemon/apps
+/config/appdaemon/apps/apps.yaml
+/config/appdaemon/apps/nspanel-lovelace-ui
+/config/appdaemon/apps/nspanel-lovelace-ui/luibackend
+/config/appdaemon/apps/nspanel-lovelace-ui/nspanel-lovelace-ui.py
+
+### DIR: /config/www
+/config/www
+/config/www/Thermo_01.HMI
+/config/www/Thermo_01.tft
+/config/www/alert.mp3
+/config/www/community
+/config/www/community/bar-card
+/config/www/community/bar-card/bar-card.js
+/config/www/community/bar-card/bar-card.js.gz
+/config/www/community/battery-state-card
+/config/www/community/battery-state-card/battery-state-card.js
+/config/www/community/battery-state-card/battery-state-card.js.gz
+/config/www/community/battery-state-card/battery-state-card.js.map
+/config/www/community/button-card
+/config/www/community/button-card/button-card.js
+/config/www/community/button-card/button-card.js.gz
+/config/www/community/config-template-card
+/config/www/community/config-template-card/config-template-card.js
+/config/www/community/config-template-card/config-template-card.js.gz
+/config/www/community/gauge-card-pro
+/config/www/community/gauge-card-pro/gauge-card-pro.js
+/config/www/community/gauge-card-pro/gauge-card-pro.js.gz
+/config/www/community/irrigation-unlimited-card
+/config/www/community/irrigation-unlimited-card/irrigation-unlimited-card.js
+/config/www/community/irrigation-unlimited-card/irrigation-unlimited-card.js.gz
+/config/www/community/kiosk-mode
+/config/www/community/kiosk-mode/kiosk-mode-es5.js
+/config/www/community/kiosk-mode/kiosk-mode-es5.js.gz
+/config/www/community/kiosk-mode/kiosk-mode.js
+/config/www/community/kiosk-mode/kiosk-mode.js.gz
+/config/www/community/logbook-card
+/config/www/community/logbook-card/logbook-card.js
+/config/www/community/logbook-card/logbook-card.js.gz
+/config/www/community/lovelace-auto-entities
+/config/www/community/lovelace-auto-entities/auto-entities.js
+/config/www/community/lovelace-auto-entities/auto-entities.js.gz
+/config/www/community/lovelace-card-mod
+/config/www/community/lovelace-card-mod/card-mod.js
+/config/www/community/lovelace-card-mod/card-mod.js.gz
+/config/www/community/lovelace-fold-entity-row
+/config/www/community/lovelace-fold-entity-row/fold-entity-row.js
+/config/www/community/lovelace-fold-entity-row/fold-entity-row.js.gz
+/config/www/community/lovelace-hui-element
+/config/www/community/lovelace-hui-element/hui-element.js
+/config/www/community/lovelace-hui-element/hui-element.js.gz
+/config/www/community/lovelace-hui-element/rollup.config.js
+/config/www/community/lovelace-hui-element/rollup.config.js.gz
+/config/www/community/lovelace-layout-card
+/config/www/community/lovelace-layout-card/layout-card.js
+/config/www/community/lovelace-layout-card/layout-card.js.gz
+/config/www/community/lovelace-layout-card/rollup.config.js
+/config/www/community/lovelace-layout-card/rollup.config.js.gz
+/config/www/community/lovelace-multiple-entity-row
+/config/www/community/lovelace-multiple-entity-row/multiple-entity-row.js
+/config/www/community/lovelace-multiple-entity-row/multiple-entity-row.js.gz
+/config/www/community/lovelace-mushroom
+/config/www/community/lovelace-mushroom/mushroom.js
+/config/www/community/lovelace-mushroom/mushroom.js.gz
+/config/www/community/lovelace-state-switch
+/config/www/community/lovelace-state-switch/rollup.config.js
+/config/www/community/lovelace-state-switch/rollup.config.js.gz
+/config/www/community/lovelace-state-switch/state-switch.js
+/config/www/community/lovelace-state-switch/state-switch.js.gz
+/config/www/community/lovelace-time-picker-card
+/config/www/community/lovelace-time-picker-card/time-picker-card.js
+/config/www/community/lovelace-time-picker-card/time-picker-card.js.gz
+/config/www/community/lovelace-xiaomi-vacuum-map-card
+/config/www/community/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js
+/config/www/community/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js.gz
+/config/www/community/mini-graph-card
+/config/www/community/mini-graph-card/mini-graph-card-bundle.js
+/config/www/community/mini-graph-card/mini-graph-card-bundle.js.gz
+/config/www/community/mini-media-player
+/config/www/community/mini-media-player/mini-media-player-bundle.js
+/config/www/community/mini-media-player/mini-media-player-bundle.js.gz
+/config/www/community/restriction-card
+/config/www/community/restriction-card/restriction-card.js
+/config/www/community/restriction-card/restriction-card.js.gz
+/config/www/community/simple-clock-card
+/config/www/community/simple-clock-card/simple-clock-card.js
+/config/www/community/simple-clock-card/simple-clock-card.js.gz
+/config/www/community/simple-weather-card
+/config/www/community/simple-weather-card/simple-weather-card-bundle.js
+/config/www/community/simple-weather-card/simple-weather-card-bundle.js.gz
+/config/www/community/zigbee2mqtt-networkmap
+/config/www/community/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js
+/config/www/community/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js.gz
+/config/www/correct-answer.wav
+/config/www/interface-back.wav
+/config/www/notification_sound (1).mp3
+/config/www/notification_sound.mp3
+/config/www/ns-panel-kantoor.HMI
+/config/www/ns-panel-kantoor.tft
+/config/www/sweet_text.mp3
+
+
+## 12) Add-ons locais e arquivos relacionados
+
+## 13) Arquivos ocultos úteis
+
+## 14) Sensores legados / platform usage
+
+## 15) Lovelace dashboards YAML
+
+## 16) Arquivos grandes
+9.0M	./usr/share/vim/vim92/syntax
+9.4M	./usr/lib/perl5/core_perl/auto/Encode
+9.7M	./homeassistant/.storage
+9.8M	./usr/share/nmap
+10.1M	./root/.oh-my-zsh/plugins
+10.4M	./homeassistant/appdaemon/apps/nspanel-lovelace-ui/luibackend/translations/frontend
+10.9M	./homeassistant/appdaemon/apps/nspanel-lovelace-ui/luibackend/translations
+10.9M	./usr/share/vim/vim92/doc
+11.3M	./homeassistant/appdaemon
+11.3M	./homeassistant/appdaemon/apps
+11.3M	./homeassistant/appdaemon/apps/nspanel-lovelace-ui
+11.3M	./homeassistant/appdaemon/apps/nspanel-lovelace-ui/luibackend
+13.2M	./homeassistant/custom_components/hacs/hacs_frontend/static/locale-data
+13.7M	./usr/lib/perl5/core_perl/auto
+14.4M	./homeassistant/custom_components/hacs/hacs_frontend/static
+14.8M	./root/.oh-my-zsh
+14.9M	./root
+15.9M	./usr/lib/python3.12/site-packages
+17.2M	./homeassistant/custom_components/hacs/hacs_frontend/frontend_latest
+18.9M	./homeassistant/custom_components/hacs/hacs_frontend/frontend_es5
+19.3M	./usr/lib/perl5/core_perl
+19.4M	./usr/lib/perl5
+23.9M	./usr/share/perl5/core_perl
+24.1M	./homeassistant/www
+24.3M	./usr/share/perl5
+26.4M	./homeassistant/zigbee2mqtt/log/2026-05-07.15-02-25
+26.6M	./homeassistant/zigbee2mqtt/log/2026-05-06.14-24-38
+26.9M	./backup
+27.6M	./homeassistant/zigbee2mqtt/log/2026-05-04.13-39-29
+28.1M	./homeassistant/zigbee2mqtt/log/2026-05-02.06-05-22
+29.9M	./usr/local
+29.9M	./usr/local/bin
+31.4M	./usr/share/vim/vim92
+31.5M	./usr/share/vim
+34.6M	./usr/lib/python3.12
+50.5M	./homeassistant/custom_components/hacs/hacs_frontend
+51.9M	./homeassistant/custom_components/hacs
+61.0M	./homeassistant/custom_components
+78.9M	./usr/bin
+85.3M	./usr/share
+117.1M	./homeassistant/zigbee2mqtt/log
+117.5M	./homeassistant/zigbee2mqtt
+118.9M	./usr/lib
+317.5M	./usr
+495.6M	./var/log
+495.6M	./var/log/journal
+495.6M	./var/log/journal/bfbfdcfee1fe4bc1b0050041e92776de
+495.7M	./var
+57.9G	./homeassistant
+58.8G	.
+
+## 17) Redação sugerida
+Antes de me enviar, remova ou masque:
+- tokens
+- senhas
+- chaves API
+- URLs privadas
+- conteúdo de secrets.yaml

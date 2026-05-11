@@ -1,0 +1,17 @@
+automation:
+  - id: reativar_protecao_automatica_delay
+    alias: Reativar proteção automática (delay)
+    description: Quando proteger_numeros for desativado, aguarda X minutos e reativa se ainda estiver desativado.
+    trigger:
+      - platform: state
+        entity_id: input_boolean.proteger_numeros
+        to: "off"
+    action:
+      - delay: "00:05:00"
+      - condition: state
+        entity_id: input_boolean.proteger_numeros
+        state: "off"
+      - service: input_boolean.turn_on
+        target:
+          entity_id: input_boolean.proteger_numeros
+    mode: restart

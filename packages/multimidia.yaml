@@ -1,0 +1,44 @@
+script:
+  tocar_playlist_likes_ivan:
+    alias: Tocar playlist Likes Ivan
+    icon: mdi:music
+    mode: single
+    sequence:
+      - service: media_player.select_source
+        target:
+          entity_id: media_player.ytube_music_player
+        data:
+          source: cozinha
+      - service: media_player.shuffle_set
+        target:
+          entity_id: media_player.ytube_music_player
+        data:
+          shuffle: true
+      - service: media_player.play_media
+        target:
+          entity_id: media_player.ytube_music_player
+        data:
+          media_content_id: LM
+          media_content_type: playlist
+
+  tocar_playlist_mix3_ivan:
+    alias: Tocar playlist Mix3 Ivan
+    icon: mdi:music
+    mode: single
+    sequence:
+      - service: media_player.select_source
+        target:
+          entity_id: media_player.ytube_music_player
+        data:
+          source: cozinha
+      - service: media_player.shuffle_set
+        target:
+          entity_id: media_player.ytube_music_player
+        data:
+          shuffle: true
+      - service: media_player.play_media
+        target:
+          entity_id: media_player.ytube_music_player
+        data:
+          media_content_id: RDTMAK5uy_k5UUl0lmrrfrjMpsT0CoMpdcBz1ruAO1k
+          media_content_type: playlist

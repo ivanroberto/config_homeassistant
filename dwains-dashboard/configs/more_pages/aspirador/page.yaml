@@ -1,0 +1,165 @@
+calibration_source:
+  camera: true
+col_span: "2"
+col_span_lg: "3"
+col_span_xl: "3"
+entity: vacuum.roborock_vacuum_s5e
+map_source:
+  camera: camera.xiaomi_cloud_map_extractor
+position: top
+row_span: "2"
+row_span_lg: "3"
+row_span_xl: "4"
+type: custom:xiaomi-vacuum-map-card
+#entity: vacuum.roborock_vacuum_s5e
+vacuum_platform: default
+language: pt-BR
+debug: false
+#map_source:
+#  camera: camera.xiaomi_cloud_map_extractor
+#calibration_source:
+#  camera: true
+append_icons: true
+icons:
+  - icon: mdi:home-floor-1
+    tap_action:
+      action: call-service
+      service: vacuum.send_command
+      service_data:
+        command: load_multi_map
+        params: 0
+        entity_id: vacuum.roborock_vacuum_s5e
+  - icon: mdi:home-floor-2
+    tap_action:
+      action: call-service
+      service: vacuum.send_command
+      service_data:
+        command: load_multi_map
+        params: 1
+        entity_id: vacuum.roborock_vacuum_s5e
+map_modes:
+  - template: vacuum_clean_zone
+  - template: vacuum_clean_zone_predefined
+    predefined_selections:
+      - zones:
+          - - 15661
+            - 27931
+            - 16838
+            - 29899
+        label:
+          text: Lavabo
+          x: 16140
+          "y": 28603
+      - zones:
+          - - 14374
+            - 26917
+            - 15597
+            - 29973
+          - - 13123
+            - 25998
+            - 14348
+            - 28925
+        label:
+          text: Ante Sala
+          x: 14299
+          "y": 27629
+      - zones:
+          - - 14352
+            - 24869
+            - 19031
+            - 26940
+          - - 13153
+            - 24870
+            - 14383
+            - 25992
+        label:
+          text: TV
+          x: 16500
+          "y": 26350
+      - zones:
+          - - 19036
+            - 24954
+            - 19707
+            - 26723
+        label:
+          text: Aparador
+          x: 19170
+          "y": 25650
+      - zones:
+          - - 20294
+            - 24953
+            - 22043
+            - 26654
+        label:
+          text: Mesa
+          x: 21126
+          "y": 25513
+      - zones:
+          - - 15614
+            - 26951
+            - 22642
+            - 27766
+          - - 19040
+            - 26639
+            - 22644
+            - 26979
+          - - 19705
+            - 24940
+            - 20274
+            - 26624
+          - - 22053
+            - 24956
+            - 22670
+            - 26639
+        label:
+          text: Corredor
+          x: 18916
+          "y": 27308
+      - zones:
+          - - 22667
+            - 25967
+            - 26043
+            - 27351
+          - - 22673
+            - 25462
+            - 23199
+            - 25980
+        label:
+          text: Bancada
+          x: 24323
+          "y": 26537
+      - zones:
+          - - 21939
+            - 27725
+            - 25390
+            - 29922
+          - - 22644
+            - 27344
+            - 23887
+            - 27774
+        label:
+          text: Cozinha
+          x: 23843
+          "y": 28508
+      - zones:
+          - - 22688
+            - 27694
+            - 25383
+            - 29300
+        label:
+          text: Coz. Esse
+          x: 24904
+          "y": 28153
+      - zones:
+          - - 22651
+            - 24888
+            - 25986
+            - 25464
+          - - 23187
+            - 25455
+            - 26000
+            - 25959
+        label:
+          text: Sala Fundos
+          x: 24435
+          "y": 25599

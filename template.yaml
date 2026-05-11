@@ -1,0 +1,19 @@
+- binary_sensor: !include binary_sensors.yaml
+- sensor: !include sensors.yaml
+
+# - sensor:
+#     - name: "Casa Potência Total"
+#       unique_id: casa_potencia_total
+#       unit_of_measurement: "W"
+#       device_class: power
+#       state_class: measurement
+#       state: >
+#         {{ ([ states('sensor.energia_casa_phase_a_active_power'),
+#               states('sensor.energia_casa_phase_b_active_power'),
+#               states('sensor.energia_casa_phase_c_active_power') ]
+#               | map('float') | sum) | round(2) }}
+#       availability: >
+#         {{ not 'unavailable' in
+#           [ states('sensor.energia_casa_phase_a_active_power'),
+#              states('sensor.energia_casa_phase_b_active_power'),
+#              states('sensor.energia_casa_phase_c_active_power') ] }}

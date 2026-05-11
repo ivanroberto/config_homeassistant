@@ -1,0 +1,200 @@
+dormir:
+  name: Ativar Cena Dormir
+  icon: mdi:sleep
+banho:
+  name: Ativar Cena Tomar Banho
+  icon: mdi:bathtub-outline
+assistir_tv:
+  name: Ativar Cena Assitir TV
+  icon: mdi:television-box
+receber_entrega:
+  name: Ativar Cena Receber Entrega
+  icon: mdi:truck-delivery
+alertas_criticos:
+  name: Controla fala p/ alertas críticos
+  icon: mdi:bullhorn-outline
+alertas_importantes:
+  name: Controla fala p/ alertas importantes
+  icon: mdi:bullhorn-outline
+alertas_informativos:
+  name: Controla fala p/ alertas informativos
+  icon: mdi:bullhorn-outline
+iluminacao_externa:
+  name: Ativa Iluminação Externa
+  icon: mdi:lightbulb-group-outline
+iluminacao_entrada_casa:
+  name: Ativa Iluminação Entrada Casa
+  icon: mdi:lightbulb-group-outline
+iluminacao_fundos:
+  name: Ativa Iluminação Fundos
+  icon: mdi:lightbulb-group-outline
+iluminacao_geral:
+  name: Ativa Iluminação Geral
+  icon: mdi:lightbulb-group-outline
+iluminacao_interna:
+  name: Ativa Iluminação Interna
+  icon: mdi:lightbulb-group-outline
+iluminacao_jardim:
+  name: Ativa Iluminação Jardim
+  icon: mdi:lightbulb-group-outline
+irrigacao_zona_fundos:
+  name: Controla Irrigação Zona Fundos
+  icon: mdi:flower
+irrigacao_zona_gramado:
+  name: Controla Irrigação Zona Gramado
+  icon: mdi:flower
+irrigacao_zona_frente:
+  name: Controla Irrigação Zona Frente
+  icon: mdi:flower
+irrigacao_zona_horta:
+  name: Controla Irrigação Zona Horta
+  icon: mdi:flower
+irrigacao_zona_corredor:
+  name: Controla Irrigação Zona Corredor
+  icon: mdi:flower
+fonte_automatico:
+  name: Controla Automatização Fonte Jardim
+  icon: mdi:fountain
+# alarme_geral_ativado:
+#   name: Alarme Geral
+#   icon: mdi:shield-home
+alarme_geral_ativar:
+  name: Alarme Geral Ativar
+  icon: mdi:shield-home
+alarme_geral_desativar:
+  name: Alarme Geral Desativar
+  icon: mdi:shield-home-outline
+# alarme_portoes_ativado:
+#   name: Alarme Portões
+#   icon: mdi:shield-car
+alarme_portoes_ativar:
+  name: Alarme Portões Ativar
+  icon: mdi:shield-car
+alarme_portoes_desativar:
+  name: Alarme Portões Desativar
+  icon: mdi:shield-car
+# alarme_externo_ativado:
+#   name: Alarme Externo
+#   icon: mdi:shield-moon
+alarme_externo_ativar:
+  name: Alarme Externo Ativar
+  icon: mdi:shield-moon
+alarme_externo_desativar:
+  name: Alarme Externo Desativar
+  icon: mdi:shield-moon-outline
+alarme_interno_ativar:
+  name: Alarme Interno Ativar
+  icon: mdi:shield-moon
+alarme_interno_desativar:
+  name: Alarme Interno Desativar
+  icon: mdi:shield-moon-outline
+verificacao_casa:
+  name: Verificação Casa
+  icon: mdi:check-underline-circle-outline
+faxina:
+  name: Faxina (Desliga alarme no dia)
+  icon: mdi:vacuum
+desativa_alarme_segunda_sexta:
+  name: Desativa Alarme (2ª a 6ª)
+  icon: mdi:security
+ativa_alarme_segunda_sexta:
+  name: Ativa Alarme (2ª a 6ª)
+  icon: mdi:security
+vazamento_agua:
+  name: Vazamento Água
+  icon: mdi:water-alert
+sensor_bateria_fraca:
+  name: Sensor Bateria Fraca
+  icon: mdi:battery-alert-variant-outline
+sensor_offline:
+  name: Sensor Offline
+  icon: mdi:access-point-network-off
+simulador_presenca_armado:
+  name: Simulador de presença Armado
+  icon: mdi:account
+simulador_presenca:
+  name: Simulador de presença
+  icon: mdi:account
+geladeira_quente:
+  name: Geladeira Quente
+  icon: mdi:thermometer-alert
+saindo_casa:
+  name: Saindo de Casa
+  icon: mdi:security
+
+controla_alarme_portoes:
+  name: Controla Alarme Portões
+  icon: mdi:shield-car
+controla_alarme_externo:
+  name: Controla Alarme Externo
+  icon: mdi:shield-car
+controla_alarme_geral:
+  name: Controla Alarme Geral
+  icon: mdi:shield-car
+controla_alarme_interno:
+  name: Controla Alarme Interno
+  icon: mdi:shield
+
+lembrete_ligar_lava_loucas:
+  name: Ligar Lava Louças
+  icon: mdi:dishwasher
+
+lembrete_retirar_lixo:
+  name: Retirar Lixo
+  icon: mdi:delete
+coleta_lixo:
+  name: Coleta Lixo
+  icon: mdi:delete
+lixo_coletado:
+  name: Lixo Coletado
+  icon: mdi:delete-empty
+
+abrir_lava_loucas:
+  name: Abrir Lava Louças
+  icon: mdi:dishwasher-alert
+lava_loucas_ligada:
+  name: Lava Louças Ligada
+  icon: mdi:dishwasher
+
+lembrete_regar_plantas:
+  name: Regar Plantas Internas
+  icon: mdi:watering-can-outline
+alerta_regar_plantas:
+  name: Plantas Internas
+  icon: mdi:watering-can-outline
+
+luzes_natal:
+  name: Luzes Natal
+  icon: mdi:string-lights
+
+desativa_movimento_andar_1:
+  name: Desativa Movimento Andar 1
+  icon: mdi:motion-sensor
+
+desativa_movimento_andar_2:
+  name: Desativa Movimento Andar 2
+  icon: mdi:motion-sensor
+
+desativa_movimento_externo:
+  name: Desativa Movimento Externo
+  icon: mdi:motion-sensor
+  
+desativa_luzes_luisa:
+  name: Desativa Luzes Luísa
+  icon: mdi:baby-face
+  
+ativa_armadilha_pernilongo:
+  name: Armadilha Pernilongos
+  icon: mdi:bug
+  
+desativa_luzes_lux:
+  name: Desliga Luzes Lux
+  icon: mdi:weather-sunny-off
+  
+bateria_casa_soc_baixo:
+  name: Bateria Casa SOC Baixo
+  icon: mdi:home-battery  
+  
+proteger_numeros:
+  name: Proteger números (bloquear toques)
+  initial: on  

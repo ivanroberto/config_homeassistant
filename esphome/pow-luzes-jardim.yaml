@@ -1,0 +1,7 @@
+substitutions:
+  device_name: "pow-luzes-jardim"
+  friendly_name: "Pow Luzes Jardim"
+  wifi_ap_password: "ivanrsc125"
+
+packages:
+  base: !include packages/base-dual-r3.yaml

@@ -1,0 +1,7 @@
+---
+substitutions:
+  devicename: painel-leds-escada
+  friendly_name: Painel Leds Escada
+
+<<: !include .base.yaml
+<<: !include .base.indicador-status.yaml

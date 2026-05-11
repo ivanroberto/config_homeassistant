@@ -1,0 +1,64 @@
+default_config:
+python_script:
+zeroconf:
+
+logger:
+  default: info
+
+recorder:
+  purge_keep_days: 370
+  exclude:
+    domains:
+      - automation
+      - update
+    entity_globs:
+      - sensor.*_last_seen
+      - sensor.*_linkquality
+      - sensor.sun*
+      - weather.*
+      - sensor.clock*
+      - sensor.date*
+      - sensor.glances*
+      - sensor.load_*m
+      - sensor.time*
+      - sensor.uptime*
+      - sensor.home*
+      - number.office*
+      - select.office*
+    entities:
+      - sensor.date
+      - sensor.last_boot
+      - sun.sun
+      - sensor.home_assistant_v2_db
+      - weather.openweathermap
+    event_types:
+      - call_service
+
+tts:
+  - platform: google_translate
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 57600
+
+homeassistant:
+  packages: !include_dir_named packages
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include_dir_merge_list automations/
+script: !include_dir_merge_named scripts/
+scene: !include scenes.yaml
+
+group: !include_dir_merge_named groups/
+template: !include_dir_merge_list templates/
+sensor: !include_dir_merge_list sensors/
+
+input_boolean: !include helpers/input_booleans.yaml
+input_number: !include helpers/input_numbers.yaml
+input_datetime: !include helpers/input_datetimes.yaml
+
+cloud: !include cloud.yaml
+mqtt: !include mqtt.yaml
+utility_meter: !include utilitymeter.yaml
+irrigation_unlimited: !include config_irrigation_unlimited.yaml
