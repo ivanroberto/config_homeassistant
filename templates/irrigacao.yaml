@@ -1,0 +1,35 @@
+- sensor:
+    - name: Chuva Hoje Local
+      unique_id: template_s_chuva_hoje_local
+      unit_of_measurement: mm
+      state: >-
+        {% set count = states('sensor.chuva_balanca_contador') | int(0) %}
+        {% set mm_per_pulse = 0.25 %}
+        {% set mm = count * mm_per_pulse %}
+        {{ mm | round(2, 'floor') }}
+
+    - name: Ajuste Irrigacao
+      unique_id: template_s_ajuste_irrigacao
+      state: "{{ state_attr('binary_sensor.irrigation_unlimited_c1_z1', 'adjustment') }}"
+
+    - name: Energia Utilizada Hoje
+      unique_id: template_s_energia_utilizada_hoje
+      unit_of_measurement: kWh
+      state: >-
+        {{ (
+            (states('sensor.consumo_concessionaria_hoje') | float(0))
+            + (states('sensor.medidor_producao_solar_energy_today') | float(0))
+            - (states('sensor.injecao_solar_hoje') | float(0))
+          ) | round(3) }}
+
+    - name: Irrigation Unlimited Rain Weighted Total
+      unique_id: template_s_irrigation_unlimited_rain_weighted_total
+      unit_of_measurement: mm
+      icon: mdi:umbrella
+      state: >-
+        {% set rain_total = (state_attr('sensor.irrigation_unlimited_rain_0', 'max_value') | float(0)) %}
+        {% set rain_total = rain_total + ((state_attr('sensor.irrigation_unlimited_rain_1', 'max_value') | float(0)) * 0.5) %}
+        {% set rain_total = rain_total + ((state_attr('sensor.irrigation_unlimited_rain_2', 'max_value') | float(0)) * 0.15) %}
+        {% set rain_total = rain_total + ((state_attr('sensor.irrigation_unlimited_rain_3', 'max_value') | float(0)) * 0.05) %}
+        {% set rain_total = rain_total + ((state_attr('sensor.irrigation_unlimited_rain_4', 'max_value') | float(0)) * 0.02) %}
+        {{ rain_total | round(1) }}

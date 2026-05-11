@@ -1,12 +1,17 @@
-automation:
-  - id: restart_vscode_memory_leak
-    alias: Restart VsCode Memory Leak
-    trigger:
-      - platform: numeric_state
-        entity_id: sensor.studio_code_server_memory_percent
-        above: 20
-    action:
-      - service: hassio.addon_restart
-        data:
-          addon: a0d7b954_vscode
-    mode: single
+- platform: time_date
+  display_options:
+    - time
+    - date
+
+- platform: command_line
+  name: CPU Temperature
+  command: "cat /sys/class/thermal/thermal_zone0/temp"
+  unit_of_measurement: "°C"
+  scan_interval: 60
+  value_template: "{{ value | multiply(0.001) | round(1) }}"
+
+- platform: command_line
+  name: cpu_temperatura
+  command: "cat /sys/class/thermal/thermal_zone2/temp"
+  unit_of_measurement: "°C"
+  value_template: "{{ value | multiply(0.001) | round(0) }}"

@@ -1,4 +1,3 @@
-- binary_sensor: !include ../binary_sensors.yaml
 - sensor:
     - name: Casa Potência Total
       unique_id: casa_potencia_total
